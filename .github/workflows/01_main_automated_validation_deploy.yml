@@ -1,0 +1,161 @@
+name: MAIN-01 Automated check-only SalesForce deployment on CODEMERGE org
+on: 
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    
+    branches:
+      - release-backlog
+    
+    paths:
+      - 'force-app/**'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    
+    branches:
+      - release-backlog
+    
+    paths:
+      - 'force-app/**'
+
+permissions:
+  contents: write # for checkout
+  pull-requests: write # for commenting
+  issues: write # for commenting
+  actions: write # for upload of code scanning results
+  security-events: write
+  
+jobs:    
+  add-blocking-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: prNumber,
+              labels: ['do-not-merge']
+            });
+  comment-pending:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ⏳ Running check-only deployment to CODEMERGE org...
+              `
+            });
+  check-only-deployment-on-org:
+    needs: add-blocking-label
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]'  && !github.event.repository.fork }}
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Fetch base branch
+        run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to CODEMERGE org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_CODEMERGE_URL }}
+      - name: Perform a check-only deployment to CODEMERGE Org
+        uses: ./.github/actions/salesforce_verification_deploy
+        with:
+          head_branch_name: ${{ github.event.pull_request.head.sha }}
+          diff_branch_name: ${{ github.event.pull_request.base.sha }}
+          username: ${{ secrets.CODEMERGE_ORG_USERNAME }}
+  comment-success:
+    runs-on: ubuntu-latest
+    needs: check-only-deployment-on-org
+    if: success()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ✅ Check-only deployment to CODEMERGE succeeded!
+              `
+            });    
+  add-success-label:
+    runs-on: ubuntu-latest
+    needs: check-only-deployment-on-org
+    if: success()
+    steps:
+      - name: Add label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: prNumber,
+              labels: ['ready-to-merge']
+            });
+
+            await github.rest.issues.removeLabel({
+              owner,
+              repo,
+              issue_number: prNumber,
+              name: 'do-not-merge'
+            });
+  comment-failure:
+    runs-on: ubuntu-latest
+    needs: check-only-deployment-on-org
+    if: failure()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ❌ Check-only deployment to CODEMERGE failed.
+              `
+            });    

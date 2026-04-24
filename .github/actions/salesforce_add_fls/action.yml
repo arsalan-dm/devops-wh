@@ -1,0 +1,38 @@
+name: 'Apply full FLS'
+description: 'Run post-deployment to apply full field level security to sys admin profile and deployment profile'
+inputs:
+  instance_url:
+    description: 
+    required: true
+  username:
+    description: 
+    required: true
+  profile_names:
+    description: 
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Pull down profile
+      shell: bash
+      run: |
+        sf project retrieve start --metadata "Profile:Admin" -o ${{ inputs.username }}
+    - name: Install cci
+      shell: bash
+      run: |
+          echo "Installing pipx"
+          sudo apt update
+          sudo apt install pipx
+          pipx ensurepath
+          echo "Installing cumulusci"
+          pipx install cumulusci
+          pipx ensurepath
+
+    - name: Add field level security
+      shell: bash
+      run: |
+          echo "Applying field-level-security"
+          chmod +x scripts/bash/give-profile-access-to-all-fields.sh
+          chmod +x scripts/bash/common.sh
+          chmod +x scripts/bash/convert-source-to-mdapi.sh
+          scripts/bash/give-profile-access-to-all-fields.sh -r ${{inputs.instance_url}} -u ${{inputs.username}} -p ${{inputs.profile_names}}

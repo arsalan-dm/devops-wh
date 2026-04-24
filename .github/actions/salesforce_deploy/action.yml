@@ -1,0 +1,27 @@
+name: 'Delta deploy to organisation'
+description: 'Performs a deployment of deltas to an organisation'
+inputs:
+  head_branch_name:
+    description: PR branch name
+    required: false
+    default: "HEAD"
+  diff_branch_name:
+    description: commit from where the diff is done
+    required: true
+  username:
+    description: 'The alias of the organisation to deploy to'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Create delta packages for new, modified or deleted metadata'
+      shell: bash
+      run: | 
+          mkdir changed-sources
+          MERGE_BASE=$(git merge-base "${{ inputs.head_branch_name }}" "${{ inputs.diff_branch_name }}")
+          sf sgd source delta -t "${{ inputs.head_branch_name}}" -f "$MERGE_BASE" -o changed-sources/ -d -s force-app/ 
+
+    - name: 'Deploy delta changes - run all tests'
+      shell: bash
+      run: |
+          sf project deploy start --source-dir "changed-sources/force-app" --test-level RunLocalTests --json -o ${{ inputs.username }} --ignore-conflicts

@@ -1,0 +1,41 @@
+name: 'Salesforce deploy setup'
+description: 'Set up the runner environment and authentication for SalesForce deployment'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22.16.0'
+
+    - name: Cache npm
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: npm-global-${{ runner.os }}-v1
+        restore-keys: |
+          npm-global-${{ runner.os }}-
+
+    - name: Cache sfdx plugins
+      uses: actions/cache@v4
+      with:
+        path: ~/.local/share/sfdx/plugins
+        key: sfdx-plugins-${{ runner.os }}
+
+    - name: 'Install Salesforce CLI'
+      shell: bash
+      run: npm install @salesforce/cli --global
+
+    - name: 'Install delta plugin'
+      shell: bash
+      run: echo y | sf plugins install sfdx-git-delta
+
+    - name: 'Install and cache java'
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '17'
+
+    - name: 'Installing SFDX scanner'
+      shell: bash
+      run: echo y | sf plugins install code-analyzer

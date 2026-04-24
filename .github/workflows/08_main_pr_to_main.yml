@@ -1,0 +1,59 @@
+name: MAIN-08 PR opened to MAIN
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    
+    branches:
+      - main
+
+permissions:
+  contents: write # for checkout
+  pull-requests: write # for commenting
+  issues: write # for commenting
+  actions: write # for upload of code scanning results
+        
+jobs:   
+  add-blocking-label:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.repository.fork && !contains(github.event.head_commit.message, '[Dummy]') }}
+    steps:
+      - name: Add label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: prNumber,
+              labels: ['do-not-merge']
+            });
+  comment-pending:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.repository.fork && !contains(github.event.head_commit.message, '[Dummy]') }}
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              Merge blocked until successful deployments to both PreProd and Prod orgs have occured.
+
+              Trigger the deployment to PreProd by creating a new comment on this PR, with message:
+                /deploy-to-preprod
+              `
+            });

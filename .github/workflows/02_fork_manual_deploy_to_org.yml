@@ -1,0 +1,228 @@
+name: FORK-02 Manual SalesForce deployment to QA org
+on: 
+  workflow_call:
+    inputs:
+      pr_branch:
+        required: true
+        type: string
+      pr_repo:
+        required: true
+        type: string
+      pr_number:
+        required: true
+        type: string
+      pr_sha:
+        required: true
+        type: string
+    secrets:
+      SFDX_QA_URL:
+        required: true
+      QA_ORG_USERNAME:
+        required: true
+      INSTANCE_URL:
+        required: true
+      PROFILE_NAMES:
+        required: true
+
+permissions:
+  contents: write # for checkout
+  pull-requests: write # for commenting
+  issues: write # for commenting
+  actions: write # for upload of code scanning results
+
+jobs:         
+  check_previous_workflow_succeeded:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get branch name
+        run: echo "BRANCH_NAME=${{ inputs.pr_branch }}" >> $GITHUB_ENV
+      - name: Check prior workflow status
+        uses: actions/github-script@v7
+        env:
+          BRANCH_NAME: ${{ env.BRANCH_NAME }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const branchName = process.env.BRANCH_NAME;
+            const workflows = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: "01_fork_automated_validation_deploy.yml",
+              branch: branchName
+            });
+
+            if (!workflows.data.workflow_runs.length || workflows.data.workflow_runs[0].conclusion !== "success") {
+              core.setFailed("Previous workflow did not succeed. Manual trigger denied.");
+            }
+  
+  add-pending-comment:
+    runs-on: ubuntu-latest
+    needs: check_previous_workflow_succeeded
+    if: success()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ⏳ Deploying to QA org...
+              `
+            });
+
+  deployment-on-QA-org:
+    needs: check_previous_workflow_succeeded
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.pr_branch }}
+          repository: ${{ inputs.pr_repo }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to QA org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_QA_URL }}
+      - name: Get SHAs
+        id: shas
+        run: |
+          FROM_SHA=$(git rev-parse origin/develop^{commit})
+          echo "from_sha=$FROM_SHA" >> $GITHUB_OUTPUT
+      - name: Perform a deployment to QA Org
+        uses: ./.github/actions/salesforce_deploy
+        with:
+          head_branch_name: ${{ inputs.pr_sha }}
+          diff_branch_name: ${{ steps.shas.outputs.from_sha }}
+          username: ${{ secrets.QA_ORG_USERNAME }}
+
+  add-label:
+    needs: deployment-on-QA-org
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add label
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: prNumber,
+              labels: ['ready-to-merge']
+            });
+
+            await github.rest.issues.removeLabel({
+              owner,
+              repo,
+              issue_number: prNumber,
+              name: 'do-not-merge'
+            });
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.pr_branch }}
+          repository: ${{ inputs.pr_repo }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0     
+      - name: check-label
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout ${{ inputs.pr_branch }}
+          git commit --allow-empty -m "Trigger PR synchronise [Dummy]"
+          git push
+
+  comment-success:
+    runs-on: ubuntu-latest
+    needs: deployment-on-QA-org
+    if: success()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ✅ Deployment to QA succeeded!
+
+              Update of field-level security now proceeding in the background.
+              `
+            });
+
+  comment-failure:
+    runs-on: ubuntu-latest
+    needs: deployment-on-QA-org
+    if: failure()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ❌ Deployment to QA failed.
+              `
+            });
+
+  add-fls-to-org:
+    needs: deployment-on-QA-org
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.pr_branch }}
+          repository: ${{ inputs.pr_repo }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to QA org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_QA_URL }}
+      - name: Apply FLS
+        uses: ./.github/actions/salesforce_add_fls
+        with:
+          instance_url: ${{ secrets.INSTANCE_URL }}
+          username: ${{ secrets.QA_ORG_USERNAME }}
+          profile_names: ${{ secrets.PROFILE_NAMES }}

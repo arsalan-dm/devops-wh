@@ -1,0 +1,23 @@
+name: FORK-06 Check PR Ready To Merge
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+        
+jobs:
+  check_labels:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.repository.fork }}
+    steps:
+      - name: Check for blocking label
+        run: |
+          LABELS="${{ toJson(github.event.pull_request.labels) }}"
+          echo "Labels on PR: $LABELS"
+          if echo "$LABELS" | grep -q "ready-to-merge"; then
+            echo "PR has successful label"
+            exit 0
+          else
+            exit 1
+          fi

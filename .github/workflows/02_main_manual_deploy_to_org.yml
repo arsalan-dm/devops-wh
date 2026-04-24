@@ -1,0 +1,52 @@
+name: MAIN-02 Manual SalesForce deployment to QA org
+on: workflow_dispatch
+  
+jobs: 
+  deployment-on-QA-org:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork}}
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to QA org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_QA_URL }}
+      - name: Get SHAs
+        id: shas
+        run: |
+          FROM_SHA=$(git rev-parse origin/main^{commit})
+          TO_SHA=$(git rev-parse origin/release-backlog^{commit})
+          echo "from_sha=$FROM_SHA" >> $GITHUB_OUTPUT
+          echo "to_sha=$TO_SHA" >> $GITHUB_OUTPUT
+      - name: Perform a deployment to QA Org
+        uses: ./.github/actions/salesforce_deploy
+        with:
+          head_branch_name: ${{ steps.shas.outputs.to_sha }}
+          diff_branch_name: ${{ steps.shas.outputs.from_sha }}
+          username: ${{ secrets.QA_ORG_USERNAME }}
+
+  add-fls-to-org:
+    needs: deployment-on-QA-org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to QA org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_QA_URL }}
+      - name: Apply FLS
+        uses: ./.github/actions/salesforce_add_fls
+        with:
+          instance_url: ${{ secrets.INSTANCE_URL }}
+          username: ${{ secrets.QA_ORG_USERNAME }}
+          profile_names: ${{ secrets.PROFILE_NAMES }}

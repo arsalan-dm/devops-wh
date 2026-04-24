@@ -1,0 +1,49 @@
+name: MAIN-07 Sync forks
+description: Synchronise changes to Main back to forks
+on: 
+  workflow_dispatch:
+  push:
+    branches: 
+      - main
+jobs:
+  sync-forks:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.repository.fork }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          repository: ${{ github.repository }}
+          token: ${{ secrets.FORK_PAT }}
+      - name: Sync forks
+        run: |
+          forks="${{ vars.FORKS }}"
+          TOKEN="${{ secrets.FORK_PAT }}"
+
+          if [ -z "$TOKEN" ]; then
+            echo "ERROR: PAT not set"
+            exit 1
+          fi
+
+          BASE_REPO="${{ github.repository }}"
+          git checkout main
+          
+          IFS=';;;'
+          for fork in $forks; do
+            if [ -n "$fork" ]; then
+              cd "$GITHUB_WORKSPACE" || exit 1
+              remote_name="fork_$(echo "$fork" | tr '/' '_')"
+              echo "Synchronising $fork"
+              git remote add "$remote_name" https://x-access-token:$TOKEN@github.com/$fork.git
+              echo "Added remote"
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              echo "Configured git"
+              git push "$remote_name" main --force
+              echo "Synchronised fork: $fork"
+              git remote remove "$remote_name" || true
+              echo "Removed remote"
+              cd ..
+            fi
+          done

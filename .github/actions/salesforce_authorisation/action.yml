@@ -1,0 +1,18 @@
+name: 'Salesforce authentication'
+description: 'Authentication for SalesForce deployment'
+inputs:
+  organisation_url:
+    description: 'The URL of the organisation to deploy to'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Populate auth file with SFDX_URL secret of org'
+      shell: bash
+      run: |
+          echo '{"sfdxAuthUrl": "${{ inputs.organisation_url }}"}' > ./SFDX_ORG_URL.json
+
+    # This authorises an org using the URL. -f [Path to file containing url] -a [alias for org]
+    - name: 'Authenticate to org'
+      shell: bash
+      run: sf org login sfdx-url --sfdx-url-file ./SFDX_ORG_URL.json

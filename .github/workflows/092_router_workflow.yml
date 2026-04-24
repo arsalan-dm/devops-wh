@@ -1,0 +1,70 @@
+name: MAIN-92 Router workflow for manual deployments
+on: 
+  issue_comment:
+    types: [created]
+
+jobs:
+  get_pr_branch:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.issue.pull_request != null && startsWith(github.event.comment.body, '/') }}
+    outputs:
+      pr_branch: ${{ steps.pr.outputs.pr_branch }}
+      pr_repo: ${{ steps.pr.outputs.pr_repo }}
+      pr_number: ${{ steps.pr.outputs.pr_number }}
+      pr_sha: ${{ steps.pr.outputs.pr_sha }}
+    steps:
+      - name: Get PR head branch
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prUrl = context.payload.issue.pull_request.url;
+            const pr = await github.request(prUrl);
+
+            core.setOutput("pr_branch", pr.data.head.ref);
+            core.setOutput("pr_repo", pr.data.head.repo.full_name);
+            core.setOutput("pr_number", pr.data.number);
+            core.setOutput("pr_sha", pr.data.head.sha);
+  route-to-preprod:
+    needs: get_pr_branch
+    if: ${{ github.event.comment.body == '/deploy-to-preprod' && !github.event.repository.fork }}
+    uses: ./.github/workflows/05_main_manual_deploy_to_preprod.yml
+    with:
+      pr_branch: ${{ needs.get_pr_branch.outputs.pr_branch }}
+      pr_repo: ${{ needs.get_pr_branch.outputs.pr_repo }}
+      pr_number: ${{ needs.get_pr_branch.outputs.pr_number }}
+      pr_sha: ${{ needs.get_pr_branch.outputs.pr_sha }}
+    secrets:
+      SFDX_PREPROD_URL: ${{ secrets.SFDX_PREPROD_URL }}
+      PREPROD_ORG_USERNAME: ${{ secrets.PREPROD_ORG_USERNAME }}
+      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
+      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
+  route-to-prod:
+    needs: get_pr_branch
+    if: ${{ github.event.comment.body == '/deploy-to-prod' && !github.event.repository.fork }}
+    uses: ./.github/workflows/06_main_manual_deploy_to_prod.yml
+    with:
+      pr_branch: ${{ needs.get_pr_branch.outputs.pr_branch }}
+      pr_repo: ${{ needs.get_pr_branch.outputs.pr_repo }}
+      pr_number: ${{ needs.get_pr_branch.outputs.pr_number }}
+      pr_sha: ${{ needs.get_pr_branch.outputs.pr_sha }}
+    secrets:
+      SFDX_PROD_URL: ${{ secrets.SFDX_PROD_URL }}
+      PROD_ORG_USERNAME: ${{ secrets.PROD_ORG_USERNAME }}
+      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
+      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
+  route-to-fork-qa:
+    needs: get_pr_branch
+    if: ${{ github.event.comment.body == '/deploy-to-QA' && github.event.repository.fork }}
+    uses: ./.github/workflows/02_fork_manual_deploy_to_org.yml
+    with:
+      pr_branch: ${{ needs.get_pr_branch.outputs.pr_branch }}
+      pr_repo: ${{ needs.get_pr_branch.outputs.pr_repo }}
+      pr_number: ${{ needs.get_pr_branch.outputs.pr_number }}
+      pr_sha: ${{ needs.get_pr_branch.outputs.pr_sha }}
+    secrets:
+      SFDX_QA_URL: ${{ secrets.SFDX_QA_URL }}
+      QA_ORG_USERNAME: ${{ secrets.QA_ORG_USERNAME }}
+      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
+      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}

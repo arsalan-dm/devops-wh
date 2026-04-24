@@ -1,0 +1,64 @@
+name: 'Validation deploy to organisation'
+description: 'Performs a check-only deployment to an organisation'
+inputs:
+  head_branch_name:
+    description: PR branch name
+    required: false
+    default: "HEAD"
+  diff_branch_name:
+    description: commit from where the diff is done
+    required: true
+  username:
+    description: 'The alias of the organisation to deploy to'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Create delta packages for new, modified or deleted metadata'
+      shell: bash
+      run: | 
+          mkdir changed-sources
+          sf sgd source delta -t "${{ inputs.head_branch_name}}" -f "${{ inputs.diff_branch_name }}" -o changed-sources/ -d -s force-app/ 
+
+    - name: 'Scan code'
+      shell: bash
+      run: |
+          cd changed-sources
+          sf code-analyzer run --workspace . --rule-selector Design --rule-selector "Best Practices" --rule-selector Performance --output-file apexScanResults.sarif
+          ls -lah
+          cd ..
+
+    - name: 'Ensure SARIF is non-empty'
+      shell: bash
+      run: |
+          if grep -q '"runs": \[\]' changed-sources/apexScanResults.sarif; then
+            echo '{
+              "version": "2.1.0",
+              "runs": [
+                {
+                  "tool": {
+                    "driver": {
+                      "name": "Salesforce Code Analyzer",
+                      "rules": [],
+                      "informationUri": "https://developer.salesforce.com/docs/atlas.en-us.apex.meta/apex_code_analyzer.htm",
+                      "semanticVersion": "latest"
+                    }
+                  },
+                  "results": []
+                }
+              ]
+            }' > changed-sources/apexScanResults.sarif
+            echo "No issues found in the code scan."
+          else
+            echo "Issues found in the code scan."
+          fi
+        
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: changed-sources/apexScanResults.sarif
+
+    - name: 'Check-only deploy delta changes - run all tests'
+      shell: bash
+      run: |
+          sf project deploy validate --source-dir "changed-sources/force-app" --test-level RunLocalTests  --json -o ${{ inputs.username }}
