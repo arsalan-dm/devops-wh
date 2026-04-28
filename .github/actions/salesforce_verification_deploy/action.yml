@@ -51,6 +51,7 @@ runs:
             echo "No issues found in the code scan."
           else
             echo "Issues found in the code scan."
+            sed -i 's|changed-sources/force-app|force-app|g' changed-sources/apexScanResults.sarif
           fi
         
     - name: Upload SARIF file
