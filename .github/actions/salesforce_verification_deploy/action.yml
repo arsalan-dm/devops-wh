@@ -50,23 +50,8 @@ runs:
             }' > changed-sources/apexScanResults.sarif
             echo "No issues found in the code scan."
           else
-            echo "Issues found in the code scan. Updating path in SARIF file."
-            
-            # DEBUG: Print the first 5 paths BEFORE we change them so we can see what they look like
-            echo "--- ORIGINAL PATHS ---"
-            grep -o '"uri": *"[^"]*"' changed-sources/apexScanResults.sarif | head -n 5
-            
-            # Fix: Use proper sed delimiters and escape special chars
-            # Strip absolute workspace path prefix (e.g., /home/runner/work/repo/repo/changed-sources/)
-            sed -i 's|"uri": "'"$GITHUB_WORKSPACE"'/changed-sources/|"uri": "|g' changed-sources/apexScanResults.sarif
-            # Strip file:// prefix if present
-            sed -i 's|"uri": "file://|"uri": "|g' changed-sources/apexScanResults.sarif
-            # Strip relative changed-sources/ prefix (but not the filename)
-            sed -i 's|"uri": "changed-sources/|"uri": "|g' changed-sources/apexScanResults.sarif
-            
-            # DEBUG: Print the first 5 paths AFTER we change them to verify the fix worked
-            echo "--- UPDATED PATHS ---"
-            grep -o '"uri": *"[^"]*"' changed-sources/apexScanResults.sarif | head -n 5
+            echo "Issues found in the code scan. 
+          
           fi
         
     - name: Upload SARIF file
