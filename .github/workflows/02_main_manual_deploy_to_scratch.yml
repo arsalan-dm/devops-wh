@@ -1,5 +1,5 @@
 name: MAIN-02 Manual SalesForce deployment to Scratch org
-on: workflow_dispatch
+on: workflow_call
   
 jobs: 
   deployment-on-scratch-org:

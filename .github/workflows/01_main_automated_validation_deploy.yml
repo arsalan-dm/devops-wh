@@ -122,8 +122,8 @@ jobs:
           username: ${{ secrets.CM_ORG_USERNAME }}
 
   # QA Org Validation (depends on CM)
-  validate-
- 
+  validate-qa:
+    needs: validate-cm
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
     steps:

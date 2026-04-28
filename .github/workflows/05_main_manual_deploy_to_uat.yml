@@ -1,5 +1,5 @@
 name: MAIN-05 Manual SalesForce deployment to UAT org
-on: workflow_dispatch
+on: workflow_call
   
 jobs: 
   check_previous_workflow_succeeded:
