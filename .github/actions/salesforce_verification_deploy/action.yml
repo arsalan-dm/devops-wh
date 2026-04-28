@@ -51,7 +51,21 @@ runs:
             echo "No issues found in the code scan."
           else
             echo "Issues found in the code scan. Updating path in SARIF file."
-            sed -i 's|changed-sources/force-app|force-app|g' changed-sources/apexScanResults.sarif
+            
+            # DEBUG: Print the first 5 paths BEFORE we change them so we can see what they look like
+            echo "--- ORIGINAL PATHS ---"
+            grep -o '"uri": *"[^"]*"' changed-sources/apexScanResults.sarif | head -n 5
+            
+            # 1. Strip absolute workspace paths
+            sed -i "s|$GITHUB_WORKSPACE/changed-sources/||g" changed-sources/apexScanResults.sarif
+            # 2. Strip file:// prefix if present
+            sed -i "s|file://||g" changed-sources/apexScanResults.sarif
+            # 3. Strip relative changed-sources/ just in case
+            sed -i "s|changed-sources/||g" changed-sources/apexScanResults.sarif
+            
+            # DEBUG: Print the first 5 paths AFTER we change them to verify the fix worked
+            echo "--- UPDATED PATHS ---"
+            grep -o '"uri": *"[^"]*"' changed-sources/apexScanResults.sarif | head -n 5
           fi
         
     - name: Upload SARIF file
