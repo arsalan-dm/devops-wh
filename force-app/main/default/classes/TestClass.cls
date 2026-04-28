@@ -3,7 +3,7 @@
  * Created on: 2026-04-28
  */
 public class TestClass {
-    public static void testMethod() {
+    static void testSomething() {
         System.debug('Test workflow test validation');
     }
 }
