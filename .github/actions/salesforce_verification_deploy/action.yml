@@ -56,12 +56,13 @@ runs:
             echo "--- ORIGINAL PATHS ---"
             grep -o '"uri": *"[^"]*"' changed-sources/apexScanResults.sarif | head -n 5
             
-            # 1. Strip absolute workspace paths
-            sed -i "s|$GITHUB_WORKSPACE/changed-sources/||g" changed-sources/apexScanResults.sarif
-            # 2. Strip file:// prefix if present
-            sed -i "s|file://||g" changed-sources/apexScanResults.sarif
-            # 3. Strip relative changed-sources/ just in case
-            sed -i "s|changed-sources/||g" changed-sources/apexScanResults.sarif
+            # Fix: Use proper sed delimiters and escape special chars
+            # Strip absolute workspace path prefix (e.g., /home/runner/work/repo/repo/changed-sources/)
+            sed -i 's|"uri": "'"$GITHUB_WORKSPACE"'/changed-sources/|"uri": "|g' changed-sources/apexScanResults.sarif
+            # Strip file:// prefix if present
+            sed -i 's|"uri": "file://|"uri": "|g' changed-sources/apexScanResults.sarif
+            # Strip relative changed-sources/ prefix (but not the filename)
+            sed -i 's|"uri": "changed-sources/|"uri": "|g' changed-sources/apexScanResults.sarif
             
             # DEBUG: Print the first 5 paths AFTER we change them to verify the fix worked
             echo "--- UPDATED PATHS ---"
