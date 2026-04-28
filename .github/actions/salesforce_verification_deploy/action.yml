@@ -19,6 +19,7 @@ runs:
       run: | 
           mkdir changed-sources
           sf sgd source delta -t "${{ inputs.head_branch_name}}" -f "${{ inputs.diff_branch_name }}" -o changed-sources/ -d -s force-app/ 
+          ls -lah changed-sources
 
     - name: 'Scan code'
       shell: bash
