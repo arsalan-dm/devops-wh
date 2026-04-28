@@ -58,6 +58,11 @@ runs:
       with:
         sarif_file: changed-sources/apexScanResults.sarif
 
+    - name: 'Verify Changes'
+      shell: bash
+      run: |
+          ls changed-sources/force-app
+
     - name: 'Check-only deploy delta changes - run all tests'
       shell: bash
       run: |
