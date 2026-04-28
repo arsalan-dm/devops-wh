@@ -4,6 +4,6 @@
  */
 public class TestClass {
     public static void testMethod() {
-        System.debug('Test workflow validation');
+        System.debug('Test workflow test validation');
     }
 }
