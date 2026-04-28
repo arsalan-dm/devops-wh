@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MM_Forward_look__c</fullName>
+    <inlineHelpText>Review planned delivery for the current month including confidence in meeting forecast KPI figures, check expected completion dates for scheduled critical path milestones and the submission of Batch and Phase Requests. Query any discrepancies identified, asking probing questions to determine associated causes and justifications.</inlineHelpText>
+    <label>Forward look</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

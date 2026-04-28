@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Disbursements__c</fullName>
+    <label>Total Disbursements</label>
+    <summarizedField>BudgetAllocation.Amount</summarizedField>
+    <summaryFilterItems>
+        <field>BudgetAllocation.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Disbursement</value>
+    </summaryFilterItems>
+    <summaryForeignKey>BudgetAllocation.BudgetId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

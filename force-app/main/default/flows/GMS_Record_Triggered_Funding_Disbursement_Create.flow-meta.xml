@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Sets the Funding Disbursements Date Dependent Defaults when the disbursement is created</description>
+    <environments>Default</environments>
+    <interviewLabel>GMS - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GMS - Record Triggered - Funding Disbursement Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Disbursement_with_defaults</name>
+        <label>Update Disbursement with defaults</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SetDisbursementDefaults</targetReference>
+        </connector>
+        <object>FundingDisbursement</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>SetDisbursementDefaults</name>
+        <label>Set Disbursement Defaults</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Disbursement_with_defaults</targetReference>
+        </connector>
+        <flowName>GMS_Set_Disbursement_Defaults</flowName>
+        <inputAssignments>
+            <name>varDisbursement</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>$Record</assignToReference>
+            <name>varDisbursement</name>
+        </outputAssignments>
+    </subflows>
+</Flow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Private_50_funded__c</fullName>
+    <label>Private 50% funded</label>
+    <summarizedField>FundingBatchProperty__c.Property_Count__c</summarizedField>
+    <summaryFilterItems>
+        <field>FundingBatchProperty__c.Tenure__c</field>
+        <operation>equals</operation>
+        <value>Private rented sector (50% funded)</value>
+    </summaryFilterItems>
+    <summaryForeignKey>FundingBatchProperty__c.Batch__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

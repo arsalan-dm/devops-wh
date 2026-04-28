@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Price_Limit__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Average price per measure across scheme</description>
+    <inlineHelpText>Measure price limits have been set for a small number of measures where the value for money of the measure type is particularly sensitive to the price of installation. GRs will be required to meet these measure price limits on average, at project level, by project closure. This means that they are permitted to install measures which are more expensive than the specified measure price limits in individual properties and batches, as long as they are within the limits on average by project closure</inlineHelpText>
+    <label>Measure Price Limit</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

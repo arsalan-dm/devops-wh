@@ -1,0 +1,144 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Monthly Forecasts",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"b6b87e51-c90c-4f50-b223-3074fca52f90\",\"columns\":[{\"UUID\":\"dc797734-eb3a-47d0-a5b0-ef89dead0c24\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "e58a0ea4-e54f-472a-adf4-cf67c7023782",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Monthly Forecasts",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "fa379d95-8238-4ade-a402-e003050a0bae",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "2d744d39-84f3-4acd-9a10-bf6295af347b",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"306bac45-4d0b-4388-a93d-cd4bcc595f95\",\"columns\":[{\"UUID\":\"6d5140cc-4e04-45da-ab7b-a85fc2469844\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"39dcb4d3-ffd6-4185-9943-b616fc2ea50d\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowName" : "{\"flowName\":\"DESNZ_Award_Forecast_Details\",\"flowLabel\":\"DESNZ - Award Forecast Details\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "b5d6c329-1710-4b35-ab57-77c3ad931a2b",
+                  "type" : "component"
+                } ],
+                "id" : "6d5140cc-4e04-45da-ab7b-a85fc2469844",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "1b46b8c1-2f40-4c6f-95e8-19f852bbe5f0",
+                  "type" : "component"
+                } ],
+                "id" : "39dcb4d3-ffd6-4185-9943-b616fc2ea50d",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "306bac45-4d0b-4388-a93d-cd4bcc595f95",
+              "type" : "component"
+            } ],
+            "id" : "dc797734-eb3a-47d0-a5b0-ef89dead0c24",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "b6b87e51-c90c-4f50-b223-3074fca52f90",
+          "type" : "component"
+        } ],
+        "id" : "0b1a5af0-6521-48f6-826a-de2be77b4b8c",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Monthly Forecasts",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "e13e412f-4035-439f-a1fb-870f83f554c1",
+          "type" : "component"
+        } ],
+        "id" : "4723afa6-100f-454b-bf94-18951682b8f6",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "a05e1382-3902-4c27-8cea-5752a5b87717",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-monthly-forecasts"
+  },
+  "urlName" : "monthly-forecasts"
+}

@@ -1,0 +1,5 @@
+{
+  "apiName" : "Create_Support_Case__c",
+  "type" : "sfdc_cms__route",
+  "path" : "routes"
+}

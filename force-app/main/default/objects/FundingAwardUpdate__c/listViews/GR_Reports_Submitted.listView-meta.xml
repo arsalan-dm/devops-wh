@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GR_Reports_Submitted</fullName>
+    <columns>Funding_Award__c</columns>
+    <columns>Date_of_Update__c</columns>
+    <columns>RAG_Status__c</columns>
+    <columns>Status__c</columns>
+    <columns>NAME</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Reporting_Period_Start__c</field>
+        <operation>equals</operation>
+        <value>LAST_MONTH</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </filters>
+    <label>GR Reports Submitted</label>
+</ListView>

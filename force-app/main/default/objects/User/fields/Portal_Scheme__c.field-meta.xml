@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Scheme__c</fullName>
+    <label>Portal Scheme</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>WHLG</fullName>
+                <default>false</default>
+                <label>WHLG</label>
+            </value>
+            <value>
+                <fullName>SHF3</fullName>
+                <default>false</default>
+                <label>SHF3</label>
+            </value>
+            <value>
+                <fullName>SHFCF</fullName>
+                <default>false</default>
+                <label>SHFCF</label>
+            </value>
+            <value>
+                <fullName>SHFSP</fullName>
+                <default>false</default>
+                <label>SHFSP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

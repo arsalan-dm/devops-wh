@@ -1,0 +1,5 @@
+{
+  "apiName" : "Create_Open_Report_Update",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

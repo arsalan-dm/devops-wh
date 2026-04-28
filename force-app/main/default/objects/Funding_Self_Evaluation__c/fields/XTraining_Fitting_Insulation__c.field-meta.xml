@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XTraining_Fitting_Insulation__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>How many Fitting insulation (e.g. EWI, IWI) training courses were attended by staff during Wave 3?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many Fitting insulation (e.g. EWI, IWI) training courses were attended by staff during Wave 3?</inlineHelpText>
+    <label>XTraining - Fitting Insulation</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

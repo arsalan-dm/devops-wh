@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevented_Actual_Estimate__c</fullName>
+    <inlineHelpText>Enter the value of fraud, error or non-compliance for the case, which can either be an actual or an estimate: 
+
+Actual – the value is known, e.g. amount disputing on the invoice 
+
+Estimate – where the amount is not known, and a credible estimate has been calculated, e.g. average cost of a measure.</inlineHelpText>
+    <label>Prevented Actual/Estimate</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Actual</fullName>
+                <default>false</default>
+                <label>Actual</label>
+            </value>
+            <value>
+                <fullName>Estimate</fullName>
+                <default>false</default>
+                <label>Estimate</label>
+            </value>
+            <value>
+                <fullName>Estimate (Used project average)</fullName>
+                <default>false</default>
+                <label>Estimate (Used project average)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

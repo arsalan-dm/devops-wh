@@ -1,0 +1,185 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Check Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"1b9b8f33-0979-49bc-ac6d-7453bce51ebb\",\"columns\":[{\"UUID\":\"a8ef2a2c-d997-4f27-a9e1-23c50a64431e\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"495b5605-128d-4917-bfa8-8ccd407892c2\",\"columns\":[{\"UUID\":\"de7acead-e7b7-4535-bdbb-6a70223e716d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"4\",\"seedComponents\":[]},{\"UUID\":\"55e211e1-4c27-4a38-b6ea-817e510a61a5\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"4\",\"seedComponents\":[]},{\"UUID\":\"c80dee71-c205-4c5c-8d1d-b7a04047b63d\",\"columnName\":\"Column 3\",\"columnKey\":\"860fa\",\"columnWidth\":\"4\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "id" : "de7acead-e7b7-4535-bdbb-6a70223e716d",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "borderColor" : "rgb(0, 52, 121)",
+                    "borderRadius" : 9,
+                    "borderWidth" : 2,
+                    "buttonDirection" : "horizontal",
+                    "buttonGroupAlignment" : "center",
+                    "buttonGroupHeight" : 45,
+                    "buttonGroupSpacingHorizontal" : "space-evenly",
+                    "buttonGroupSpacingVertical" : "space-evenly",
+                    "buttonGroupWidth" : 75,
+                    "height" : 325,
+                    "imageFit" : "contain",
+                    "imageHeight" : 25,
+                    "imageInfo" : "",
+                    "imagePosition" : "center center",
+                    "isLink" : false,
+                    "linkAssistiveText" : "",
+                    "showButtons" : false,
+                    "showSecondaryButton" : false,
+                    "singleButtonAlignment" : "center",
+                    "width" : 100
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : {
+                        "checkEmailMessage" : "Check the email account associated with your username for the link to reset your password. If you didn't get an email, check your Spam folder. Or contact your administrator.",
+                        "returnButtonLabel" : "Back to login",
+                        "titleLabel" : "Now check your email"
+                      },
+                      "definition" : "community_login:checkEmail",
+                      "id" : "ad86615d-113f-4d0a-9428-71a5d819f261",
+                      "type" : "component"
+                    } ],
+                    "id" : "06ed0fe3-b57c-4a4a-a327-fdef08420be6",
+                    "name" : "topContentRegion",
+                    "title" : "Content Region",
+                    "type" : "region"
+                  }, {
+                    "id" : "465df6b3-3ab5-42db-9020-3e1169eb6eec",
+                    "name" : "contentRegion",
+                    "title" : "Content Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Learn More",
+                        "type" : "primary"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "d027fa75-2a8f-4a47-82fb-6b44166e6a5b",
+                      "type" : "component"
+                    } ],
+                    "id" : "59c2d4d8-2370-49b9-9a48-01323806fdad",
+                    "name" : "tilePrimaryButton",
+                    "title" : "Primary Button Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Contact Us",
+                        "type" : "secondary"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "a701011d-515e-4c56-91c1-6679f92293f5",
+                      "type" : "component"
+                    } ],
+                    "id" : "1122c5e5-3716-4449-a21b-7fa381e5aa4c",
+                    "name" : "tileSecondaryButton",
+                    "title" : "Secondary Button Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : { },
+                      "definition" : "dxp_page_layout:placeHolder",
+                      "id" : "0278d0bc-95e1-42f0-a6b6-9b7c288b63cd",
+                      "type" : "component"
+                    } ],
+                    "id" : "c48f5c5c-aac8-42cd-b4e6-ec7277200d48",
+                    "name" : "placeholder",
+                    "title" : "placeholder",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_content_layout:tile2",
+                  "id" : "bf02bd31-5140-4d61-a362-d826e47b81fa",
+                  "type" : "component"
+                } ],
+                "id" : "55e211e1-4c27-4a38-b6ea-817e510a61a5",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              }, {
+                "id" : "c80dee71-c205-4c5c-8d1d-b7a04047b63d",
+                "name" : "860fa",
+                "title" : "Column 3",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "495b5605-128d-4917-bfa8-8ccd407892c2",
+              "type" : "component"
+            } ],
+            "id" : "a8ef2a2c-d997-4f27-a9e1-23c50a64431e",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "1b9b8f33-0979-49bc-ac6d-7453bce51ebb",
+          "type" : "component"
+        } ],
+        "id" : "9eba881d-a79a-490b-ac45-166017a7b6d7",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Check Password",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "41964dee-232f-44ac-8ac1-77fd07651334",
+          "type" : "component"
+        } ],
+        "id" : "0e52cc07-a450-4b20-8377-044b86dfe140",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "fe6d7b87-bbdc-4dcd-8ffb-1197a319475b",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "jGegvfZhILIbo9pWpLGiglBHFyjLqG",
+    "viewType" : "check-password"
+  },
+  "urlName" : "check-password"
+}

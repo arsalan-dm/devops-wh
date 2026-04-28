@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR50LCH_Matched_Total__c</fullName>
+    <inlineHelpText>Total landlord funding for low carbon heat cost cap for private rented (50% funded by landlord) homes within batch</inlineHelpText>
+    <label>Matched Total PR50LCH</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

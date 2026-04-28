@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_Newly_Recruited_Roles_if_any__c</fullName>
+    <defaultValue>&quot;Enter Text&quot;</defaultValue>
+    <description>What are the nature of newly recruited roles, if any?</description>
+    <inlineHelpText>What are the nature of newly recruited roles, if any?</inlineHelpText>
+    <label>Nature of Newly Recruited Roles, if any?</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

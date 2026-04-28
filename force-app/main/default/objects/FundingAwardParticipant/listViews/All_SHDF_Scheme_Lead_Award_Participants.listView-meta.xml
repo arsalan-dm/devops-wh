@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_SHDF_Scheme_Lead_Award_Participants</fullName>
+    <columns>Name</columns>
+    <columns>FundingAward</columns>
+    <columns>Participant</columns>
+    <columns>ParticipantRole</columns>
+    <columns>IsParticipantActive</columns>
+    <columns>Comments</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Participant_Role_Name__c</field>
+        <operation>equals</operation>
+        <value>Scheme Lead</value>
+    </filters>
+    <filters>
+        <field>FundingAward</field>
+        <operation>contains</operation>
+        <value>SHF3</value>
+    </filters>
+    <label>All SHDF Scheme Lead Award Participants</label>
+</ListView>

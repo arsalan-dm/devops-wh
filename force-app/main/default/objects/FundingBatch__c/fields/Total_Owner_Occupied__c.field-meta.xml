@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Owner_Occupied__c</fullName>
+    <label>Total Owner Occupied</label>
+    <summarizedField>FundingBatchProperty__c.Property_Count__c</summarizedField>
+    <summaryFilterItems>
+        <field>FundingBatchProperty__c.Tenure__c</field>
+        <operation>equals</operation>
+        <value>Owner occupied</value>
+    </summaryFilterItems>
+    <summaryForeignKey>FundingBatchProperty__c.Batch__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

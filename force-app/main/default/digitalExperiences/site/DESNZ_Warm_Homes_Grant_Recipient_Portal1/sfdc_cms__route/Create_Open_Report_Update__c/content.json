@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Create Open Report Update",
+  "contentBody" : {
+    "activeViewId" : "Create_Open_Report_Update",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-create-open-report-update",
+    "urlPrefix" : "open-report-update"
+  },
+  "urlName" : "create-open-report-update"
+}

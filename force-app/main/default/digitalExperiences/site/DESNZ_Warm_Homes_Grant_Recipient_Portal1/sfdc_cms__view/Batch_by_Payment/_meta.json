@@ -1,0 +1,5 @@
+{
+  "apiName" : "Batch_by_Payment",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

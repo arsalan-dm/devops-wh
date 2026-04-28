@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Scheme_Number__c</fullName>
+    <description>Autonumber to identify scheme eg FO-000001</description>
+    <displayFormat>FO-{000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Funding Scheme Number</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Change Control Requests Draft",
+  "contentBody" : {
+    "activeViewId" : "Change_Control_Requests_Draft",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-change-control-requests-draft",
+    "urlPrefix" : "change-control-requests-draft"
+  },
+  "urlName" : "change-control-requests-draft"
+}

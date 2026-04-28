@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Bulk Record Loader">
+        <div class="slds-p-around_small">
+            <lightning-textarea
+                label="Paste tab-delimited data from Excel"
+                placeholder="Paste here..."
+                rows="10">
+            </lightning-textarea>
+        </div>
+        <div class="slds-m-top_small">
+            <lightning-button
+                label={buttonLabel}
+                onclick={build}
+                variant="brand">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

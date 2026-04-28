@@ -1,0 +1,78 @@
+name: MAIN-03 Manual SalesForce deployment to CM org
+on: workflow_dispatch
+  
+jobs: 
+  check_previous_workflow_succeeded:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.repository.fork }}
+    steps:
+      - name: Get branch name
+        run: echo "BRANCH_NAME=${{ github.ref_name }}" >> $GITHUB_ENV
+      - name: Check prior workflow status
+        uses: actions/github-script@v7
+        env:
+          BRANCH_NAME: ${{ env.BRANCH_NAME }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const branchName = process.env.BRANCH_NAME;
+            const workflows = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: "02_main_manual_deploy_to_scratch.yml",
+              branch: branchName
+            });
+
+            if (!workflows.data.workflow_runs.length || workflows.data.workflow_runs[0].conclusion !== "success") {
+              core.setFailed("Previous workflow (Deployment to Scratch org) did not succeed. Manual trigger denied.");
+            }
+
+  deployment-on-cm-org:
+    needs: check_previous_workflow_succeeded
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to CM org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_CM_URL }}
+      - name: Get SHAs
+        id: shas
+        run: |
+          FROM_SHA=$(git rev-parse origin/main^{commit})
+          TO_SHA=$(git rev-parse origin/develop^{commit})
+          echo "from_sha=$FROM_SHA" >> $GITHUB_OUTPUT
+          echo "to_sha=$TO_SHA" >> $GITHUB_OUTPUT
+      - name: Perform a deployment to CM Org
+        uses: ./.github/actions/salesforce_deploy
+        with:
+          head_branch_name: ${{ steps.shas.outputs.to_sha }}
+          diff_branch_name: ${{ steps.shas.outputs.from_sha }}
+          username: ${{ secrets.CM_ORG_USERNAME }}
+
+  add-fls-to-org:
+    needs: deployment-on-cm-org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to CM org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_CM_URL }}
+      - name: Apply FLS
+        uses: ./.github/actions/salesforce_add_fls
+        with:
+          instance_url: ${{ secrets.INSTANCE_URL }}
+          username: ${{ secrets.CM_ORG_USERNAME }}
+          profile_names: ${{ secrets.PROFILE_NAMES }}

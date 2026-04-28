@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Risk Register",
+  "contentBody" : {
+    "activeViewId" : "Risk_Register",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-risk-register",
+    "urlPrefix" : "risk-register"
+  },
+  "urlName" : "risk-register"
+}

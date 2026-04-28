@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Justification_of_non_acknowledgement__c</fullName>
+    <inlineHelpText>Please include a justification of why you don&apos;t acknowledge this phase request will result in a change.</inlineHelpText>
+    <label>Justification of non acknowledgement</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,5 @@
+{
+  "apiName" : "Create_Change_Control_Request__c",
+  "type" : "sfdc_cms__route",
+  "path" : "routes"
+}

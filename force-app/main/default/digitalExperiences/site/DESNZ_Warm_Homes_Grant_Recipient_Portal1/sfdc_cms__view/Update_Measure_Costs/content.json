@@ -1,0 +1,196 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Manage Properties",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"13290e02-d52d-4091-866e-6225f2698fcb\",\"columns\":[{\"UUID\":\"78329d74-8231-4525-b781-83aaa1a877a1\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "5ae63008-3a21-423f-8ded-1a5801d98772",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Manage Properties",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "dfff2df3-a180-4d0e-9f77-b48147c5fc34",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "18e9b742-47ec-42c1-8190-b757299b940c",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "activeTabBorderHighlightWeight" : "2px",
+                "activeTabTextEmphasis" : "{\"bold\":true}",
+                "activeTabTextStyle" : "{\"textStyle\":\"paragraph1\",\"headingTag\":\"p\"}",
+                "borderColor" : "",
+                "borderRadius" : "0px",
+                "borderWeight" : "0px",
+                "enableOverflowMenu" : false,
+                "imageFit" : "cover",
+                "imagePosition" : "center center",
+                "overflowIconColor" : "rgb(116,116,116)",
+                "overflowIconStyle" : "down-arrow",
+                "overflowMenuLabel" : "More",
+                "tabAlignment" : "left",
+                "tabBorderColor" : "",
+                "tabBorderRadius" : "0px",
+                "tabBorderWeight" : "0px",
+                "tabHoverBorderHighlightWeight" : "1px",
+                "tabLayout" : "horizontal",
+                "tabPadding" : "12px",
+                "tabTextStyle" : "{\"textStyle\":\"paragraph1\",\"headingTag\":\"p\"}",
+                "tabsetConfig" : "{\"UUID\":\"654a23e6-f8d6-4987-b4ad-10738dafc40a\",\"activeTab\":null,\"useOverflowMenu\":null,\"tabs\":[{\"UUID\":\"a1f5a905-7912-4674-bcc2-c224bb0b6a26\",\"tabName\":\"Input Measure Costs (via Table)\",\"tabKey\":\"tab3\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"4316588a-7b2e-42f2-abf7-be99eed57f10\",\"tabName\":\"Input  Measure Costs (via Spreadsheet)\",\"tabKey\":\"15bd6\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"cba2099c-58c8-4630-a737-c4fc68f1467c\",\"tabName\":\"Update Additional Capital Expenditure\",\"tabKey\":\"c901a\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"d3d9ac01-5b71-4521-bf66-4d87b6b72b63\",\"tabName\":\"Remove Properties and Measures\",\"tabKey\":\"a5cc9\",\"locked\":false,\"allowGuestUser\":false}]}",
+                "width" : "100%"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowArguments" : "[{\"label\":\"var_Bulk_Input_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Bulk_Input_Type\",\"type\":\"String\",\"value\":\"Table\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Bulk_Property_Cost_Input\",\"flowLabel\":\"GMS - Bulk Property Cost Input\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "40af7ff9-531f-47d0-abad-4f17c2b54707",
+                  "type" : "component"
+                } ],
+                "id" : "a1f5a905-7912-4674-bcc2-c224bb0b6a26",
+                "name" : "tab3",
+                "title" : "Input Measure Costs (via Table)",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Bulk_Property_Cost_Input\",\"flowLabel\":\"GMS - Bulk Property Cost Input\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "41a311bd-7eca-4b31-8a7d-eb82e04adcbe",
+                  "type" : "component"
+                } ],
+                "id" : "4316588a-7b2e-42f2-abf7-be99eed57f10",
+                "name" : "15bd6",
+                "title" : "Input  Measure Costs (via Spreadsheet)",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"var_Measure_Type_Input\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Measure_Type_Input\",\"type\":\"String\",\"value\":\"ADC\"}]",
+                    "flowName" : "{\"flowName\":\"DESNZ_Measure_Cost_Input\",\"flowLabel\":\"DESNZ - Measure Cost Input\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "0471747d-e534-4111-a03b-2f97fb8cedda",
+                  "type" : "component"
+                } ],
+                "id" : "cba2099c-58c8-4630-a737-c4fc68f1467c",
+                "name" : "c901a",
+                "title" : "Update Additional Capital Expenditure",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowArguments" : "[{\"label\":\"var_Bulk_Input_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Bulk_Input_Type\",\"type\":\"String\",\"value\":\"Table\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Bulk_Property_Removal\",\"flowLabel\":\"GMS - Bulk Property Removal\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "ed7b19d1-7cb4-4c71-9afd-71b69970d122",
+                  "type" : "component"
+                } ],
+                "id" : "d3d9ac01-5b71-4521-bf66-4d87b6b72b63",
+                "name" : "a5cc9",
+                "title" : "Remove Properties and Measures",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:tabs",
+              "id" : "654a23e6-f8d6-4987-b4ad-10738dafc40a",
+              "type" : "component"
+            } ],
+            "id" : "78329d74-8231-4525-b781-83aaa1a877a1",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "13290e02-d52d-4091-866e-6225f2698fcb",
+          "type" : "component"
+        } ],
+        "id" : "bbe2d76d-1648-40a7-9b09-a71baea4ffcb",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Manage Properties",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "8d618294-87ea-42ae-be15-fb58e3f290d0",
+          "type" : "component"
+        } ],
+        "id" : "62d6d31b-2825-4012-ab8f-9a8846281869",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "ba40b2d7-2229-448c-950c-5b4321106562",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-update-measure-costs"
+  },
+  "urlName" : "update-measure-costs"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Awards_with_Red_Project_Status</fullName>
+    <columns>RecordType</columns>
+    <columns>Name</columns>
+    <columns>Project_RAG_Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Project_RAG__c</field>
+        <operation>equals</operation>
+        <value>Red</value>
+    </filters>
+    <label>Funding Awards with Red Project Status</label>
+</ListView>

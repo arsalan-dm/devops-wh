@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Monthly Actuals",
+  "contentBody" : {
+    "activeViewId" : "Monthly_Actuals",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-monthly-actuals",
+    "urlPrefix" : "monthly-actuals"
+  },
+  "urlName" : "monthly-actuals"
+}

@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Change Control Requests Awaiting Changes",
+  "contentBody" : {
+    "activeViewId" : "Change_Control_Requests_Awaiting_Changes",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-change-control-requests-awaiting-changes",
+    "urlPrefix" : "change-control-requests-awaiting-changes"
+  },
+  "urlName" : "change-control-requests-awaiting-changes"
+}

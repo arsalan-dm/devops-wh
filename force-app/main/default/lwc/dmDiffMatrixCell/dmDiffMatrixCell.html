@@ -1,0 +1,29 @@
+<template>
+    <div class={cellClasses}>
+        <div lwc:if={readOnly}>
+            <div class="input-cell"><b>{readOnlyValue}</b></div>
+        </div>
+        <div lwc:else>
+            <div class="cell-updated slds-var-p-vertical_small">
+                <div lwc:if={differenceColumn} class="difference-info">
+                    <b>Sum of inputs: {updatedValue}</b>
+                </div>
+                <div lwc:else class="input-cell">
+                    <lightning-input 
+                        type="number" 
+                        value={inputValue} 
+                        onchange={handleChange}
+                        disabled={disabled}
+                        step="any">
+                    </lightning-input>
+                </div>
+            </div>
+            <div class="cell-initial info">
+               {initialValue}
+            </div>
+            <div class="cell-difference info slds-grow">
+                {difference}
+            </div>
+        </div>
+    </div>
+</template>

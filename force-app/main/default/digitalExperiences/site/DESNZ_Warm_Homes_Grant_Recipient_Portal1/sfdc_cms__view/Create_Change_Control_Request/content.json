@@ -1,0 +1,137 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Create Change Control Request",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"f41623bc-0771-4218-8db4-b3a9d3c2b192\",\"columns\":[{\"UUID\":\"92dfa257-96c6-43fa-9e0f-55aee03ebfa4\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "53372158-b226-477a-8038-732522bd4258",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Create Change Control Request",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "5705cdfa-936e-454d-9824-20ee1fc9f177",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "f84ba9bc-2ebf-4376-a28f-158e35a52034",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"bf3d5509-4b1a-4ce3-9f4f-08a7f361fe24\",\"columns\":[{\"UUID\":\"e07f8549-f4cf-427b-ae3e-9040fd3cf0cf\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"9087a96c-152f-4a46-aabe-e681494f57a3\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[]",
+                    "flowName" : "{\"flowName\":\"GMS_Change_Control_Request_Form\",\"flowLabel\":\"GMS - Change Control Request Form\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "1e949f86-813f-4755-bed2-7270d086827c",
+                  "type" : "component"
+                } ],
+                "id" : "e07f8549-f4cf-427b-ae3e-9040fd3cf0cf",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "fdd68b65-9db0-49c0-b132-bf804cdade42",
+                  "type" : "component"
+                } ],
+                "id" : "9087a96c-152f-4a46-aabe-e681494f57a3",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "bf3d5509-4b1a-4ce3-9f4f-08a7f361fe24",
+              "type" : "component"
+            } ],
+            "id" : "92dfa257-96c6-43fa-9e0f-55aee03ebfa4",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f41623bc-0771-4218-8db4-b3a9d3c2b192",
+          "type" : "component"
+        } ],
+        "id" : "f8008b21-eebf-4dc9-bc5e-3a1079da93d9",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Create Change Control Request",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "e6b24f33-0d55-47cc-bd65-2c9852494577",
+          "type" : "component"
+        } ],
+        "id" : "fc721b85-0220-47cc-ab07-ee41eaeb1bf8",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "a69f7823-eceb-4203-901f-f26dcb282181",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-create-change-control-request"
+  },
+  "urlName" : "create-change-control-request"
+}

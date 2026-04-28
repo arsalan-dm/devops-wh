@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Activity_Outcome__c</fullName>
+    <businessStatus>DeprecateCandidate</businessStatus>
+    <label>X Final Activity Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FENC Found – Investigation Required</fullName>
+                <default>false</default>
+                <label>FENC Found – Investigation Required</label>
+            </value>
+            <value>
+                <fullName>FENC suspected - further scrutiny required</fullName>
+                <default>false</default>
+                <label>FENC suspected - further scrutiny required</label>
+            </value>
+            <value>
+                <fullName>FENC identified - remedial action required</fullName>
+                <default>false</default>
+                <label>FENC identified - remedial action required</label>
+            </value>
+            <value>
+                <fullName>FENC identified: major issues - escalate for Investigation</fullName>
+                <default>false</default>
+                <label>FENC identified: major issues - escalate for Investigation</label>
+            </value>
+            <value>
+                <fullName>FENC identified: immediate threat - escalate to DESNZ</fullName>
+                <default>false</default>
+                <label>FENC identified: immediate threat - escalate to DESNZ</label>
+            </value>
+            <value>
+                <fullName>Inconclusive – Investigation Recommended</fullName>
+                <default>false</default>
+                <label>Inconclusive – Investigation Recommended</label>
+            </value>
+            <value>
+                <fullName>Inconclusive - further scrutiny required</fullName>
+                <default>false</default>
+                <label>Inconclusive - further scrutiny required</label>
+            </value>
+            <value>
+                <fullName>No FENC Found</fullName>
+                <default>false</default>
+                <label>No FENC Found</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,5 @@
+{
+  "apiName" : "Monthly_Actuals__c",
+  "type" : "sfdc_cms__route",
+  "path" : "routes"
+}

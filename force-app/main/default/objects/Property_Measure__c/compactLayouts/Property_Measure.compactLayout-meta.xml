@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Measure</fullName>
+    <fields>Measure_Type__c</fields>
+    <fields>Total_Cost_of_Single_Measure_Installatio__c</fields>
+    <fields>Date_of_Starting_Installation__c</fields>
+    <fields>Date_of_Completing_Installation__c</fields>
+    <label>Property Measure</label>
+</CompactLayout>

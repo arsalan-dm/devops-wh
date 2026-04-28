@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This event is fired when a picker option is selected on a screen</description>
+    <isExposed>false</isExposed>
+    <lightningMessageFields>
+        <description>This is the position on the repeater</description>
+        <fieldName>repeaterId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Specifies the specific picker that the value should be attributed</description>
+        <fieldName>pickerId</fieldName>
+    </lightningMessageFields>
+    <masterLabel>Options Picker</masterLabel>
+</LightningMessageChannel>

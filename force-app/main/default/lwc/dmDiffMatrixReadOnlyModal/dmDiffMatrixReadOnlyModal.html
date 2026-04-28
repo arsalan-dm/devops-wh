@@ -1,0 +1,21 @@
+<template>
+    <lightning-modal-header label="Variance Display Table">
+    </lightning-modal-header>
+    <lightning-modal-body> 
+        <c-dm-diff-matrix-read-only
+            title={title}
+            records={records}
+            initial-records={initialRecords}
+            fields={fields}
+            total-record-id={totalRecordId}
+            record-names={recordNames}
+            sobject-type={sobjectType}
+            difference={difference}
+            use-total-for-differences={useTotalForDifferences}
+            orientation={orientation}
+            start-expanded={startExpanded}>
+        </c-dm-diff-matrix-read-only>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+    </lightning-modal-footer>
+</template>

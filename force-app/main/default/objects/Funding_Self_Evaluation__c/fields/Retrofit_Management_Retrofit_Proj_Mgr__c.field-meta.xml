@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retrofit_Management_Retrofit_Proj_Mgr__c</fullName>
+    <description>Indicates the primary delivery model/structure the organisation adopts for the retrofit management - retrofit project manager role from the drop-down list.</description>
+    <inlineHelpText>Indicates the primary delivery model/structure the organisation adopts for the retrofit management - retrofit project manager role from the drop-down list.</inlineHelpText>
+    <label>Retrofit Management - Retrofit Proj Mgr</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Delivered internally</fullName>
+                <default>false</default>
+                <label>Delivered internally</label>
+            </value>
+            <value>
+                <fullName>Directly contracted</fullName>
+                <default>false</default>
+                <label>Directly contracted</label>
+            </value>
+            <value>
+                <fullName>Subcontracted</fullName>
+                <default>false</default>
+                <label>Subcontracted</label>
+            </value>
+            <value>
+                <fullName>Not used on this project</fullName>
+                <default>false</default>
+                <label>Not used on this project</label>
+            </value>
+            <value>
+                <fullName>My consortium lead / consortium partner manages this role</fullName>
+                <default>false</default>
+                <label>My consortium partner manages this role</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Don&apos;t know</fullName>
+                <default>false</default>
+                <label>Don&apos;t know</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

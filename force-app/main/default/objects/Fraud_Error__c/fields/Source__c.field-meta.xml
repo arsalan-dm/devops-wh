@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <description>How was the suspected fraud, error or non-compliance identified</description>
+    <inlineHelpText>How was the suspected fraud, error or non-compliance identified</inlineHelpText>
+    <label>Source</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allegation Received From Public</fullName>
+                <default>false</default>
+                <label>Allegation Received From Public</label>
+            </value>
+            <value>
+                <fullName>Due-Diligent Checks Installer</fullName>
+                <default>false</default>
+                <label>Due-Diligent Checks Installer</label>
+            </value>
+            <value>
+                <fullName>Due-Diligent Checks Landlord</fullName>
+                <default>false</default>
+                <label>Due-Diligent Checks Landlord</label>
+            </value>
+            <value>
+                <fullName>Eligibility Criteria/Rules Checking</fullName>
+                <default>false</default>
+                <label>Eligibility Criteria/Rules Checking</label>
+            </value>
+            <value>
+                <fullName>Energy Efficiency Installation Checker</fullName>
+                <default>false</default>
+                <label>Energy Efficiency Installation Checker</label>
+            </value>
+            <value>
+                <fullName>Intel Received From Other Organisation (e.g., Delivery Partner, DESNZ)</fullName>
+                <default>false</default>
+                <label>Intel Received From Other Organisation (e.g., Delivery Partner, DESNZ)</label>
+            </value>
+            <value>
+                <fullName>Internal Quality Assuring Checks</fullName>
+                <default>false</default>
+                <label>Internal Quality Assuring Checks</label>
+            </value>
+            <value>
+                <fullName>Invoice Checking</fullName>
+                <default>false</default>
+                <label>Invoice Checking</label>
+            </value>
+            <value>
+                <fullName>Occupier Eligibility Checking (e.g., Income, Benefit Receipt, Identity, etc.)</fullName>
+                <default>false</default>
+                <label>Occupier Eligibility Checking (e.g., Income, Benefit Receipt, Identity, etc.)</label>
+            </value>
+            <value>
+                <fullName>Property Eligibility Check – EPC Data</fullName>
+                <default>false</default>
+                <label>Property Eligibility Check – EPC Data</label>
+            </value>
+            <value>
+                <fullName>Reconciliation Checks: Invoices</fullName>
+                <default>false</default>
+                <label>Reconciliation Checks: Invoices</label>
+            </value>
+            <value>
+                <fullName>Reconciliation Checks: Measures</fullName>
+                <default>false</default>
+                <label>Reconciliation Checks: Measures</label>
+            </value>
+            <value>
+                <fullName>Routine/Site Audit</fullName>
+                <default>false</default>
+                <label>Routine/Site Audit</label>
+            </value>
+            <value>
+                <fullName>TrustMark: Checking Installation of Measures Meet Requirement</fullName>
+                <default>false</default>
+                <label>TrustMark: Checking Installation of Measures Meet Requirement</label>
+            </value>
+            <value>
+                <fullName>TrustMark: Checking Installer Accredited</fullName>
+                <default>false</default>
+                <label>TrustMark: Checking Installer Accredited</label>
+            </value>
+            <value>
+                <fullName>Whistleblower</fullName>
+                <default>false</default>
+                <label>Whistleblower</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Nil_Risk_Return_Declaration</fullName>
+    <columns>NAME</columns>
+    <columns>Date_of_Update__c</columns>
+    <columns>Status__c</columns>
+    <columns>Funding_Award__c</columns>
+    <columns>Month__c</columns>
+    <columns>RAG_Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Nil_Return_Declaration__c</columns>
+    <columns>Reason_for_Nil_Return__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Nil_Risk_Declaration__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Nil Risk Return Declaration</label>
+</ListView>

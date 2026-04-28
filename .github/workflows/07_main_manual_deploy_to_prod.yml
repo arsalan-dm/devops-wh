@@ -1,0 +1,223 @@
+name: MAIN-07 Manual SalesForce deployment to PROD org
+on: 
+  workflow_call:
+    inputs:
+      pr_branch:
+        required: true
+        type: string
+      pr_repo:
+        required: true
+        type: string
+      pr_number:
+        required: true
+        type: string
+      pr_sha:
+        required: true
+        type: string
+    secrets:
+      SFDX_PROD_URL:
+        required: true
+      PROD_ORG_USERNAME:
+        required: true
+      INSTANCE_URL:
+        required: true
+      PROFILE_NAMES:
+        required: true
+
+permissions:
+  contents: write # for checkout
+  pull-requests: write # for commenting
+  issues: write # for commenting
+  actions: write # for upload of code scanning results
+  
+jobs: 
+  check_previous_workflow_succeeded:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check prior workflow status
+        uses: actions/github-script@v7
+        env:
+          BRANCH_NAME: ${{ inputs.pr_branch }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const branchName = process.env.BRANCH_NAME;
+            const comments = await github.rest.issues.listComments({
+              owner: owner,
+              repo: repo,
+              issue_number: process.env.PR_NUMBER
+            });
+
+            const successComment = comments.data.find(comment => comment.body.includes("Deployment to Regression succeeded!"));
+
+            if (!branchName.startsWith("release/") && !branchName.startsWith("hotfix/")) {
+              core.setFailed("Pipeline should only be run from a release candidate branch (release/[date]) or hotfix branch (hotfix/[...])")
+            }
+
+            if (!successComment) {
+              core.setFailed("Previous workflow did not succeed (deployment to Regression). Manual trigger denied.");
+            }
+  
+  add-pending-comment:
+    runs-on: ubuntu-latest
+    needs: check_previous_workflow_succeeded
+    if: success()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ⏳ Deploying to PROD org...
+              `
+            });
+
+  deployment-on-prod-org:
+    needs: check_previous_workflow_succeeded
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to PROD org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_PROD_URL }}
+      - name: Get SHAs
+        id: shas
+        run: |
+          FROM_SHA=$(git rev-parse origin/main^{commit})
+          echo "from_sha=$FROM_SHA" >> $GITHUB_OUTPUT
+      - name: Perform a deployment to PROD Org
+        uses: ./.github/actions/salesforce_deploy
+        with:
+          head_branch_name: ${{ inputs.pr_sha }}
+          diff_branch_name: ${{ steps.shas.outputs.from_sha }}
+          username: ${{ secrets.PROD_ORG_USERNAME }}
+
+  add-label:
+    needs: deployment-on-prod-org
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add label
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: prNumber,
+              labels: ['ready-to-merge']
+            });
+
+            await github.rest.issues.removeLabel({
+              owner,
+              repo,
+              issue_number: prNumber,
+              name: 'do-not-merge'
+            });
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.pr_branch }}
+          repository: ${{ inputs.pr_repo }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0     
+      - name: check-label
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout ${{ inputs.pr_branch }}
+          git commit --allow-empty -m "Trigger PR synchronise [Dummy]"
+          git push
+
+  comment-success:
+    runs-on: ubuntu-latest
+    needs: deployment-on-prod-org
+    if: success()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ✅ Deployment to PROD succeeded!
+              `
+            });
+
+  comment-failure:
+    runs-on: ubuntu-latest
+    needs: deployment-on-prod-org
+    if: failure()
+    steps:
+      - name: Add comment to PR
+        uses: actions/github-script@v7
+        env:
+          pr_number: ${{ inputs.pr_number }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = process.env.pr_number;
+            const { owner, repo } = context.repo;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: `
+              ❌ Deployment to PROD failed.
+              `
+            });
+
+  add-fls-to-org:
+    needs: deployment-on-prod-org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up the environment
+        uses: ./.github/actions/salesforce_runner_env
+      - name: Auth to PROD org
+        uses: ./.github/actions/salesforce_authorisation
+        with:
+          organisation_url: ${{ secrets.SFDX_PROD_URL }}
+      - name: Apply FLS
+        uses: ./.github/actions/salesforce_add_fls
+        with:
+          instance_url: ${{ secrets.INSTANCE_URL }}
+          username: ${{ secrets.PROD_ORG_USERNAME }}
+          profile_names: ${{ secrets.PROFILE_NAMES }}

@@ -1,0 +1,5 @@
+{
+  "apiName" : "Batch_Summary",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

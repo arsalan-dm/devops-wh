@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trustmark_UMR__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>TM Reference number (UMR- unique measure reference)</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Unique Measure Reference</inlineHelpText>
+    <label>Trustmark UMR</label>
+    <length>20</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

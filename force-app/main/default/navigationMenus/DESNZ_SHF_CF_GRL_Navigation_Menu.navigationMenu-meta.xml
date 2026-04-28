@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>DESNZ Warm Homes Grant Recipient Portal</container>
+    <containerType>Network</containerType>
+    <label>DESNZ SHF CF GRL Navigation Menu</label>
+    <navigationMenuItem>
+        <label>Home</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Performance Management</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Performance</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/performance</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Create Monthly Update</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/award-update-form</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>View Monthly Updates</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/monthly-updates</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Project Summary</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/project-summary</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Phase Requests</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Submit Phase Request</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/submit-phase-request</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>View/Amend Phase Request</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/amend-phase-request</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Finance</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Payments</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/payments</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Submit Drawdown Request</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/submit-grant-drawdown-request</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Approved Drawdown Requests</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/approved-grant-drawdown-requests</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Submitted Drawdown Requests</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/submitted-grant-drawdown-requests</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Rejected Drawdown Requests</label>
+                <position>4</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/rejected-grant-drawdown-requests</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Transactions</label>
+                <position>5</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/transactions</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Transaction Reports</label>
+                <position>6</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/reconciliations</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Baselines</label>
+        <position>5</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/baselines</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Fraud &amp; Risks</label>
+        <position>6</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Fraud and Error</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/fraud-and-error</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Risk Register</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/risk-register</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Properties &amp; Measures</label>
+        <position>7</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Property &amp; Measure Details</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/properties-and-measures</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Address Lookup</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/address-lookup</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Retrieve Trustmark Data</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/retrieve-trustmark-data</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Manage Properties</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/manage-properties</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Manage Installers</label>
+                <position>4</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/manage-installers</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Change Control</label>
+        <position>8</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Create</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/create-change-control-request</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Draft</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/change-control-requests-draft</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Submitted</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/change-control-requests</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Approved</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/change-control-requests-approved</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Rejected</label>
+                <position>4</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/change-control-requests-rejected</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Support</label>
+        <position>9</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/support</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Logout</label>
+        <position>10</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>https://desnz-gm.my.site.com/warmhomesportal/secur/logout.jsp</target>
+        <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+        <type>ExternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

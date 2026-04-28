@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>FundingBaseline__c.Total_Homes_to_be_Upgraded__c:SUM-FundingAwardForecast__c.No_of_Homes_Completed__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Forecast Total homes to be upgraded from FY basline minus total homes completed forecast</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Forecast Difference Total Homes</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>FundingAwardForecast__c.No_of_Homes_Completed__c:SUM/FundingBaseline__c.Total_Homes_to_be_Upgraded__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% to be Treated</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingAward.Funding_Baselines__r$Total_Homes_to_be_Upgraded__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingAward.Funding_Baselines__r.Forecasts__r$No_of_Homes_Completed__c</field>
+    </columns>
+    <columns>
+        <field>FundingAward$Awardee</field>
+    </columns>
+    <description>Monitor % and number of forecasted homes treated per Financial year as a proportion of total estimated</description>
+    <filter>
+        <criteriaItems>
+            <column>FundingAward$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>FundingAward.Local_Grant</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FundingAward.Funding_Baselines__r$Baseline_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Financial Year</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FundingAward.Funding_Baselines__r$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingAward$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingAward.Funding_Baselines__r$Baseline_Version__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>FundingAward.Funding_Baselines__r.Forecasts__r$Forecast_Start_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Forecast homes treated</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Funding_Awards_with_Baselines_and_with_or_without_Funding_Award_Forecasts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FundingAward$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

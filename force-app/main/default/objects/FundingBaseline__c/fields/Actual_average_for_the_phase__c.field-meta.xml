@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_average_for_the_phase__c</fullName>
+    <formula>Baseline_Grant_Capital_Spend__c - ( No_of_Homes_for_On_Gas_grid_LCH_Offer__c * 20000) / ( Total_Homes_to_be_Upgraded__c - No_of_Homes_for_On_Gas_grid_LCH_Offer__c)</formula>
+    <label>Actual average for the phase</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

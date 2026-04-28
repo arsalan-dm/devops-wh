@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Retrieve Trustmark Data",
+  "contentBody" : {
+    "activeViewId" : "Retrieve_Trustmark_Data",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-retrieve-trustmark-data",
+    "urlPrefix" : "retrieve-trustmark-data"
+  },
+  "urlName" : "retrieve-trustmark-data"
+}

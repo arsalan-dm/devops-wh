@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DESNZ_Approved</fullName>
+    <columns>NAME</columns>
+    <columns>Measure_Type_Description__c</columns>
+    <columns>Cost_Cap_Category__c</columns>
+    <columns>Average_Price_Limit__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Origin_Type__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PropertyMeasureType__c.Energy_Efficiency</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>DESNZ Approved</value>
+    </filters>
+    <label>DESNZ Approved</label>
+</ListView>

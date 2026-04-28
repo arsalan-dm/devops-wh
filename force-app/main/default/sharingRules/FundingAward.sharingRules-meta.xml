@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Desnz_Delivery_Official_LG</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Desnz Delivery Official LG</label>
+        <sharedTo>
+            <role>Warm_Homes_LG_Lead</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Warm_Homes_Lead_Senior_Responsible_Owner</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Desnz_Delivery_Official_SHF</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Desnz Delivery Official SHF</label>
+        <sharedTo>
+            <role>Warm_Homes_SHF_Lead</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Warm_Homes_Lead_Senior_Responsible_Owner</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Desnz_Delivery_Partner_PPDO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Desnz Delivery Partner PPDO</label>
+        <sharedTo>
+            <role>Warm_Homes_Delivery_Partner_PSO</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Warm_Homes_Lead_Senior_Responsible_Owner</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

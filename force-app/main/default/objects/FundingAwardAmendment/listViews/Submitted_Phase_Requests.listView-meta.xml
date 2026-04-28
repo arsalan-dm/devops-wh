@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submitted_Phase_Requests</fullName>
+    <columns>Name</columns>
+    <columns>RecordType</columns>
+    <columns>FundingAward</columns>
+    <columns>Phase_Baseline__c</columns>
+    <columns>Status</columns>
+    <columns>CreatedBy</columns>
+    <columns>CreatedDate</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecordType</field>
+        <operation>equals</operation>
+        <value>FundingAwardAmendment.Phase_Request</value>
+    </filters>
+    <filters>
+        <field>Status</field>
+        <operation>equals</operation>
+        <value>In Draft</value>
+    </filters>
+    <label>Submitted Phase Requests</label>
+</ListView>

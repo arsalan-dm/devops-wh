@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Required permission set group to enable the DESNZ Counter Fraud Team Users to be able to access all required PSS Assignments</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>DESNZ Counter Fraud Team PSS Group</label>
+    <permissionSets>Chat_User_Internal</permissionSets>
+    <permissionSets>Compliant_Data_Sharing_Users</permissionSets>
+    <permissionSets>DESNZ_Counter_Fraud_Team_Custom_Objects</permissionSets>
+    <permissionSets>DESNZ_Counter_Fraud_Team_Grantmaking</permissionSets>
+    <permissionSets>force__CompliantDataSharingUser</permissionSets>
+    <permissionSets>force__ServiceUserPsl</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

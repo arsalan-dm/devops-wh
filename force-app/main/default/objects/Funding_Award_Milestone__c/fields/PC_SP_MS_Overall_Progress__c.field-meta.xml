@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PC_SP_MS_Overall_Progress__c</fullName>
+    <formula>(PC_Energy_Savings_kWh__c +
+ PC_No_of_homes_to_EPC_C__c +
+ PC_SP_Baseline_Grant_Spend__c +
+ PC_Total_homes_to_be_upgraded__c)/4</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% SP MS Overall Progress</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_to_install_measure__c</fullName>
+    <inlineHelpText>The figures entered into the &apos;Cost to install measure&apos; column should be best estimate averages, and the costs listed for this question are for information only, rather than forming part of the detailed baseline for this phase of the project.</inlineHelpText>
+    <label>Cost to install measure</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Energy_Efficiency</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Property_Measure</compactLayoutAssignment>
+    <label>Energy Efficiency</label>
+    <picklistValues>
+        <picklist>Measure_Type__c</picklist>
+        <values>
+            <fullName>Additional Capital Expenditure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air Source Heat Pump</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draughtproofing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Wall Insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ground Source Heat Pump</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loft insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary Glazing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar PV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar Thermal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage heaters*%28TBC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underfloor insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ventilation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wet Central Heating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Abandoned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assessed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TM_Pre_Installation_Heating_Fuel_Source__c</picklist>
+        <values>
+            <fullName>Boiler and radiators%2C mains gas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TM_Tenure_Type__c</picklist>
+        <values>
+            <fullName>Owner Occupied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

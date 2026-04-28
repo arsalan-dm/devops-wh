@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Social_Homes__c</fullName>
+    <label>Social Homes</label>
+    <summarizedField>FundingBatchProperty__c.Property_Count__c</summarizedField>
+    <summaryFilterItems>
+        <field>FundingBatchProperty__c.Tenure__c</field>
+        <operation>equals</operation>
+        <value>Social housing (50% funded)</value>
+    </summaryFilterItems>
+    <summaryForeignKey>FundingBatchProperty__c.Batch__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,128 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Transaction Evidence",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"e1b5b166-82fb-4880-b713-c1e715baf5a2\",\"columns\":[{\"UUID\":\"3617aef3-4565-45cc-80a2-ae72665008c4\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Transaction Evidence",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "b6ffb94d-c5ab-4677-83fe-ae0dd443acfe",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "a40d6cfd-c1c0-4f54-a989-9fa8fc176e3b",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"49018a8c-8010-4865-aa6d-959375b72683\",\"columns\":[{\"UUID\":\"7734fdbd-9481-47ba-b6e6-ecae831d6fae\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"f862ea22-9b8d-47e8-8251-086fa9edeb18\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Select_Transactions_to_Upload_Evidence\",\"flowLabel\":\"GMS - Select Transactions to Upload Evidence\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "53163610-30e8-44c3-995d-83ef3ff0d4a9",
+                  "type" : "component"
+                } ],
+                "id" : "7734fdbd-9481-47ba-b6e6-ecae831d6fae",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "d216efc4-e3d1-445e-b6a1-898a29c08c4f",
+                  "type" : "component"
+                } ],
+                "id" : "f862ea22-9b8d-47e8-8251-086fa9edeb18",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "49018a8c-8010-4865-aa6d-959375b72683",
+              "type" : "component"
+            } ],
+            "id" : "3617aef3-4565-45cc-80a2-ae72665008c4",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "e1b5b166-82fb-4880-b713-c1e715baf5a2",
+          "type" : "component"
+        } ],
+        "id" : "74dace89-d631-4131-a773-ec70fd2f30da",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Transaction Evidence",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "3f2b32bd-e9f8-4b8e-9435-4e1a688571c6",
+          "type" : "component"
+        } ],
+        "id" : "ec1f65fa-de76-48b2-aba2-1c27d51155f3",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "8b87072d-6bc5-49de-9a4a-178b098027fa",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-transaction-evidence"
+  },
+  "urlName" : "transaction-evidence"
+}

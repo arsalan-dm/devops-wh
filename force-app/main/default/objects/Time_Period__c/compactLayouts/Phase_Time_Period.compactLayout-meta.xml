@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phase_Time_Period</fullName>
+    <fields>Record_Type_Name__c</fields>
+    <fields>Time_Period_Reference__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Start_Date__c</fields>
+    <label>Phase Time Period</label>
+</CompactLayout>

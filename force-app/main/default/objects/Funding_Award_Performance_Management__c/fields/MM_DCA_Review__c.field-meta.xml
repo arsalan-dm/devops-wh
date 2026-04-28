@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MM_DCA_Review__c</fullName>
+    <inlineHelpText>Review last DCA (RAG + justifications). Discuss any change in circumstances, capture GR considerations on delivery confidence for next month and discuss any discrepancies with the PSO’s own early considerations, given the challenges, risks and forward look discussed above. Confirm understanding of risks and any expected departures from plans, to inform a realistic shared understanding of the delivery confidence. Address any remaining concerns.</inlineHelpText>
+    <label>DCA Review</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

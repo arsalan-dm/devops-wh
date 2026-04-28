@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Address__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Only if applicable (if the summary selected is property/measure) Affected property address details - Enter the address of the property (House name/number, street, postcode) if fraud, error or non/compliance relates to address.</description>
+    <inlineHelpText>Only if applicable (if the summary selected is property/measure)Affected property address details - Enter the address of the property (House name/number, street, postcode) if fraud, error or non/compliance relates to address.</inlineHelpText>
+    <label>Property Address</label>
+    <referenceTo>Address</referenceTo>
+    <relationshipLabel>Fraud &amp; Errors</relationshipLabel>
+    <relationshipName>Fraud_Errors</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

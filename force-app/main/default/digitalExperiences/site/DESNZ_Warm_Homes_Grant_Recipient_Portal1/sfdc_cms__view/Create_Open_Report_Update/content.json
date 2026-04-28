@@ -1,0 +1,145 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Create Open Report Update",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"34d25a14-c955-451f-90fa-f0a132812595\",\"columns\":[{\"UUID\":\"41858eae-fe88-4885-b5df-1bffb7691a62\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "7651498c-633e-42fc-a0d7-db13e3fcba50",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Request to Re-Open Monthly Update",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "65efab11-1218-4a6f-a6f1-a1d89e3c7edd",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "a98124ec-51e4-458e-9c81-104ac558f263",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"d1b4fcca-f4ef-4398-a349-e88844084226\",\"columns\":[{\"UUID\":\"95ce982b-5e2f-4e1a-98ec-651925cad240\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"6cb22bac-9443-4c10-9651-cc5968fb0c25\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "",
+                        "right" : "",
+                        "top" : ""
+                      }
+                    },
+                    "flowArguments" : "[{\"label\":\"fundingProjectUpdateName\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"fundingProjectUpdateName\",\"type\":\"String\",\"value\":\"{!updateReference}\"},{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"recordId\",\"type\":\"String\",\"value\":\"{!Id}\"}]",
+                    "flowName" : "{\"flowName\":\"DESNZ_Open_Monthly_Update_Request\",\"flowLabel\":\"DESNZ - Open Monthly Update Request\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "57533d82-ec09-430c-b9a3-81c67f003f11",
+                  "type" : "component"
+                } ],
+                "id" : "95ce982b-5e2f-4e1a-98ec-651925cad240",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "058eaee9-477a-45e5-aefb-a73f02fd50a2",
+                  "type" : "component"
+                } ],
+                "id" : "6cb22bac-9443-4c10-9651-cc5968fb0c25",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "d1b4fcca-f4ef-4398-a349-e88844084226",
+              "type" : "component"
+            } ],
+            "id" : "41858eae-fe88-4885-b5df-1bffb7691a62",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "34d25a14-c955-451f-90fa-f0a132812595",
+          "type" : "component"
+        } ],
+        "id" : "b800a6bb-a824-4cee-bb60-93871e9790da",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Create Open Report Update",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "2806ee39-2d78-4d18-a2a4-b5f4feaf911b",
+          "type" : "component"
+        } ],
+        "id" : "2c705d5c-00ca-489c-9885-7a8db6db0b70",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "a39601d5-8d39-4c38-948c-f51efd01dc09",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-create-open-report-update"
+  },
+  "urlName" : "create-open-report-update"
+}

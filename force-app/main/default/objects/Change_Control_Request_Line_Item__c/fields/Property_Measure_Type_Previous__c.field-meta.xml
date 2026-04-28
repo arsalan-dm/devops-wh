@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Measure_Type_Previous__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>To store the related baseline measure detail&apos;s current value on creation of the line item. The value will be copied at the time of creation via the GMS form.</description>
+    <label>Property Measure Type (Previous)</label>
+    <referenceTo>PropertyMeasureType__c</referenceTo>
+    <relationshipLabel>Change Control Request Line Items (Property Measure Type (Previous))</relationshipLabel>
+    <relationshipName>Change_Control_Request_Line_Items1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

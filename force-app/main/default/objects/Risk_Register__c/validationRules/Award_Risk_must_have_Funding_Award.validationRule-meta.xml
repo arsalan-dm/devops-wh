@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Award_Risk_must_have_Funding_Award</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    RecordType.Name = &quot;Award&quot;,
+    ISBLANK( Funding_Award__c )
+)</errorConditionFormula>
+    <errorMessage>A Risk with record type &apos;Award&apos; must ne linked to a Funding Award</errorMessage>
+</ValidationRule>

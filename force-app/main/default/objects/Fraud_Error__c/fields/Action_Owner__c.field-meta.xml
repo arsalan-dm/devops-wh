@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Owner__c</fullName>
+    <description>Enter the name/ email address of the person responsible for the mitigating action</description>
+    <inlineHelpText>Enter the name/ email address of the person responsible for the mitigating action</inlineHelpText>
+    <label>Action Owner</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

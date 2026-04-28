@@ -1,0 +1,5 @@
+{
+  "apiName" : "Change_Control_Requests_Awaiting_Changes",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

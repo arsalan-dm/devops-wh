@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingBaseline__c$No_of_homes_ending_at_EPC_D__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingBaseline__c$No_of_homes_ending_at_EPC_E__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingBaseline__c$No_of_homes_ending_at_EPC_F__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingBaseline__c$No_of_homes_ending_at_EPC_G__c</field>
+    </columns>
+    <description>Monitor % and number of homes upgraded to each EPC band (D, E, F, G).</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>FundingBaseline__c.Funding_Awards1__r.Actuals__r$Actuals_Start_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingBaseline__c$RecordType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingBaseline__c$Funding_Award__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Final EPC</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Baselines_with_Actuals_and_Forecasts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FundingBaseline__c$Approved_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

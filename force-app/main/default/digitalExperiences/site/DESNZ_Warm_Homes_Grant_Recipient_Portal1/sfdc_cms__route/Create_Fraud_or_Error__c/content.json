@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Create Fraud or Error",
+  "contentBody" : {
+    "activeViewId" : "Create_Fraud_or_Error",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-create-fraud-or-error",
+    "urlPrefix" : "create-fraud-or-error"
+  },
+  "urlName" : "create-fraud-or-error"
+}

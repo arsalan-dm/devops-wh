@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percent_homes_starting_at_EPC_G_Variance__c</fullName>
+    <formula>(  Baseline__r.No_of_homes_starting_at_EPC_G__c  -  No_of_homes_starting_at_EPC_G__c  ) / Baseline__r.No_of_homes_starting_at_EPC_G__c * -1</formula>
+    <label>% homes starting at EPC G Variance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

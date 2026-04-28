@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_Homes_Treated_at_least_1_Measure__c</fullName>
+    <description>KPI 4 - No. of Homes Treated with at least One Measure</description>
+    <externalId>false</externalId>
+    <inlineHelpText>KPI 4 - No. of Homes Treated with at least One Measure</inlineHelpText>
+    <label>No. of Homes Treated at least 1 Measure</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

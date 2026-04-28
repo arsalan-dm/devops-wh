@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>The type of record this change control request is for</description>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Award Baseline</fullName>
+                <default>false</default>
+                <label>Award Baseline</label>
+            </value>
+            <value>
+                <fullName>Sub Baseline</fullName>
+                <default>false</default>
+                <label>Sub Baseline</label>
+            </value>
+            <value>
+                <fullName>Forecast</fullName>
+                <default>false</default>
+                <label>Forecast</label>
+            </value>
+            <value>
+                <fullName>Consortium Member Change</fullName>
+                <default>false</default>
+                <label>Consortium Member Change</label>
+            </value>
+            <value>
+                <fullName>Award Rename</fullName>
+                <default>false</default>
+                <label>Award Rename</label>
+            </value>
+            <value>
+                <fullName>Grant Recipient Lead Change</fullName>
+                <default>false</default>
+                <label>Grant Recipient Lead Change</label>
+            </value>
+            <value>
+                <fullName>Measure Detail</fullName>
+                <default>false</default>
+                <label>Measure Detail</label>
+            </value>
+            <value>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+                <label>Supplier</label>
+            </value>
+            <value>
+                <fullName>Project End Date</fullName>
+                <default>false</default>
+                <label>Project End Date</label>
+            </value>
+            <value>
+                <fullName>Phase Change</fullName>
+                <default>false</default>
+                <label>Phase Change</label>
+            </value>
+            <value>
+                <fullName>Income Verification</fullName>
+                <default>false</default>
+                <label>Income Verification</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

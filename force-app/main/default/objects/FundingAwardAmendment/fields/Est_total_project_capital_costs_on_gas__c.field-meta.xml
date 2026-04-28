@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Est_total_project_capital_costs_on_gas__c</fullName>
+    <description>Estimated total project capital costs on gas LCH homes</description>
+    <inlineHelpText>Estimated total project capital costs on gas LCH homes</inlineHelpText>
+    <label>DELETE_ total project capital on gas LCH</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

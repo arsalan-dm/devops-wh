@@ -1,0 +1,137 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Change Control Requests Approved",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"492dff91-c5c1-44e1-8e2c-a2558aa28a81\",\"columns\":[{\"UUID\":\"f06e3402-89b6-4db8-b2ad-578619b2ac71\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "174a0efb-690d-4865-b6be-fc043b1498a9",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Approved Change Control Requests",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "30f9cc55-1f93-4bcc-8571-255002976d09",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "2082232f-a65b-4f49-9ba6-b081a233ac5a",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"40345e6b-d208-44d4-8c81-a346e24d8668\",\"columns\":[{\"UUID\":\"2859bba5-4df8-4c44-9c6a-298cef3a3581\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"0ac06115-f666-418d-badc-2a7578721516\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"varFilter\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varFilter\",\"type\":\"String\",\"value\":\"approved\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Change_Control_Request_List\",\"flowLabel\":\"GMS - Change Control Request List\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "b2c73782-ebc8-4a30-8427-9e4a64b0bf30",
+                  "type" : "component"
+                } ],
+                "id" : "2859bba5-4df8-4c44-9c6a-298cef3a3581",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "7a05f78d-1f34-4024-a102-8e4c096db25d",
+                  "type" : "component"
+                } ],
+                "id" : "0ac06115-f666-418d-badc-2a7578721516",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "40345e6b-d208-44d4-8c81-a346e24d8668",
+              "type" : "component"
+            } ],
+            "id" : "f06e3402-89b6-4db8-b2ad-578619b2ac71",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "492dff91-c5c1-44e1-8e2c-a2558aa28a81",
+          "type" : "component"
+        } ],
+        "id" : "502c312e-f822-43c9-90fc-67a9936f90db",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Change Control Requests Approved",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "48d0caf8-c858-4433-a5a8-2c6181a1948a",
+          "type" : "component"
+        } ],
+        "id" : "f096aeaa-5be4-48cb-b84c-dcc3a01838bd",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "86b384ea-12c6-41f2-93f2-558d2cf0aabe",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-change-control-requests-approved"
+  },
+  "urlName" : "change-control-requests-approved"
+}

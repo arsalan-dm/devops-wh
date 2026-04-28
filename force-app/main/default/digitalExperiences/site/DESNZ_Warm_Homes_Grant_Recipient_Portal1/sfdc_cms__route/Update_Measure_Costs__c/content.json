@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Manage Properties",
+  "contentBody" : {
+    "activeViewId" : "Update_Measure_Costs",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-update-measure-costs",
+    "urlPrefix" : "manage-properties"
+  },
+  "urlName" : "update-measure-costs"
+}

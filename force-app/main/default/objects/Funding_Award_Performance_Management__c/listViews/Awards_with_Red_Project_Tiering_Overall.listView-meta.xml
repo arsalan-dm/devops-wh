@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Awards_with_Red_Project_Tiering_Overall</fullName>
+    <columns>NAME</columns>
+    <columns>Related_Funding_Award__c</columns>
+    <columns>Project_Tiering_Overall_RAG__c</columns>
+    <columns>Project_Tiering_RAG_Justification__c</columns>
+    <columns>Project_Tiering_Completed__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Project_Tiering_Overall_RAG__c</field>
+        <operation>equals</operation>
+        <value>1 (Red)</value>
+    </filters>
+    <filters>
+        <field>Project_Tiering_Status__c</field>
+        <operation>equals</operation>
+        <value>Complete</value>
+    </filters>
+    <filters>
+        <field>Project_Tiering_Completed__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <label>Awards with Red Project Tiering Overall</label>
+</ListView>

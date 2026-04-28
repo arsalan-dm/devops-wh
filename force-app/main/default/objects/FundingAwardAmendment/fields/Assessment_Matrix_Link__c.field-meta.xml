@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assessment_Matrix_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://beisgov.sharepoint.com/:x:/r/sites/TAF2-EXT-OS/Shared%20Documents/5100%20-%20IDM%20(OFF_SEN)/Phase%20Requests/PR%20PROCESS,%20GUIDANCE%20%26%20TEMPLATES/PR%20Assessment%20Matrix%20-%20Live%20Version/Phase%20Request%20Assessment%20Matrix%20-%20Live%20Version%20(V2).xlsx?d=w182b2a07ed074f02ac79ea6c585ba617&amp;csf=1&amp;web=1&amp;e=NUh3Li&quot;, 
+&quot;Click here to open the Assessment Matrix spreadsheet&quot;
+, &quot;_blank&quot;)</formula>
+    <label>Assessment Matrix Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

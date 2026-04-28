@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grant_Recipient_Size__c</fullName>
+    <description>Large business: a business with 250 or more employees
+Medium-sized business: a business with 50 to 249 employees
+Small business: a business with 0 to 49 employees
+Small and medium-sized enterprises (SMEs: businesses with 0 to 249 employees)</description>
+    <label>Grant Recipient Size</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Large organisation</fullName>
+                <default>false</default>
+                <label>Large organisation</label>
+            </value>
+            <value>
+                <fullName>Medium-sized organisation</fullName>
+                <default>false</default>
+                <label>Medium-sized organisation</label>
+            </value>
+            <value>
+                <fullName>Small organisation</fullName>
+                <default>false</default>
+                <label>Small organisation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

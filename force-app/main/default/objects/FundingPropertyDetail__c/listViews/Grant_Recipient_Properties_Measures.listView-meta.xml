@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grant_Recipient_Properties_Measures</fullName>
+    <columns>NAME</columns>
+    <columns>Address_First_Line__c</columns>
+    <columns>Address_Postcode__c</columns>
+    <columns>Region__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Funding_Award__c</columns>
+    <columns>Financial_Year__c</columns>
+    <columns>Phase__c</columns>
+    <columns>Tenure_Type__c</columns>
+    <columns>Address_UPRN__c</columns>
+    <columns>Address_Town__c</columns>
+    <columns>TM_Project_Reference_Number__c</columns>
+    <columns>Property_Archetype__c</columns>
+    <columns>Property_Address__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Grant Recipient Properties &amp; Measures</label>
+    <sharedTo>
+        <allCustomerPortalUsers></allCustomerPortalUsers>
+        <group>DESNZ_Grant_Recipient</group>
+    </sharedTo>
+</ListView>

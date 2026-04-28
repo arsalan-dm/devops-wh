@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warm_Homes</fullName>
+    <active>true</active>
+    <label>Warm Homes</label>
+    <picklistValues>
+        <picklist>Question_Data_Type__c</picklist>
+        <values>
+            <fullName>Currency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Picklist %28Multi-Select%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Picklist %28Single%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Question_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Historic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

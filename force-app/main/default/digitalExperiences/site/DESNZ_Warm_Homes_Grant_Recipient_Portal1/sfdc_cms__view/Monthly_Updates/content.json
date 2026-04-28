@@ -1,0 +1,159 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Monthly Updates",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"c59b3297-798a-4662-bdb0-43e0a5c70ba0\",\"columns\":[{\"UUID\":\"57d34483-268d-494c-b7b8-d63cdc2ac44b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "29cd5cdf-ceab-4310-a828-284ded342383",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Monthly Updates",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "8fad92cb-a39f-4e0f-9f27-3212e5d8770c",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "1fd47707-f275-4489-9241-d9cefd4a4817",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"2e789ac9-4d0c-4fd3-9ae4-f57c14d1349f\",\"columns\":[{\"UUID\":\"98292cf1-e37d-4940-b62a-224d919f4b8d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"649abb17-68ed-423b-86b5-ba4b6218290a\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowName" : "{\"flowName\":\"DESNZ_Award_Next_Reporting_Alert\",\"flowLabel\":\"DESNZ Award Next Reporting Alert\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "0a2d6609-c3ec-4974-a320-c809c77d0b0e",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowName" : "{\"flowName\":\"DESNZ_Award_Update_Details\",\"flowLabel\":\"DESNZ - Award Update Details\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "8bc67bd0-b951-4eb8-996d-d121743a3267",
+                  "type" : "component"
+                } ],
+                "id" : "98292cf1-e37d-4940-b62a-224d919f4b8d",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "1066932c-3f51-44c4-a614-5a280727e693",
+                  "type" : "component"
+                } ],
+                "id" : "649abb17-68ed-423b-86b5-ba4b6218290a",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "2e789ac9-4d0c-4fd3-9ae4-f57c14d1349f",
+              "type" : "component"
+            } ],
+            "id" : "57d34483-268d-494c-b7b8-d63cdc2ac44b",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c59b3297-798a-4662-bdb0-43e0a5c70ba0",
+          "type" : "component"
+        } ],
+        "id" : "51307689-5be9-462f-a55f-3c733c1e2e98",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Monthly Updates",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "63dadbb4-da4f-4eb0-a415-29dd47c24255",
+          "type" : "component"
+        } ],
+        "id" : "9dd66b92-0a70-4b93-88cb-8c3877ae9d6b",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "8647127d-2c25-4ec5-b411-be253fac33aa",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-monthly-updates"
+  },
+  "urlName" : "monthly-updates"
+}

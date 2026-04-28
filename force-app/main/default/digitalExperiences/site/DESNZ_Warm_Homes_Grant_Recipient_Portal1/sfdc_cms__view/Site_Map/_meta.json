@@ -1,0 +1,5 @@
+{
+  "apiName" : "Site_Map",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

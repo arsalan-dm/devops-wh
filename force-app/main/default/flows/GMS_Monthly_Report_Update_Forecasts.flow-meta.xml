@@ -1,0 +1,2469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Forecasts_to_List</name>
+        <label>Assign Forecasts to List</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>rcdForecastList</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Forecasts_for_Update</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Forecast_List</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Updated_Forecast_to_List</name>
+        <label>Assign Updated Forecast to List</label>
+        <locationX>798</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecastList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>rcdUpdatedForecast</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Forecast_List</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Updated_Forecast_Values</name>
+        <label>Assign Updated Forecast Values</label>
+        <locationX>798</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Funding_Award__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>rcdActual.Funding_Award__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Co_funding_Capital_Spend__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_funding_Capital_Spend</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Grant_A_A_Spend__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Grant_A_A_Spend</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Grant_Capital_Spend__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Grant_Capital_Spend</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.No_of_Homes_Completed__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Home_Completed_KPI</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.No_of_Homes_Suitable_For_Retrofit__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Homes_identified_suitable_for_retrofit</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.No_of_Homes_Started_Installations__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Homes_started_installations_KPI</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.No_of_Homes_to_EPC_C__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Homes_to_EPC_C</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.No_of_Homes_All_Installations_Completed__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Homes_with_all_installations_completed</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.No_of_Homes_Ready_for_Installs_to_Start__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_No_of_homes_ready_for_installs_to_start</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Forecast_List.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Forecast_Start_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Start_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Forecast_End_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_End_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Energy_Savings_kWh__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Forecast_Update_Energy_Savings</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Co_funding_A_A_spend__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Co_funding_A_A_Spend_Required</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdatedForecast.Total_Co_funding_toward_on_gas_LCH_offer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Required_Total_Co_funding_toward_on_gas_LCH_offer</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Updated_Forecast_to_List</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>chcCancelSkip</name>
+        <choiceText>Cancel Skip and choose Phase</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cancel Skip</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcEditActual</name>
+        <choiceText>Edit Phase Actuals</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Edit Actual</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcEditForecast</name>
+        <choiceText>Edit Forecast</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Edit Forecast</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcEditSummary</name>
+        <choiceText>Edit Summary</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Edit Summary</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcSkipActualsandForecast</name>
+        <choiceText>Skip editing further Actuals and Forecasts</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>SkipChildren</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcSubmitUpdate</name>
+        <choiceText>Submit Monthly Update</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Submit</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Any_forecasts_to_create</name>
+        <label>Any forecasts to create?</label>
+        <locationX>182</locationX>
+        <locationY>1100</locationY>
+        <defaultConnectorLabel>None to create</defaultConnectorLabel>
+        <rules>
+            <name>Create</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>rcdUpdatedForecastList</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Forecast_List</targetReference>
+            </connector>
+            <label>Create</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Forecast_Date</name>
+        <label>Check Forecast Date</label>
+        <locationX>600</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>SHF_Forecast_Update_Form</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Is Updatable</defaultConnectorLabel>
+        <rules>
+            <name>Is_SHF_Read_Only</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_Forecast_List.Forecast_Start_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>flaMonthPriorStartDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Record_Type</targetReference>
+            </connector>
+            <label>Is SHF Read Only</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Record_Type</name>
+        <label>Check Record Type</label>
+        <locationX>402</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Forecast_LG_Form</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Is LG</defaultConnectorLabel>
+        <rules>
+            <name>Is_SHF</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>rcdUpdate.Award_Record_Type_Name__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>SHF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RO_SHF_Forecast_Update_Form</targetReference>
+            </connector>
+            <label>Is SHF</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <name>chcActiveBaselines</name>
+        <dataType>String</dataType>
+        <displayField>Baseline_Version__c</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Funding_Award__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>rcdFundingAward.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Baseline_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Phase</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <object>FundingBaseline__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>chcPhase_RAG</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Phase_RAG_rating__c</picklistField>
+        <picklistObject>FundingAwardUpdate__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>chcPhaseBaselinesList</name>
+        <collectionReference>rcdRemainingBaselinesList</collectionReference>
+        <dataType>String</dataType>
+        <displayField>Baseline_Version__c</displayField>
+        <object>FundingBaseline__c</object>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>chcReasons_not_receiving_installations</name>
+        <dataType>Multipicklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Reason_for_homes_approached_not_receivin__c</picklistField>
+        <picklistObject>FundingAwardUpdate__c</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>fla3MonthEnd</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+  YEAR({!rcdActual.Actuals_Start_Date__c}),
+  MONTH({!rcdActual.Actuals_Start_Date__c}) + 4,
+  1
+) - 1</expression>
+    </formulas>
+    <formulas>
+        <name>fla3MonthName</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH(  {!fla3MonthStart} ),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fla3MonthStart</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+  YEAR({!rcdUpdate.Reporting_Period_Start__c}),
+  MONTH({!rcdUpdate.Reporting_Period_Start__c}) + 3,
+  1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaCheckTotalHomesTreated_LG</name>
+        <dataType>Boolean</dataType>
+        <expression>({!rcdActual.No_of_Homes_Suitable_For_Retrofit__c} + {!rcdActual.No_of_Homes_Completed__c} + {!rcdActual.No_of_Homes_Started_Installations__c})&lt;= {!rcdParentBaseline.Total_Homes_to_be_Upgraded__c}</expression>
+    </formulas>
+    <formulas>
+        <name>flaCheckTotalHomesTreated_SHF</name>
+        <dataType>Boolean</dataType>
+        <expression>({!rcdActual.No_of_Homes_Suitable_For_Retrofit__c} + {!rcdActual.No_of_Homes_Ready_for_Installs_to_Start__c} + {!rcdActual.No_of_Homes_Started_Installations__c} + {!rcdActual.No_of_Homes_Completed__c} + {!rcdActual.No_of_Homes_All_Installations_Completed__c} )&lt;= {!rcdParentBaseline.Total_Homes_to_be_Upgraded__c}</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentMonthEnd</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!$Flow.CurrentDate}),
+    MONTH({!$Flow.CurrentDate}) + 1,
+    1
+) - 1</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentMonthName</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH( {!$Flow.CurrentDate}),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentMonthStart</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!$Flow.CurrentDate}),
+    MONTH({!$Flow.CurrentDate}),
+    1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaFinalEditDate</name>
+        <dataType>Date</dataType>
+        <expression>{!rcdFundingAward.Next_Reporting_Date__c}</expression>
+    </formulas>
+    <formulas>
+        <name>flaMonthPriorEndDate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR(TODAY()) + FLOOR((MONTH(TODAY()) - 2) / 12),
+    MOD(MONTH(TODAY()) - 2, 12)+2,
+    1
+) - 1</expression>
+    </formulas>
+    <formulas>
+        <name>flaMonthPriorName</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH(  {!flaMonthPriorStartDate} ),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaMonthPriorStartDate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    IF(MONTH(TODAY()) = 1, YEAR(TODAY()) - 1, YEAR(TODAY())),
+    IF(MONTH(TODAY()) = 1, 12, MONTH(TODAY()) - 1),
+    1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaUpdateMonthandYear</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH( {!rcdUpdate.Reporting_Period_Start__c} ),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+) + &quot; &quot; + TEXT(YEAR( {!rcdUpdate.Reporting_Period_Start__c}))</expression>
+    </formulas>
+    <interviewLabel>GMS - Monthly Report Update Forecasts {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>GMS - Monthly Report Update Forecasts</label>
+    <loops>
+        <name>Loop_Forecast_List</name>
+        <label>Loop Forecast List</label>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
+        <collectionReference>rcdForecastList</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Check_Forecast_Date</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Any_forecasts_to_create</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Forecasts_for_Update</name>
+        <label>Get Forecasts for Update</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Forecasts_to_List</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Parent_Baseline__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>rcdActual.Parent_Baseline__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Forecast_Start_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>flaMonthPriorStartDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Forecast_End_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>fla3MonthEnd</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>FundingAwardForecast__c</object>
+        <sortField>Forecast_Start_Date__c</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Forecast_List</name>
+        <label>Update Forecast List</label>
+        <locationX>50</locationX>
+        <locationY>1208</locationY>
+        <inputReference>rcdUpdatedForecastList</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>Forecast_LG_Form</name>
+        <label>Forecast LG Form</label>
+        <locationX>534</locationX>
+        <locationY>674</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Any_forecasts_to_create</targetReference>
+        </connector>
+        <fields>
+            <name>Forecast_LG_Header</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Monthly Update: Forecast for {!Loop_Forecast_List.Forecast_Month__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-size: 24px;&quot;&gt;{!Loop_Forecast_List.Funding_Award__r.Name}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(37, 107, 199); font-size: 24px;&quot;&gt;{!Loop_Forecast_List.Parent_Baseline__r.Baseline_Version__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); font-size: 18px;&quot;&gt;Update Due: {!rcdUpdate.Update_Deadline_Date__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Forecast_LG_Form_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Forecast_LG_Form_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_LG_Start_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Forecast_Start_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Forecast Start Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Forecast_LG_Form_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_LG_End_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Forecast_End_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Forecast End Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Clarification_Text_Summary_Forecast_LG</name>
+            <fieldText>&lt;p&gt;{!txt_Date_Clarification_Message}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Forecast_LG_Finance_Forecast</name>
+            <fieldText>Finance Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Forecast_LG_Finance_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_LG_Grant_Capital_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_Capital_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant Capital Spend</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Enter the cumulative actual/forecast Capital spend per month, from grant only&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Forecast_LG_Grant_Admin_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_Admin_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant Admin Spend</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Enter the cumulative actual/forecast Admin spend per month, from grant only&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Forecast_LG_Finance_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_LG_Grant_A_A_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_A_A_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant A&amp;A Spend</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Enter the cumulative actual/forecast Admin and Ancillary spend per month, from grant only&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Forecast_LG_of_Grant_Ancillary_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_Ancillary_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant Ancillary Spend</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Enter the cumulative actual/forecast Ancillary spend per month, from grant only&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Copy_1_of_FOR_Homes_Forecast</name>
+            <fieldText>Homes Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_FOR_Homes_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_LG_Homes_Validated_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Validated__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Validated</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;KPI 1 - No. of Homes Validated&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Forecast_LG_No_of_Homes_Assessed_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Assessed__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Assessed</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;KPI 2 - No. of Homes Assessed&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Forecast_LG_Homes_started_installations_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Started_Installations__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Started Installations</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;KPI 3 - No. of Homes Started Installations&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Forecast_LG_No_of_Homes_Treated_With_At_Least_One_Measure_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Treated_at_Least_1_Measure__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Treated With At Least One Measure</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;KPI 4 - No. of Homes Treated With At Least One Measure&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Forecast_LG_Homes_Completed_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>rcdForecast.No_of_Homes_Completed__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Completed</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;KPI 5 - No. of Homes Completed&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_FOR_Homes_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Copy_1_of_FOR_EPC_Forecast</name>
+            <fieldText>EPC Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_FOR_EPC_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_LG_Homes_to_EPC_C</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_to_EPC_C__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No of Homes to EPC C</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Cumulative, derive from post-installation SAP scores&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_FOR_EPC_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>RO_SHF_Forecast_Update_Form</name>
+        <label>RO SHF Forecast Update Form</label>
+        <locationX>270</locationX>
+        <locationY>674</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Loop_Forecast_List</targetReference>
+        </connector>
+        <fields>
+            <name>Copy_1_of_Forecast_Update_Header</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Monthly Update: Forecast for {!Loop_Forecast_List.Forecast_Month__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-size: 24px;&quot;&gt;{!Loop_Forecast_List.Funding_Award__r.Name}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(37, 107, 199); font-size: 24px;&quot;&gt;{!Loop_Forecast_List.Parent_Baseline__r.Baseline_Version__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); font-size: 18px;&quot;&gt;Update Due: {!rcdUpdate.Update_Deadline_Date__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>RO_SHF_Forecast_Update_Form_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>RO_SHF_Forecast_Update_Form_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_Start_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Forecast_Start_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Forecast Start Date (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>RO_SHF_Forecast_Update_Form_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_End_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Forecast_End_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Forecast_End_Date (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>RO_Clarification_Text_Forecast</name>
+            <fieldText>&lt;p&gt;{!txt_Date_Clarification_Message}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Copy_1_of_Forecast_Update_Finance_Forecast</name>
+            <fieldText>Finance Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_Forecast_Update_Finance_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_Grant_Capital_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_Capital_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant Capital Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Enter the amount of capital spend this month (grant only)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Grant_Capital_Spend} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Forecast_Update_Grant_A_A_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_A_A_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant A&amp;A Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Enter the amount of Admin and Ancillary spend this month (grant only).&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Grant_A_A_Spend} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_Forecast_Update_Finance_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_funding_Capital_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Co_funding_Capital_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Co-funding Capital Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Enter the amount of capital spend this month (co-funding only)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_funding_Capital_Spend} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Co_funding_A_A_Spend_Required</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Co_funding_A_A_spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Co-funding A&amp;A Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Enter the amount of &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Admin and Ancillary&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;spend this month (co-funding only)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Co_funding_A_A_Spend_Required} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Required_Total_Co_funding_toward_on_gas_LCH_offer</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Total_Co_funding_toward_on_gas_LCH_offer__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Total Co-funding toward on-gas LCH offer</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Required_Total_Co_funding_toward_on_gas_LCH_offer} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Copy_1_of_Forecast_Update_Homes_Forecast</name>
+            <fieldText>Homes Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_Forecast_Update_Homes_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_Homes_identified_suitable_for_retrofit</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Suitable_For_Retrofit__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Identified Suitable For Retrofit (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 1 - No. of Homes Identified as Suitable for Retrofit&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_identified_suitable_for_retrofit} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Copy_1_of_Forecast_Update_No_of_homes_ready_for_installs_to_start</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Ready_for_Installs_to_Start__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Ready For Installs To Start (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 2 - No. of Homes Ready for Installs to Start&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_No_of_homes_ready_for_installs_to_start} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Forecast_Update_Homes_started_installations_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Started_Installations__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Started Installations (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 3 - No. of Homes Started Installations&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_started_installations_KPI} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Forecast_Update_Homes_with_all_installations_completed</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_All_Installations_Completed__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes With All Installations Completed (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;KPI 4 - No. of Homes with all Installations Completed&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_with_all_installations_completed} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>RO_Forecast_Update_Home_Completed_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Completed__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Home Completed (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 5 - No. of Homes Completed&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Home_Completed_KPI} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_Forecast_Update_Homes_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Copy_1_of_Forecast_Update_EPC_Forecast</name>
+            <fieldText>EPC Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_Forecast_Update_EPC_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_Homes_to_EPC_C</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_to_EPC_C__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes To EPC C (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;No. of Homes To EPC C&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_to_EPC_C} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_Forecast_Update_EPC_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RO_Forecast_Update_Energy_Savings</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Energy_Savings_kWh__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Energy Savings (kWh) (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Total energy savings (SPs)&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Energy_Savings} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>varRecordTypeCode</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>SP</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>SHF_Forecast_Update_Form</name>
+        <label>SHF Forecast Update Form</label>
+        <locationX>798</locationX>
+        <locationY>566</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Updated_Forecast_Values</targetReference>
+        </connector>
+        <fields>
+            <name>Forecast_Update_Header</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Monthly Update: Forecast for {!Loop_Forecast_List.Forecast_Month__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 24px;&quot;&gt;{!Loop_Forecast_List.Funding_Award__r.Name}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(37, 107, 199); font-size: 24px;&quot;&gt;{!Loop_Forecast_List.Parent_Baseline__r.Baseline_Version__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); font-size: 18px;&quot;&gt;Update Due: {!rcdUpdate.Update_Deadline_Date__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 16px;&quot;&gt;All fields must be completed to save the form. If you have incomplete figures at the time of creating the first draft then enter 0 for that data and return to finish your update later. Updates cannot be edited after the due date&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); font-size: 16px;&quot;&gt;Fields marked with an asterisk (*) are required. Please ensure all required fields are completed before submitting the form.&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>SHF_Forecast_Update_Form_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>SHF_Forecast_Update_Form_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_Start_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Forecast_Start_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Forecast Start Date (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>SHF_Forecast_Update_Form_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_End_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Forecast_End_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Forecast_End_Date (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Clarification_Text_Forecast</name>
+            <fieldText>&lt;p&gt;{!txt_Date_Clarification_Message}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Forecast_Update_Finance_Forecast</name>
+            <fieldText>Finance Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Forecast_Update_Finance_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_Grant_Capital_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_Capital_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant Capital Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Enter the amount of capital spend this month (grant only)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Grant_Capital_Spend} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Forecast_Update_Grant_A_A_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Grant_A_A_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Grant A&amp;A Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Enter the amount of Admin and Ancillary spend this month (grant only).&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Grant_A_A_Spend} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Forecast_Update_Finance_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_funding_Capital_Spend</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Co_funding_Capital_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Co-funding Capital Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Enter the amount of capital spend this month (co-funding only)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_funding_Capital_Spend} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Co_funding_A_A_Spend_Required</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Co_funding_A_A_spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Co-funding A&amp;A Spend (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Enter the amount of &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Admin and Ancillary&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;spend this month (co-funding only)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Co_funding_A_A_Spend_Required} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Required_Total_Co_funding_toward_on_gas_LCH_offer</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Total_Co_funding_toward_on_gas_LCH_offer__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Total Co-funding toward on-gas LCH offer</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Required_Total_Co_funding_toward_on_gas_LCH_offer} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Forecast_Update_Homes_Forecast</name>
+            <fieldText>Homes Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Forecast_Update_Homes_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_Homes_identified_suitable_for_retrofit</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Suitable_For_Retrofit__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Identified Suitable For Retrofit (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 1 - No. of Homes Identified as Suitable for Retrofit&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_identified_suitable_for_retrofit} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Forecast_Update_No_of_homes_ready_for_installs_to_start</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Ready_for_Installs_to_Start__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Ready For Installs To Start (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 2 - No. of Homes Ready for Installs to Start&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_No_of_homes_ready_for_installs_to_start} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Forecast_Update_Homes_started_installations_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Started_Installations__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes Started Installations (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 3 - No. of Homes Started Installations&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_started_installations_KPI} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Forecast_Update_Homes_with_all_installations_completed</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_All_Installations_Completed__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes With All Installations Completed (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;KPI 4 - No. of Homes with all Installations Completed&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_with_all_installations_completed} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Forecast_Update_Home_Completed_KPI</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_Completed__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Home Completed (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;KPI 5 - No. of Homes Completed&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Home_Completed_KPI} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Forecast_Update_Homes_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Forecast_Update_EPC_Forecast</name>
+            <fieldText>EPC Forecast</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Forecast_Update_EPC_Forecast_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_Homes_to_EPC_C</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.No_of_Homes_to_EPC_C__c</elementReference>
+                    </defaultValue>
+                    <fieldText>No. of Homes To EPC C (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;No. of Homes To EPC C&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Homes_to_EPC_C} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Forecast_Update_EPC_Forecast_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Forecast_Update_Energy_Savings</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Loop_Forecast_List.Energy_Savings_kWh__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Energy Savings (kWh) (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Total energy savings (SPs)&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Atlassian Sans&amp;quot;, ui-sans-serif, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Ubuntu, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(41, 42, 46);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Forecast_Update_Energy_Savings} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>varRecordTypeCode</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>SP</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Forecasts_for_Update</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>txt_Date_Clarification_Message</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(231, 119, 7);&quot;&gt;Please enter non-cumulative data only to represent progress made in this month only&lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_Resubmission_Text</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div style=&quot;width:100%;border: 3px solid  rgb(37, 107, 199);padding: 10px;&quot;&gt;
+&lt;p&gt;&lt;strong style=&quot;font-size: 18px; color: rgb(37, 107, 199);&quot;&gt;Please adjust and resubmit your report for the following reasons:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(0, 0, 0);&quot;&gt;{!rcdUpdate.Resubmission_Request_Details__c}&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtHR</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;hr/&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtRAG_Amber</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;/resource/ragstatus/3amber.png&quot; alt=&quot;Amber Disk&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtRAG_Green</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;/resource/ragstatus/2green.png&quot; alt=&quot;Green Disk&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtRAG_Red</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;/resource/ragstatus/4red.png&quot; alt=&quot;Red Disk&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>currentItem_Filter_Forecasts_to_Attach</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>currentItemFromSourceCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdActual</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardActual__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdActualsList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardActual__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdActualsListincUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardActual__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdBaselineList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdForecast</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdForecastList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdFundingAward</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAward</objectType>
+    </variables>
+    <variables>
+        <name>rcdParentBaseline</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdRemainingBaselinesList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardUpdate__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdUpdatedForecast</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdUpdatedForecastList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_Date_of_Update</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_No_Baseline</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varAASpendFieldValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>rcdActual.Grant_A_A_Spend__c</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>varAwardId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varChosenBaselineIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varFinalForecastCountText</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varForecastCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varFormType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Create</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varNewForecastEndDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varNewForecastMonth</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varNewForecastStartDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varParentBaselineId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varPhaseBaselineCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>varPosition</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>1.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varRecordTypeCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varReportingPeriodEnd</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varReportingPeriodMonth</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varReportingPeriodStart</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varShowSkip</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varTotalReceived</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

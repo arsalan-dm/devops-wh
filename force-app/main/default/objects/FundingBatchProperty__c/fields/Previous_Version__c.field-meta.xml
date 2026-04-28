@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_Version__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Previous Version</label>
+    <referenceTo>FundingBatchProperty__c</referenceTo>
+    <relationshipLabel>Batch Properties</relationshipLabel>
+    <relationshipName>Next_Version</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

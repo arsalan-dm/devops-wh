@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UiFormatSpecificationSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <field>FundingAwardAmendment.DESNZ_Days_left_to_Respond_DELETE__c</field>
+    <formatType>ICON</formatType>
+    <masterLabel>DESNZDayslefttorespond</masterLabel>
+    <sobjectType>FundingAwardAmendment</sobjectType>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;warning_triangle&quot;,&quot;iconColor&quot;:&quot;orange&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>1</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.DESNZ_Days_left_to_Respond_DELETE__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>8</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;warning_triangle&quot;,&quot;iconColor&quot;:&quot;red&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>2</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.DESNZ_Days_left_to_Respond_DELETE__c}</leftValue>
+                <operator>LE</operator>
+                <rightValue>7</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+</UiFormatSpecificationSet>

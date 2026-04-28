@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Project Summary",
+  "contentBody" : {
+    "activeViewId" : "Project_Summary",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-project-summary",
+    "urlPrefix" : "project-summary"
+  },
+  "urlName" : "project-summary"
+}

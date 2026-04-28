@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FTE_Posts_No_joined_or_moved_Internal__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Of the retrofit-related FTE posts, how many have newly joined the organisation or moved internally from a role unrelated to retrofit during the Wave 3 project?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Of the retrofit-related FTE posts, how many have newly joined the organisation or moved internally from a role unrelated to retrofit during the Wave 3 project?</inlineHelpText>
+    <label>FTE Posts - No. Joined/Moved Internally</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

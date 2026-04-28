@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TM_On_or_Off_Gas_Grid_Property__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>TM On or Off Gas Grid Property</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

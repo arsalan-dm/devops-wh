@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upcoming_Monthly_Meetings</fullName>
+    <columns>NAME</columns>
+    <columns>Related_Funding_Award__c</columns>
+    <columns>Monthly_Meeting_Date_Time__c</columns>
+    <columns>Monthly_Meeting_Status__c</columns>
+    <columns>GR_Contact__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Monthly_Meeting_Date_Time__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Monthly_Meeting_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete</value>
+    </filters>
+    <label>Upcoming Monthly Meetings</label>
+</ListView>

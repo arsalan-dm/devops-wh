@@ -1,0 +1,57 @@
+<template>
+    <div class="lwr-flow-navigation">
+        <div class={buttonAlignmentClass}>
+            
+            <template if:true={showBackButton}>   
+                <template lwc:if={isButton}>
+                    <lightning-button
+                        label={backLabel}
+                        title="Back"
+                        onclick={handleBack}
+                        variant={variant}
+                        disabled={isDisabled}>
+                    </lightning-button>
+                </template>
+                <template lwc:else>
+                    <a href={backUrl}>
+                        {backLabel} 
+                    </a>
+                </template>            
+            </template>
+
+            <template if:true={showNextButton}>
+                <template lwc:if={isButton}>
+                    <lightning-button 
+                        label={nextLabel}
+                        title="Next"
+                        onclick={handleNext}
+                        variant={variant}
+                        disabled={isDisabled}>
+                    </lightning-button>
+                </template>
+                <template lwc:else>
+                    <a href={nextUrl}>
+                        {nextLabel}
+                    </a>
+                </template>
+            </template>
+
+            <template if:true={showFinishButton}>
+                <template lwc:if={isButton}>
+                    <lightning-button 
+                        label={finishLabel}
+                        title="Finish"
+                        onclick={handleFinish}
+                        variant={variant}
+                        disabled={isDisabled}>
+                    </lightning-button>
+                </template>
+                <template lwc:else>
+                    <a href={finishUrl}>
+                        {finishLabel}
+                    </a>
+                </template>
+            </template> 
+        </div>
+    </div>
+</template>

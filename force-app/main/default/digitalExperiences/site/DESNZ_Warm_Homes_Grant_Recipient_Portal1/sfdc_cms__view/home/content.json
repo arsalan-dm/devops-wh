@@ -1,0 +1,497 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"2c8ed79a-d336-4c97-bece-64e6e6523aaa\",\"columns\":[{\"UUID\":\"7c6c8e86-043e-4cb6-bffd-2738adf8ae0e\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "flowName" : "{\"flowName\":\"GMS_Display_Form_Message\",\"flowLabel\":\"GMS - Display Form Message\"}"
+              },
+              "definition" : "dxp_flow:flow",
+              "id" : "39c1f3e8-2f2c-4068-8b0d-e185b325cb7d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Home",
+                "textAlign" : "left",
+                "textColor" : "",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "208dfd61-2126-41d4-9c99-3dc19fe3b7b4",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "9b865c39-b2dc-4cc6-9003-98bab5a3659e",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"eac17301-8b1a-4767-98f2-0856aed36221\",\"columns\":[{\"UUID\":\"c1c02878-a83f-434b-8aae-00709b32e88b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"8\",\"seedComponents\":[]},{\"UUID\":\"1bcc4498-188c-4c0e-8e2e-d6b613adab28\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"1\",\"seedComponents\":[]},{\"UUID\":\"653ee595-58b2-402a-bff3-e200df265d69\",\"columnName\":\"Column 3\",\"columnKey\":\"3616e\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "0%",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : "0%"
+                      }
+                    },
+                    "flowName" : "{\"flowName\":\"DESNZ_Award_Next_Reporting_Alert\",\"flowLabel\":\"DESNZ Award Next Reporting Alert\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "088a3282-63cc-4f54-9e45-35af615601fb",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "0px",
+                        "left" : "0px",
+                        "right" : "0px",
+                        "top" : "15px"
+                      }
+                    },
+                    "isLinkable" : false,
+                    "linkAssistiveText" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "Notifications",
+                    "textAlign" : "left",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}"
+                  },
+                  "definition" : "dxp_base:textBlock",
+                  "id" : "32c2e091-0896-4913-92cc-da35e64fbcad",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Home_Page_Alerts\",\"flowLabel\":\"GMS - Home Page TEMP\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "0cba320e-425d-49e7-a816-9f936610a1ee",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "isLinkable" : false,
+                    "linkAssistiveText" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "Funding Adjustment",
+                    "textAlign" : "left",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}"
+                  },
+                  "definition" : "dxp_base:textBlock",
+                  "id" : "ab2f65ff-d10b-4928-b517-c5ff7dd22fcd",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "alignment" : "center",
+                    "color" : "rgb(0, 52, 121)",
+                    "lineStyle" : "solid",
+                    "size" : 1,
+                    "width" : 100
+                  },
+                  "definition" : "dxp_base:horizontalLine",
+                  "id" : "67aacd4e-c402-41d7-860f-796c05656cc9",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_GR_Clawback_Display\",\"flowLabel\":\"GMS - GR Clawback Display\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "8296b04e-5a7b-42cf-81fa-42d013e4bc54",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "borderColor" : "rgb(0, 52, 121)",
+                    "borderRadius" : 20,
+                    "borderWidth" : 2,
+                    "buttonDirection" : "horizontal",
+                    "buttonGroupAlignment" : "center",
+                    "buttonGroupHeight" : 45,
+                    "buttonGroupSpacingHorizontal" : "space-evenly",
+                    "buttonGroupSpacingVertical" : "space-evenly",
+                    "buttonGroupWidth" : 75,
+                    "height" : 100,
+                    "imageFit" : "contain",
+                    "imageHeight" : 25,
+                    "imageInfo" : "{\"imageInfoV1\":{\"url\":\"\",\"altText\":\"Chart Region\",\"contentKey\":\"\",\"contentType\":null}}",
+                    "imagePosition" : "center center",
+                    "isLink" : false,
+                    "linkAssistiveText" : "",
+                    "showButtons" : false,
+                    "showSecondaryButton" : false,
+                    "singleButtonAlignment" : "center",
+                    "width" : 100
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : {
+                        "backgroundColor" : "",
+                        "dxpStyle" : {
+                          "margin" : {
+                            "bottom" : "0%",
+                            "left" : "2%",
+                            "right" : "2%",
+                            "top" : "2%"
+                          }
+                        },
+                        "isLinkable" : false,
+                        "linkAssistiveText" : "",
+                        "paddingHorizontal" : "none",
+                        "paddingVertical" : "none",
+                        "text" : "Key Data",
+                        "textAlign" : "left",
+                        "textDecoration" : "{}",
+                        "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}"
+                      },
+                      "definition" : "dxp_base:textBlock",
+                      "id" : "e2b0981d-61ec-475e-a300-dbafc80b591b",
+                      "type" : "component"
+                    } ],
+                    "id" : "0176028e-7747-4e39-bc7a-3484b840c5ef",
+                    "name" : "topContentRegion",
+                    "title" : "Content Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "color" : "rgb(0, 52, 121)",
+                        "dxpStyle" : {
+                          "margin" : {
+                            "bottom" : "0%",
+                            "left" : "2%",
+                            "right" : "2%",
+                            "top" : "0%"
+                          }
+                        },
+                        "lineStyle" : "solid",
+                        "size" : 1,
+                        "width" : 100
+                      },
+                      "definition" : "dxp_base:horizontalLine",
+                      "id" : "1eab68e7-cb51-42f6-be14-f8a27e1021ab",
+                      "type" : "component"
+                    }, {
+                      "attributes" : {
+                        "dxpStyle" : {
+                          "margin" : {
+                            "bottom" : "2%",
+                            "left" : "2%",
+                            "right" : "2%",
+                            "top" : "0%"
+                          }
+                        },
+                        "flowName" : "{\"flowName\":\"GMS_Key_Data_Display\",\"flowLabel\":\"GMS - Key Data Display\"}"
+                      },
+                      "definition" : "dxp_flow:flow",
+                      "id" : "f71f1135-1e71-4185-b0c1-a6e6603ba8f4",
+                      "type" : "component"
+                    } ],
+                    "id" : "e5bbd5fd-339a-4ca9-b183-28698a9f0e8d",
+                    "name" : "contentRegion",
+                    "title" : "Content Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Learn More",
+                        "type" : "primary"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "9ed19a01-07e6-44e6-b9f8-0a4a910ed48f",
+                      "type" : "component"
+                    } ],
+                    "id" : "45a9161b-0ea3-444b-9885-0d883878d300",
+                    "name" : "tilePrimaryButton",
+                    "title" : "Primary Button Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Contact Us",
+                        "type" : "secondary"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "3953fb7d-3579-433d-a75f-b26764c87084",
+                      "type" : "component"
+                    } ],
+                    "id" : "ed46b736-a3ac-454e-a1c7-a0ffdd1b0b0d",
+                    "name" : "tileSecondaryButton",
+                    "title" : "Secondary Button Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : { },
+                      "definition" : "dxp_page_layout:placeHolder",
+                      "id" : "c873cdc8-5e57-428c-a448-84fdff978ee2",
+                      "type" : "component"
+                    } ],
+                    "id" : "57f21a18-4abc-4adc-ac79-f5009713730a",
+                    "name" : "placeholder",
+                    "title" : "placeholder",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_content_layout:tile2",
+                  "id" : "c4db4591-948b-475b-8295-cdafa2578789",
+                  "type" : "component"
+                } ],
+                "id" : "c1c02878-a83f-434b-8aae-00709b32e88b",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "id" : "1bcc4498-188c-4c0e-8e2e-d6b613adab28",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"var_Component_Height\",\"dataType\":\"Number\",\"supportsRecordId\":false,\"inputType\":\"number\",\"name\":\"var_Component_Height\",\"type\":\"Number\",\"value\":\"280\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "07003c46-3c6f-4e10-9dbd-9b3af6409e71",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "borderColor" : "rgb(0, 52, 121)",
+                    "borderRadius" : 20,
+                    "borderWidth" : 2,
+                    "buttonDirection" : "horizontal",
+                    "buttonGroupAlignment" : "center",
+                    "buttonGroupHeight" : 45,
+                    "buttonGroupSpacingHorizontal" : "space-evenly",
+                    "buttonGroupSpacingVertical" : "space-evenly",
+                    "buttonGroupWidth" : 75,
+                    "height" : 100,
+                    "imageFit" : "contain",
+                    "imageHeight" : 25,
+                    "imageInfo" : "{\"imageInfoV1\":{\"url\":\"\",\"altText\":\"Award Heading Region\",\"contentKey\":\"\",\"contentType\":null}}",
+                    "imagePosition" : "center center",
+                    "isLink" : false,
+                    "linkAssistiveText" : "",
+                    "showButtons" : false,
+                    "showSecondaryButton" : false,
+                    "singleButtonAlignment" : "center",
+                    "width" : 100
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "color" : "rgb(0, 52, 121)",
+                        "dxpStyle" : {
+                          "margin" : {
+                            "bottom" : "0%",
+                            "left" : "5%",
+                            "right" : "5%",
+                            "top" : "0%"
+                          }
+                        },
+                        "lineStyle" : "solid",
+                        "size" : 1,
+                        "width" : 100
+                      },
+                      "definition" : "dxp_base:horizontalLine",
+                      "id" : "c09cfa50-9131-4017-8952-e5f2467e52e9",
+                      "type" : "component"
+                    } ],
+                    "id" : "41953524-bfcc-4e73-bd3b-fa3d7c19b028",
+                    "name" : "topContentRegion",
+                    "title" : "Content Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "backgroundColor" : "",
+                        "dxpStyle" : {
+                          "margin" : {
+                            "bottom" : "0%",
+                            "left" : "5%",
+                            "right" : "5%",
+                            "top" : "5%"
+                          }
+                        },
+                        "isLinkable" : false,
+                        "linkAssistiveText" : "",
+                        "paddingHorizontal" : "none",
+                        "paddingVertical" : "none",
+                        "text" : "Latest Performance Assessment",
+                        "textAlign" : "left",
+                        "textDecoration" : "{}",
+                        "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}"
+                      },
+                      "definition" : "dxp_base:textBlock",
+                      "id" : "c4d5d7dc-20a2-476b-b222-f5e7272fd9f0",
+                      "type" : "component"
+                    }, {
+                      "attributes" : {
+                        "dxpStyle" : {
+                          "margin" : {
+                            "bottom" : "5%",
+                            "left" : "5%",
+                            "right" : "5%",
+                            "top" : "0%"
+                          }
+                        },
+                        "flowName" : "{\"flowName\":\"GMS_Performance_Details\",\"flowLabel\":\"GMS - Performance Details\"}"
+                      },
+                      "definition" : "dxp_flow:flow",
+                      "id" : "f826bd56-6172-4611-8837-a85e921a7968",
+                      "type" : "component"
+                    } ],
+                    "id" : "f72cbe60-b327-4c9a-8dac-fa344d0a2086",
+                    "name" : "contentRegion",
+                    "title" : "Content Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Learn More",
+                        "type" : "primary"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "06b9dc6d-0965-492d-94b0-47a1c8180fb8",
+                      "type" : "component"
+                    } ],
+                    "id" : "666aeacc-9df8-4602-9ef8-4a71f4e02d87",
+                    "name" : "tilePrimaryButton",
+                    "title" : "Primary Button Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "center",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Contact Us",
+                        "type" : "secondary"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "8002d283-0c75-4519-b973-5107c9d2274a",
+                      "type" : "component"
+                    } ],
+                    "id" : "d6af3c3e-e672-4e5e-8419-3ad3eef67e62",
+                    "name" : "tileSecondaryButton",
+                    "title" : "Secondary Button Region",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : { },
+                      "definition" : "dxp_page_layout:placeHolder",
+                      "id" : "6ae75170-e90e-4a36-9a83-ff53aabd737f",
+                      "type" : "component"
+                    } ],
+                    "id" : "2420793e-8f13-4277-9a9e-08b7f9034dd5",
+                    "name" : "placeholder",
+                    "title" : "placeholder",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_content_layout:tile2",
+                  "id" : "ddef5445-8567-4366-baea-e81211328f0d",
+                  "type" : "component"
+                } ],
+                "id" : "653ee595-58b2-402a-bff3-e200df265d69",
+                "name" : "3616e",
+                "title" : "Column 3",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "eac17301-8b1a-4767-98f2-0856aed36221",
+              "type" : "component"
+            } ],
+            "id" : "7c6c8e86-043e-4cb6-bffd-2738adf8ae0e",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "2c8ed79a-d336-4c97-bece-64e6e6523aaa",
+          "type" : "component"
+        } ],
+        "id" : "025eeac7-7fee-4408-834d-99c9e50fdc2b",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Home",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "c49b28a6-1d90-41ea-8732-0f5ac926031d",
+          "type" : "component"
+        } ],
+        "id" : "27bc7667-10d0-419c-87f5-9645589040a0",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "d4c4da78-8e12-456c-8176-35fc6f4961bb",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "home"
+  },
+  "urlName" : "home"
+}

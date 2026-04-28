@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WH_LG</fullName>
+    <active>true</active>
+    <label>WH-LG</label>
+    <picklistValues>
+        <picklist>Adjustment_Direction__c</picklist>
+        <values>
+            <fullName>DESNZ to GR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GR to DESNZ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Adjustment_Type__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Repayment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding Adjustment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

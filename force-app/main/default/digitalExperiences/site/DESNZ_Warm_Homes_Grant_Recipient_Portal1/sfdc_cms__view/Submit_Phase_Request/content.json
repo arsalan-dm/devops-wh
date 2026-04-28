@@ -1,0 +1,136 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Submit Phase Request",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"2a1fcf16-d0d4-4c03-bdb6-03e32ab3343a\",\"columns\":[{\"UUID\":\"512a371f-ab63-4b34-b927-c5253dc6de87\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "d086a4dd-ae6c-42b0-8a55-c4204a432c1e",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Submit Phase Request",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "0dc42caa-5618-4bcf-a7d9-b731d93058bb",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "a65c8d71-493e-492a-afa8-062dc9446cf4",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"5ef3c226-73b9-4c6a-987d-d76caa16ac67\",\"columns\":[{\"UUID\":\"4cdb62b0-411e-462b-9ab2-91a55e87eb9f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"2dd00439-63f2-4519-a7d7-df3123d28519\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Phase_Request_Form\",\"flowLabel\":\"GMS - Phase Request Form\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "90c102b8-ea42-448c-bf34-516bca0bc239",
+                  "type" : "component"
+                } ],
+                "id" : "4cdb62b0-411e-462b-9ab2-91a55e87eb9f",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "7b177f62-38a0-46be-ad5f-61c43fe693b0",
+                  "type" : "component"
+                } ],
+                "id" : "2dd00439-63f2-4519-a7d7-df3123d28519",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "5ef3c226-73b9-4c6a-987d-d76caa16ac67",
+              "type" : "component"
+            } ],
+            "id" : "512a371f-ab63-4b34-b927-c5253dc6de87",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "2a1fcf16-d0d4-4c03-bdb6-03e32ab3343a",
+          "type" : "component"
+        } ],
+        "id" : "d5f3c16b-969f-49b6-81ff-5a0e5d67d8e3",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Submit Phase Request",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "2908dd98-873b-48b6-af88-3a32fe2e80f6",
+          "type" : "component"
+        } ],
+        "id" : "687b015e-0c95-418e-9c8c-8c776fca55f7",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "768cc521-f60b-424d-9e34-9d93abac0d2f",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-submit-phase-request"
+  },
+  "urlName" : "submit-phase-request"
+}

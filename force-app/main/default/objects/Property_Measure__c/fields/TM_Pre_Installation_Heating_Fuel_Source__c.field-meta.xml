@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TM_Pre_Installation_Heating_Fuel_Source__c</fullName>
+    <label>TM Pre Installation Heating Fuel Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Boiler and radiators, mains gas</fullName>
+                <default>false</default>
+                <label>Boiler and radiators, mains gas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

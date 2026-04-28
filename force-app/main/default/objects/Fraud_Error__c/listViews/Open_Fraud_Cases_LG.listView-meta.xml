@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Fraud_Cases_LG</fullName>
+    <columns>NAME</columns>
+    <columns>LA_Identifier__c</columns>
+    <columns>Case_Type__c</columns>
+    <columns>Funding_Award__c</columns>
+    <columns>Summary_of_Risk__c</columns>
+    <columns>Category_of_Risk_Areas__c</columns>
+    <columns>Status__c</columns>
+    <columns>Case_Started__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Case_Type__c</field>
+        <operation>equals</operation>
+        <value>Fraud</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Funding_Award__c</field>
+        <operation>startsWith</operation>
+        <value>WHLG</value>
+    </filters>
+    <label>Open Fraud Cases - LG</label>
+    <sharedTo>
+        <group>Digital_Modus</group>
+        <group>Local_Grant_User</group>
+    </sharedTo>
+</ListView>

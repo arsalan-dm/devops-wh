@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <masterLabel>Chat Home Page Window</masterLabel>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="showUnreadCount"
+                type="Boolean"
+                label="Shows the number of unread messages in each chat"
+                role='inputOnly'/>      
+            <property name="maxHeight"
+                type="Integer"
+                label="the maximum height of the chat message section of the chat component"
+                role="inputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
