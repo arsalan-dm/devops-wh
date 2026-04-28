@@ -132,7 +132,12 @@ jobs:
               labels: ['ready-to-merge']
             });
 
-
+            await github.rest.issues.removeLabel({
+              owner,
+              repo,
+              issue_number: prNumber,
+              name: 'do-not-merge'
+            });
   comment-failure:
     runs-on: ubuntu-latest
     needs: check-only-deployment-on-org
