@@ -1,5 +1,5 @@
 name: MAIN-04 Manual SalesForce deployment to QA org
-on: workflow_dispatch
+on: workflow_call
   
 jobs: 
   check_previous_workflow_succeeded:

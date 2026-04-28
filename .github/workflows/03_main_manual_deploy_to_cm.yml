@@ -1,5 +1,5 @@
 name: MAIN-03 Manual SalesForce deployment to CM org
-on: workflow_dispatch
+on: workflow_call
   
 jobs: 
   check_previous_workflow_succeeded:
