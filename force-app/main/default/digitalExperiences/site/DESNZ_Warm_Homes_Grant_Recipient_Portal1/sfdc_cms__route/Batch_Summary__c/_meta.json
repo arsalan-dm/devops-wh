@@ -1,0 +1,5 @@
+{
+  "apiName" : "Batch_Summary__c",
+  "type" : "sfdc_cms__route",
+  "path" : "routes"
+}

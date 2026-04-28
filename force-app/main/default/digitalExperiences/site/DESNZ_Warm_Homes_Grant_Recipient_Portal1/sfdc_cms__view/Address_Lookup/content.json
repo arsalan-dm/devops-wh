@@ -1,0 +1,144 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Address Lookup",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"ccf61a0c-30a4-4e91-9044-f2eeec22ce7b\",\"columns\":[{\"UUID\":\"e21d9914-7927-4f1e-a717-84ca3ec2d89a\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "be64ebda-41dc-4448-947a-28f4266c95c1",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Address Lookup",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "8535449d-c94b-4193-bd7c-1d1357f1e89d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "eec0cd46-0ea7-42bd-8616-9fd0696b6aad",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"10c6fb11-a102-4730-a068-81eee47b8765\",\"columns\":[{\"UUID\":\"e817a6d2-b749-4786-8108-e56c7a3568d2\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"6775c1a1-1361-4bc0-b204-3f9b12df3105\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowName" : "{\"flowName\":\"DESNZ_Address_Search\",\"flowLabel\":\"DESNZ - Address Search\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "ac225976-3c52-466d-b0f4-fc2d0f27f026",
+                  "type" : "component"
+                } ],
+                "id" : "e817a6d2-b749-4786-8108-e56c7a3568d2",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "77b8c498-8bfe-44a1-9829-5ac8ac94f781",
+                  "type" : "component"
+                } ],
+                "id" : "6775c1a1-1361-4bc0-b204-3f9b12df3105",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "10c6fb11-a102-4730-a068-81eee47b8765",
+              "type" : "component"
+            } ],
+            "id" : "e21d9914-7927-4f1e-a717-84ca3ec2d89a",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "ccf61a0c-30a4-4e91-9044-f2eeec22ce7b",
+          "type" : "component"
+        } ],
+        "id" : "c8337ffa-3e86-495d-8a03-ea8d0ca4985c",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Address Lookup",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "b921b864-e7b6-4eb3-bac4-068698b3f91c",
+          "type" : "component"
+        } ],
+        "id" : "c80a12a3-1789-428d-a8f7-5eda96d1931c",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "dd103473-b604-4e5b-99b3-87b4945e5df3",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-address-lookup"
+  },
+  "urlName" : "address-lookup"
+}

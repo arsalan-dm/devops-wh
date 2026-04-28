@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="flowApiName"
+                      type="String"
+                      label="Flow API Name"
+                      description="API name of the Flow to launch"/>
+            <property name="parentObject"
+                      type="String"
+                      label="Parent Object Label"
+                      description="Enter the Object Label to pass to the Flow"/>
+            <property name="buttonLabel"
+                      type="String"
+                      label="Button Label"
+                      description="Text to display on the launch button"
+                      default="Launch Flow"/>
+            <property name="refreshOnFinish"
+                      type="Boolean"
+                      label="Refresh Page on Flow Finish?"
+                      description="If checked, the page will refresh at the end of the flow when the modal closes."
+                      default="false"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

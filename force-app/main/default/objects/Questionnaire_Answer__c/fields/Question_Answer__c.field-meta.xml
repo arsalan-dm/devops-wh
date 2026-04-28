@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Question_Answer__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(Response_Text__c)),
+    Response_Text__c,
+
+    IF(
+        NOT(ISNULL(Response_Number__c)),
+        TEXT(Response_Number__c),
+
+        IF(
+            NOT(ISNULL(Response_Currency__c)),
+            TEXT(Response_Currency__c),
+
+            IF(
+                NOT(ISBLANK(Response_Date__c)),
+                TEXT(Response_Date__c),
+                &quot;No Answer&quot;
+            )
+        )
+    )
+)</formula>
+    <label>Question Answer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

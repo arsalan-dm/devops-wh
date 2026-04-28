@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Cap_Exc_LCH_On_Gas_Variance__c</fullName>
+    <formula>IF(Parent_Change_Control_Tracker__c = &quot;&quot;, 0,
+IF(Pending_Change_Control_Request__c = &quot;&quot;,
+(Cost_Cap_Exc_LCH_On_Gas__c -  (Original_Award_Project_Baseline__r.Baseline_Total_Grant_Spend__c - (Original_Award_Project_Baseline__r.Total_Homes_to_be_Upgraded__c * 7500)) ),
+(Cost_Cap_Exc_LCH_On_Gas__c - ( Current_Award_Baseline__r.Baseline_Total_Grant_Spend__c - ( Current_Award_Baseline__r.Total_Homes_to_be_Upgraded__c * 7500)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cost Cap Exc LCH On Gas - Variance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

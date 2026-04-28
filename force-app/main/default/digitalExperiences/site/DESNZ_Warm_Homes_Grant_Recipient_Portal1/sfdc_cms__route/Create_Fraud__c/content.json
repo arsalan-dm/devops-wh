@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Create Fraud",
+  "contentBody" : {
+    "activeViewId" : "Create_Fraud",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-create-fraud",
+    "urlPrefix" : "create-fraud"
+  },
+  "urlName" : "create-fraud"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Assigned_Actions</fullName>
+    <columns>NAME</columns>
+    <columns>Action_Title__c</columns>
+    <columns>Action_Description__c</columns>
+    <columns>Owning_Team__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Owner_Name__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Assigned Actions</label>
+</ListView>

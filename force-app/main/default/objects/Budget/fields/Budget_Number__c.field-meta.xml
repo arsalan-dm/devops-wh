@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Number__c</fullName>
+    <description>Autonumber to identify Budget record</description>
+    <displayFormat>BU-{00000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Budget Number</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

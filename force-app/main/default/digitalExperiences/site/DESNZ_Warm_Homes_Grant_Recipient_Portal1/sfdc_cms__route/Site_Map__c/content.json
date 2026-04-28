@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Site Map",
+  "contentBody" : {
+    "activeViewId" : "Site_Map",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-site-map",
+    "urlPrefix" : "site-map"
+  },
+  "urlName" : "site-map"
+}

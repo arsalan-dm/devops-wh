@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MM_Spend_and_Payments_Update__c</fullName>
+    <inlineHelpText>Review spend milestones and progress against planned grant claims for the period. Query any variances identified, exploring causes and justifications. Check whether GR is in line with A&amp;A spending rules. Explore any support needs and agree corrective actions, where required – this may include considering deployment of additional Delivery Partner support.</inlineHelpText>
+    <label>Spend and Payments Update</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

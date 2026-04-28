@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Year__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to Time Period object. Record Type Financial Year</description>
+    <label>Financial Year</label>
+    <referenceTo>Time_Period__c</referenceTo>
+    <relationshipLabel>Funding Property Details (Financial Year)</relationshipLabel>
+    <relationshipName>Funding_Property_Details_FY</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

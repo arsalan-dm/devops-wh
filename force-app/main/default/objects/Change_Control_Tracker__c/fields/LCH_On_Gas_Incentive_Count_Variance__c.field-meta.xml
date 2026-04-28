@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LCH_On_Gas_Incentive_Count_Variance__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Parent_Change_Control_Tracker__c = &quot;&quot;, 0,
+IF(Pending_Change_Control_Request__c = &quot;&quot;,
+( LCH_On_Gas_Incentive_Count__c -  Original_Award_Project_Baseline__r.No_of_Homes_for_On_Gas_grid_LCH_Offer__c ),
+(LCH_On_Gas_Incentive_Count__c - Current_Award_Baseline__r.No_of_Homes_for_On_Gas_grid_LCH_Offer__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>LCH On Gas Incentive Count - Variance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

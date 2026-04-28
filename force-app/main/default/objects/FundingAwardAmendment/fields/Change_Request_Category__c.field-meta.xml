@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Category__c</fullName>
+    <label>Change Request Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Green - Low Risk</fullName>
+                <default>false</default>
+                <label>Green - Low Risk</label>
+            </value>
+            <value>
+                <fullName>Amber/Green - Medium Risk</fullName>
+                <default>false</default>
+                <label>Amber/Green - Medium Risk</label>
+            </value>
+            <value>
+                <fullName>Amber - High Risk</fullName>
+                <default>false</default>
+                <label>Amber - High Risk</label>
+            </value>
+            <value>
+                <fullName>Red- Significantly High Risk</fullName>
+                <default>false</default>
+                <label>Red- Significantly High Risk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

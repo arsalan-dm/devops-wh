@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Award_Name_Text__c</fullName>
+    <description>Formula field used to retrieve the name of the related Funding Award. This can then be used in Flow datatables for examples.</description>
+    <externalId>false</externalId>
+    <formula>Funding_Award__r.Name</formula>
+    <label>Award Name Text</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Batch in Progress",
+  "contentBody" : {
+    "activeViewId" : "Batch_in_Progress",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-batch-in-progress",
+    "urlPrefix" : "batch-in-progress"
+  },
+  "urlName" : "batch-in-progress"
+}

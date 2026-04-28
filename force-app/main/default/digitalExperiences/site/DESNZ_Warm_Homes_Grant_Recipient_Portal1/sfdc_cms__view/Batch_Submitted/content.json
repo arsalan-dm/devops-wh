@@ -1,0 +1,145 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Batch Submitted",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"f1e81e50-b587-4061-9711-27ecf503011c\",\"columns\":[{\"UUID\":\"46429027-8171-4b60-af48-f9e8f1f09c57\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "e100d029-0fff-4972-af75-c75c7295607c",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Submitted Batches",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "6560687f-59d6-44c5-af21-adbb992e5b8a",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "37ae3725-f0aa-452b-83fb-404d9d5cd6db",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"c58bfd6c-8411-4821-8b3a-ee51e43f44ac\",\"columns\":[{\"UUID\":\"3716434d-6719-4da2-91b5-533486a4ed7d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"b6fc8a71-8d84-4add-96da-9ea3bc5a66e5\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowArguments" : "[{\"label\":\"varTableType\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varTableType\",\"type\":\"String\",\"value\":\"Submitted\"}]",
+                    "flowName" : "{\"flowName\":\"ABS_Batch_List\",\"flowLabel\":\"ABS FORM - Batch List and Edit\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "51482d31-4157-4c9d-8b65-a446106bf0d1",
+                  "type" : "component"
+                } ],
+                "id" : "3716434d-6719-4da2-91b5-533486a4ed7d",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "f790679c-1e6b-4b72-b592-f0c03d1f88e6",
+                  "type" : "component"
+                } ],
+                "id" : "b6fc8a71-8d84-4add-96da-9ea3bc5a66e5",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "c58bfd6c-8411-4821-8b3a-ee51e43f44ac",
+              "type" : "component"
+            } ],
+            "id" : "46429027-8171-4b60-af48-f9e8f1f09c57",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f1e81e50-b587-4061-9711-27ecf503011c",
+          "type" : "component"
+        } ],
+        "id" : "c38db395-03c4-497d-83ed-e87512aff282",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Batch Submitted",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "931434a9-4c5f-468f-bb64-2d2c6b6e77cf",
+          "type" : "component"
+        } ],
+        "id" : "ecd375ff-f175-48bb-a29e-6702214ed49d",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "c7e72398-3856-4c81-b6f3-2ecc3460a1fc",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-batch-submitted"
+  },
+  "urlName" : "batch-submitted"
+}

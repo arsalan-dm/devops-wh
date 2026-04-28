@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingAward$No_of_Homes_Completed__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>FundingAward.Batches__r$OOLCH_Grant_Total__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>FundingAward.Batches__r$PR100LCH_Grant_Total__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>FundingAward.Batches__r$PR50LCH_Grant_Total__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>FundingAward.Batches__r$SHLCH_Grant_Total__c</field>
+    </columns>
+    <columns>
+        <field>FundingAward.Batches__r$Approved_Date__c</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>FundingAward.Batches__r$Name</field>
+    </columns>
+    <columns>
+        <field>FundingAward.Batches__r.Batch_Properties__r$Name</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Cost_Cap_Category__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Low Carbon Heat</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>FundingAward.Batches__r$Id</primaryTableColumn>
+        <relatedTable>FundingBatchMeasureSpend__c</relatedTable>
+        <relatedTableJoinColumn>Batch__c</relatedTableJoinColumn>
+    </crossFilters>
+    <customDetailFormulas>
+        <calculatedFormula>CASE( MONTH( FundingBatch__c.Approved_Date__c ),
+1, &quot;January&quot;,
+2, &quot;February&quot;,
+3, &quot;March&quot;,
+4, &quot;April&quot;,
+5, &quot;May&quot;,
+6, &quot;June&quot;,
+7, &quot;July&quot;,
+8, &quot;August&quot;,
+9, &quot;September&quot;,
+10, &quot;October&quot;,
+11, &quot;November&quot;,
+12, &quot;December&quot;,
+&quot;Unknown&quot;
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Month Approved</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Monitor how GRs perform against their low carbon heat cost cap (per tenure) on average across all batches approved to date – and provide risk levels on GR likelihood of meeting cost cap by scheme end.</description>
+    <filter>
+        <criteriaItems>
+            <column>FundingAward.Batches__r$ABS_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Approved</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingAward$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingAward.Batches__r.Batch_Properties__r$Tenure__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Low Carbon Heat Cost Cap</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Funding_Awards_with_Batches_and_Batch_Properties__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FundingAward$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

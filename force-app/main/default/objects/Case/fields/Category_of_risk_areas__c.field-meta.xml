@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_of_risk_areas__c</fullName>
+    <label>Category of Risk</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Summary_of_Risk__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Money sent to the incorrect supplier</fullName>
+                <default>false</default>
+                <label>Money sent to the incorrect supplier</label>
+            </value>
+            <value>
+                <fullName>Incorrect Amount sent to the supplier</fullName>
+                <default>false</default>
+                <label>Incorrect Amount sent to the supplier</label>
+            </value>
+            <value>
+                <fullName>Collusion between Supplier and internal staff</fullName>
+                <default>false</default>
+                <label>Collusion between Supplier and internal staff</label>
+            </value>
+            <value>
+                <fullName>Incorrect expenditure (grant instead of co-funding)</fullName>
+                <default>false</default>
+                <label>Incorrect expenditure (grant instead of co-funding)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Co-funding contribution amount paid from grant instead of Landlord/third party</fullName>
+                <default>false</default>
+                <label>Co-funding contribution amount paid from grant instead of Landlord/third party</label>
+            </value>
+            <value>
+                <fullName>Collusion between Supplier and homeowner/landlord</fullName>
+                <default>false</default>
+                <label>Collusion between Supplier and homeowner/landlord</label>
+            </value>
+            <value>
+                <fullName>Ineligible Application - False information on the Application: Undeclared partners</fullName>
+                <default>false</default>
+                <label>Ineligible Application - False information on the Application: Undeclared partners</label>
+            </value>
+            <value>
+                <fullName>Ineligible Application - False information on the Application: Income</fullName>
+                <default>false</default>
+                <label>Ineligible Application - False information on the Application: Income</label>
+            </value>
+            <value>
+                <fullName>Ineligible Application - False information on the Application: Benefit Receipt</fullName>
+                <default>false</default>
+                <label>Ineligible Application - False information on the Application: Benefit Receipt</label>
+            </value>
+            <value>
+                <fullName>Ineligible Application - False information on the Application: Other</fullName>
+                <default>false</default>
+                <label>Ineligible Application - False information on the Application: Other</label>
+            </value>
+            <value>
+                <fullName>Ineligible Application - Owner not occupier</fullName>
+                <default>false</default>
+                <label>Ineligible Application - Owner not occupier</label>
+            </value>
+            <value>
+                <fullName>Ineligible Application - False information on the Application: False ID</fullName>
+                <default>false</default>
+                <label>Ineligible Application - False information on the Application: False ID</label>
+            </value>
+            <value>
+                <fullName>Ineligible Property - false information on the application</fullName>
+                <default>false</default>
+                <label>Ineligible Property - false information on the application</label>
+            </value>
+            <value>
+                <fullName>Ineligible Property - falsified/incorrect EPC from pre-installation check</fullName>
+                <default>false</default>
+                <label>Ineligible Property - falsified/incorrect EPC from pre-installation check</label>
+            </value>
+            <value>
+                <fullName>Ineligible Property - non domestic</fullName>
+                <default>false</default>
+                <label>Ineligible Property - non domestic</label>
+            </value>
+            <value>
+                <fullName>Measure already Exists in the property</fullName>
+                <default>false</default>
+                <label>Measure already Exists in the property</label>
+            </value>
+            <value>
+                <fullName>Measure not compliant with standards/cannot be lodged</fullName>
+                <default>false</default>
+                <label>Measure not compliant with standards/cannot be lodged</label>
+            </value>
+            <value>
+                <fullName>Measures not installed</fullName>
+                <default>false</default>
+                <label>Measures not installed</label>
+            </value>
+            <value>
+                <fullName>Measure substitution (and substitution not compliant)</fullName>
+                <default>false</default>
+                <label>Measure substitution (and substitution not compliant)</label>
+            </value>
+            <value>
+                <fullName>Invoiced by both installer and retrofit co-ordinator</fullName>
+                <default>false</default>
+                <label>Invoiced by both installer and retrofit co-ordinator</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - Charging for additional/cancelled work</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - Charging for additional/cancelled work</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - for non existing enabling or ancillary work</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - for non existing enabling or ancillary work</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - Charging for incomplete measures</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - Charging for incomplete measures</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - Charging for measures not installed</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - Charging for measures not installed</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - Charging for non-compliant measures</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - Charging for non-compliant measures</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - Charging incorrect amount</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - Charging incorrect amount</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - duplicate charging for measures/labour</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - duplicate charging for measures/labour</label>
+            </value>
+            <value>
+                <fullName>Supplier invoice/proposal  - VAT</fullName>
+                <default>false</default>
+                <label>Supplier invoice/proposal  - VAT</label>
+            </value>
+            <value>
+                <fullName>Supplier not accredited</fullName>
+                <default>false</default>
+                <label>Supplier not accredited</label>
+            </value>
+            <value>
+                <fullName>Supplier looses accreditation (midway delivery)</fullName>
+                <default>false</default>
+                <label>Supplier looses accreditation (midway delivery)</label>
+            </value>
+            <value>
+                <fullName>Mandate fraud - unrelated to scheme properties</fullName>
+                <default>false</default>
+                <label>Mandate fraud - unrelated to scheme properties</label>
+            </value>
+            <value>
+                <fullName>mis selling of scheme</fullName>
+                <default>false</default>
+                <label>mis selling of scheme</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Scheme admin/administration</controllingFieldValue>
+            <valueName>Money sent to the incorrect supplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheme admin/administration</controllingFieldValue>
+            <valueName>Incorrect Amount sent to the supplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheme admin/administration</controllingFieldValue>
+            <valueName>Incorrect expenditure (grant instead of co-funding)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheme admin/administration</controllingFieldValue>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <controllingFieldValue>Measure/Installation</controllingFieldValue>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Co-funding contribution amount paid from grant instead of Landlord/third party</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Collusion between Supplier and homeowner/landlord</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Ineligible Application - False information on the Application: Undeclared partners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Ineligible Application - False information on the Application: Income</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Ineligible Application - False information on the Application: Benefit Receipt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Ineligible Application - False information on the Application: Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Ineligible Application - Owner not occupier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer/Beneficiary/Applicant</controllingFieldValue>
+            <valueName>Ineligible Application - False information on the Application: False ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Ineligible Property - false information on the application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Ineligible Property - falsified/incorrect EPC from pre-installation check</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Ineligible Property - non domestic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Measure/Installation</controllingFieldValue>
+            <valueName>Measure already Exists in the property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Measure/Installation</controllingFieldValue>
+            <valueName>Measure not compliant with standards/cannot be lodged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Measure/Installation</controllingFieldValue>
+            <valueName>Measures not installed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Measure/Installation</controllingFieldValue>
+            <valueName>Measure substitution (and substitution not compliant)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Collusion between Supplier and internal staff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Invoiced by both installer and retrofit co-ordinator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - Charging for additional/cancelled work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - for non existing enabling or ancillary work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - Charging for incomplete measures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - Charging for measures not installed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - Charging for non-compliant measures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - Charging incorrect amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - duplicate charging for measures/labour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier invoice/proposal  - VAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier not accredited</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Supplier</controllingFieldValue>
+            <valueName>Supplier looses accreditation (midway delivery)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External</controllingFieldValue>
+            <valueName>Mandate fraud - unrelated to scheme properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External</controllingFieldValue>
+            <valueName>mis selling of scheme</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

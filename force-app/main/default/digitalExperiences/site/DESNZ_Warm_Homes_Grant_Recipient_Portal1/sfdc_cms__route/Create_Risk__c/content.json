@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Create Risk",
+  "contentBody" : {
+    "activeViewId" : "Create_Risk",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-create-risk",
+    "urlPrefix" : "create-risk"
+  },
+  "urlName" : "create-risk"
+}

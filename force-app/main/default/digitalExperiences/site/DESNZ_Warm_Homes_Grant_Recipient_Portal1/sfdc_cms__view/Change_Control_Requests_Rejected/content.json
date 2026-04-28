@@ -1,0 +1,137 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Change Control Requests Rejected",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"e7a791de-4a4c-41b5-af39-cbfa7f8a0224\",\"columns\":[{\"UUID\":\"8913ce22-d805-4534-9e08-f50fe64aa16f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "1ed9c6a2-8d39-4a7d-8947-2579ce52161d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Rejected Change Control Requests",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "ba52250e-8064-4e24-8ed0-e1c6277d2068",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "88fd8b80-96d9-4d79-b7dc-10e062d5b736",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"6e6fb3ac-3c84-4ded-834d-22c898ba3c7b\",\"columns\":[{\"UUID\":\"4d211649-6f67-4bfa-b3a8-93bc413b30c9\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"7d3b4e8c-d6f0-425d-83ef-5c99d6a1288f\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"varFilter\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varFilter\",\"type\":\"String\",\"value\":\"rejected\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Change_Control_Request_List\",\"flowLabel\":\"GMS - Change Control Request List\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "19c016b1-f9d9-41d2-b463-25f62d36b52f",
+                  "type" : "component"
+                } ],
+                "id" : "4d211649-6f67-4bfa-b3a8-93bc413b30c9",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "28238926-05b9-40ff-b599-587afbe5a939",
+                  "type" : "component"
+                } ],
+                "id" : "7d3b4e8c-d6f0-425d-83ef-5c99d6a1288f",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "6e6fb3ac-3c84-4ded-834d-22c898ba3c7b",
+              "type" : "component"
+            } ],
+            "id" : "8913ce22-d805-4534-9e08-f50fe64aa16f",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "e7a791de-4a4c-41b5-af39-cbfa7f8a0224",
+          "type" : "component"
+        } ],
+        "id" : "77421c62-9b63-4de1-9b3e-dcf2c6cb1ecc",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Change Control Requests Rejected",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "950bd612-8557-42c2-a62b-aef70bc279e3",
+          "type" : "component"
+        } ],
+        "id" : "9367a984-b1e9-4e02-be4d-1942943de078",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "6ded5fe7-baf2-4d99-99e5-bfbf79113f2d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-change-control-requests-rejected"
+  },
+  "urlName" : "change-control-requests-rejected"
+}

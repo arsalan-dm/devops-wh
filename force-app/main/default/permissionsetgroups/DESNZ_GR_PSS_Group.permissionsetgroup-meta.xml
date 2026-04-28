@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Required permission set group to enable Grant Recipients to be able to access required PSS objects</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>DESNZ Customer - Grant Recipient</label>
+    <permissionSets>Chat_User_Portal</permissionSets>
+    <permissionSets>Compliant_Data_Sharing_Users</permissionSets>
+    <permissionSets>DESNZ_Customer_Grants_Recipient_Custom_Objects_CPL</permissionSets>
+    <permissionSets>DESNZ_Customer_Grants_Recipient_Custom_Objects_No_Licence</permissionSets>
+    <permissionSets>DESNZ_Customer_Grants_Recipient_Grantmaking_Feature_Licence_Dep</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

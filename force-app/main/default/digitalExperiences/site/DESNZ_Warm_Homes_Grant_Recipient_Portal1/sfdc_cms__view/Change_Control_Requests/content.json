@@ -1,0 +1,137 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Change Control Requests",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"76f82e40-91c2-462a-9900-408691ea8978\",\"columns\":[{\"UUID\":\"6ea12617-2e47-4dc9-aaa7-b10848c0e6cf\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "8d7fe255-80cf-478d-a1e2-b9fa5fe85a8f",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Change Control Requests",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "bd3504d0-78c4-4686-8b9e-185fec18c82a",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "940c3b09-68f2-482d-9a7f-a1cf2eff5aed",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"3abca388-b9ab-4b44-a0bb-e480a7d73e7f\",\"columns\":[{\"UUID\":\"c08928de-51f3-4a81-97e2-93258ede850e\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"85ab4ed1-8697-41bb-92b6-3475cdd544cb\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"varFilter\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varFilter\",\"type\":\"String\",\"value\":\"notApprovedOrRejected\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Change_Control_Request_List\",\"flowLabel\":\"GMS - Change Control Request List\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "8dcebb8d-834b-42d4-b1a0-f5164dd6c941",
+                  "type" : "component"
+                } ],
+                "id" : "c08928de-51f3-4a81-97e2-93258ede850e",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "b500fc4f-bd18-42a8-9344-9087619aca88",
+                  "type" : "component"
+                } ],
+                "id" : "85ab4ed1-8697-41bb-92b6-3475cdd544cb",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "3abca388-b9ab-4b44-a0bb-e480a7d73e7f",
+              "type" : "component"
+            } ],
+            "id" : "6ea12617-2e47-4dc9-aaa7-b10848c0e6cf",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "76f82e40-91c2-462a-9900-408691ea8978",
+          "type" : "component"
+        } ],
+        "id" : "94930ecb-ad64-42cc-9552-8aa0c85125fe",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Change Control Requests",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "ca045039-16af-4203-831f-452cc46242da",
+          "type" : "component"
+        } ],
+        "id" : "5300320a-adab-49b7-ade3-49290ff2b21b",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "b77c861d-0b89-4fea-81f1-2e13534ed651",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-change-control-requests"
+  },
+  "urlName" : "change-control-requests"
+}

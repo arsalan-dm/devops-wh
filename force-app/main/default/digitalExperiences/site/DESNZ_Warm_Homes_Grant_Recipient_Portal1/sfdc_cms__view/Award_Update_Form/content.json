@@ -1,0 +1,146 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Award Update Form",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"54f8e3c9-8a9a-44d0-adf2-8a366c0e5b03\",\"columns\":[{\"UUID\":\"c704d1f8-5f65-4f01-bf4e-5fa2194e0d69\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "0b207f75-3a2e-4954-91cb-c065e2649091",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Create Monthly Update",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "d418c807-f93c-481c-9aa1-dcb03ec6720d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "a3a37a58-0a82-479b-b6e7-781271f345e5",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"cf674bbb-8e13-47f9-bbd9-057f0f92fe68\",\"columns\":[{\"UUID\":\"66e8c133-37a9-491d-bff8-1408094b9885\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"7019cc1b-6ba7-4e88-8d72-40d9d1e2b4b1\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "2%",
+                        "right" : "2%",
+                        "top" : ""
+                      }
+                    },
+                    "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"recordId\",\"type\":\"String\",\"value\":\"{!Id}\"},{\"label\":\"varFormType\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varFormType\",\"type\":\"String\",\"value\":\"Create\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Monthly_Report_Framework\",\"flowLabel\":\"GMS - Monthly Report Framework\"}"
+                  },
+                  "customCssClasses" : "",
+                  "definition" : "dxp_flow:flow",
+                  "id" : "f1843280-190b-4c5f-9de0-490f9a222951",
+                  "type" : "component"
+                } ],
+                "id" : "66e8c133-37a9-491d-bff8-1408094b9885",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "cdd55913-66a3-4b93-91e2-affbd9a908da",
+                  "type" : "component"
+                } ],
+                "id" : "7019cc1b-6ba7-4e88-8d72-40d9d1e2b4b1",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "cf674bbb-8e13-47f9-bbd9-057f0f92fe68",
+              "type" : "component"
+            } ],
+            "id" : "c704d1f8-5f65-4f01-bf4e-5fa2194e0d69",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "54f8e3c9-8a9a-44d0-adf2-8a366c0e5b03",
+          "type" : "component"
+        } ],
+        "id" : "fa16f391-0fc7-47ad-977a-eeae59937a7c",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Award Update Form",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "8c567968-fbac-4de5-802f-b17df57efd72",
+          "type" : "component"
+        } ],
+        "id" : "a71a6e44-41f3-40cc-841f-dda75c312a3d",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "26e68714-eb6f-4d4f-a557-500193b26842",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-award-update-form"
+  },
+  "urlName" : "award-update-form"
+}

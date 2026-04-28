@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PC_Energy_Savings_kWh__c</fullName>
+    <formula>IF(
+    OR(
+        ISBLANK(Energy_Savings_kWh__c),
+        Energy_Savings_kWh__c = 0
+    ),
+    0,
+    Energy_Savings_kWh_Actual__c / Energy_Savings_kWh__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Energy Savings (kWh)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

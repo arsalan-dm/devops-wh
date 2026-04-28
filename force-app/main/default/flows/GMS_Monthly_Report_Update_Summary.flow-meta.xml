@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Update_Values</name>
+        <label>Assign Update Values</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Reason_for_homes_approached_not_receivin__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Reasons_not_receiving_installations</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Homes_Approached__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Homes_Approached</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Plan_for_Next_Month__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Plan_for_Next_Month</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Progress_Update__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Progress_Update</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Lessons_Learned_Other_Information__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Lessons_Learned_Other_Information_optio</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Reporting_Period_Start__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Start_of_Reporting_Period</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Reporting_Period_End__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>End_of_Reporting_Period</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Phase_RAG_rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Phase_RAG_Rating</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Grant_A_A_Spend__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Total_Grant_A_A_spend_for_Project</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Total_No_of_KPI_2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Total_No_of_Homes_Ready_For_Installs_To_Start</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Total_No_of_KPI_1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Total_No_of_Homes_Identified_As_Suitable_For_Retrofit</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Date_of_Update__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rcdUpdate.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>rcdUpdate.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Monthly_Update</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>chcCancelSkip</name>
+        <choiceText>Cancel Skip and choose Phase</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cancel Skip</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcEditActual</name>
+        <choiceText>Edit Phase Actuals</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Edit Actual</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcEditForecast</name>
+        <choiceText>Edit Forecast</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Edit Forecast</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcEditSummary</name>
+        <choiceText>Edit Summary</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Edit Summary</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcSkipActualsandForecast</name>
+        <choiceText>Skip editing further Actuals and Forecasts</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>SkipChildren</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>chcSubmitUpdate</name>
+        <choiceText>Submit Monthly Update</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Submit</stringValue>
+        </value>
+    </choices>
+    <dynamicChoiceSets>
+        <name>chcActiveBaselines</name>
+        <dataType>String</dataType>
+        <displayField>Baseline_Version__c</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Funding_Award__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>rcdFundingAward.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Baseline_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Phase</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <object>FundingBaseline__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>chcPhase_RAG</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Phase_RAG_rating__c</picklistField>
+        <picklistObject>FundingAwardUpdate__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>chcPhaseBaselinesList</name>
+        <collectionReference>rcdRemainingBaselinesList</collectionReference>
+        <dataType>String</dataType>
+        <displayField>Baseline_Version__c</displayField>
+        <object>FundingBaseline__c</object>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>chcReasons_not_receiving_installations</name>
+        <dataType>Multipicklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Reason_for_homes_approached_not_receivin__c</picklistField>
+        <picklistObject>FundingAwardUpdate__c</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>fla3MonthEnd</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!rcdUpdate.Reporting_Period_Start__c}) + FLOOR((MONTH({!rcdUpdate.Reporting_Period_Start__c}) + 3) / 12),
+    MOD(MONTH({!rcdUpdate.Reporting_Period_Start__c}) + 3, 12) + 1,
+    1
+) - 1</expression>
+    </formulas>
+    <formulas>
+        <name>fla3MonthName</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH(  {!fla3MonthStart} ),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fla3MonthStart</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!rcdUpdate.Reporting_Period_Start__c}) + FLOOR((MONTH({!rcdUpdate.Reporting_Period_Start__c}) + 1) / 12),
+    MOD(MONTH({!rcdUpdate.Reporting_Period_Start__c}) + 2, 12) + 1,
+    1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaCheckTotalHomesTreated_LG</name>
+        <dataType>Boolean</dataType>
+        <expression>({!rcdActual.No_of_Homes_Suitable_For_Retrofit__c} + {!rcdActual.No_of_Homes_Completed__c} + {!rcdActual.No_of_Homes_Started_Installations__c})&lt;= {!rcdParentBaseline.Total_Homes_to_be_Upgraded__c}</expression>
+    </formulas>
+    <formulas>
+        <name>flaCheckTotalHomesTreated_SHF</name>
+        <dataType>Boolean</dataType>
+        <expression>({!rcdActual.No_of_Homes_Suitable_For_Retrofit__c} + {!rcdActual.No_of_Homes_Ready_for_Installs_to_Start__c} + {!rcdActual.No_of_Homes_Started_Installations__c} + {!rcdActual.No_of_Homes_Completed__c} + {!rcdActual.No_of_Homes_All_Installations_Completed__c} )&lt;= {!rcdParentBaseline.Total_Homes_to_be_Upgraded__c}</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentForecastStartDate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!rcdUpdate.Reporting_Period_Start__c}) + FLOOR((MONTH({!rcdUpdate.Reporting_Period_Start__c})) / 12),
+    MOD(MONTH({!rcdUpdate.Reporting_Period_Start__c}), 12) +1 ,
+    1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentMonthEnd</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!$Flow.CurrentDate}),
+    MONTH({!$Flow.CurrentDate}) + 1,
+    1
+) - 1</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentMonthName</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH( {!$Flow.CurrentDate}),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaCurrentMonthStart</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR({!$Flow.CurrentDate}),
+    MONTH({!$Flow.CurrentDate}),
+    1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaFinalEditDate</name>
+        <dataType>Date</dataType>
+        <expression>{!rcdFundingAward.Next_Reporting_Date__c}</expression>
+    </formulas>
+    <formulas>
+        <name>flaMonthPriorEndDate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    YEAR(TODAY()) + FLOOR((MONTH(TODAY()) - 2) / 12),
+    MOD(MONTH(TODAY()) - 2, 12)+2,
+    1
+) - 1</expression>
+    </formulas>
+    <formulas>
+        <name>flaMonthPriorName</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH(  {!flaMonthPriorStartDate} ),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaMonthPriorStartDate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    IF(MONTH(TODAY()) = 1, YEAR(TODAY()) - 1, YEAR(TODAY())),
+    IF(MONTH(TODAY()) = 1, 12, MONTH(TODAY()) - 1),
+    1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>flaUpdateMonthandYear</name>
+        <dataType>String</dataType>
+        <expression>CASE( MONTH(  {!rcdUpdate.Reporting_Period_Start__c} ),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;,
+    4, &quot;April&quot;,
+    5, &quot;May&quot;,
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;Unknown&quot;
+) + &quot; &quot; + TEXT(YEAR( {!rcdUpdate.Reporting_Period_Start__c}))</expression>
+    </formulas>
+    <interviewLabel>GMS - Monthly Report Update Summary {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>GMS - Monthly Report Update Summary</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Monthly_Update</name>
+        <label>Update Monthly Update</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <inputReference>rcdUpdate</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>Summary_Screen</name>
+        <label>Summary Screen</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Update_Values</targetReference>
+        </connector>
+        <fields>
+            <name>Summary_Header</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Monthly Update: {!flaUpdateMonthandYear}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 24px;&quot;&gt;{!rcdUpdate.Funding_Award__r.Name}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(22, 93, 134); font-size: 20px;&quot;&gt;{!rcdUpdate.Funding_Baseline__r.Baseline_Version__c}&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 16px; color: rgb(0, 0, 0);&quot;&gt;All fields must be completed to save the form. If you have incomplete figures at the time of creating the first draft then enter 0 or dummy text/dates for that data and return to finish your update later. Updates cannot be edited after the due date&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(0, 0, 0);&quot;&gt;Fields marked with an asterisk (*) are required. Please ensure all required fields are completed before submitting the form.&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Resubmission_DisplayText</name>
+            <fieldText>&lt;p&gt;{!txt_Resubmission_Text}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>rcdUpdate.Status__c</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Resubmission Requested</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Summary_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Summary_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Start_of_Reporting_Period</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Reporting_Period_Start__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Start of Reporting Period</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Summary_Screen_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>End_of_Reporting_Period</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Reporting_Period_End__c</elementReference>
+                    </defaultValue>
+                    <fieldText>End of Reporting Period</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isReadOnly>
+                        <booleanValue>true</booleanValue>
+                    </isReadOnly>
+                    <isRequired>false</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Clarification_Text_Summary</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;{!txt_Date_Clarification_Message}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Summary_Details</name>
+            <fieldText>Summary Details</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Summary_Details_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Homes_Approached</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Homes_Approached__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Homes Approached (optional)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Please enter the number of homes which have been approached but are not receiving installations&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Homes_Approached} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Reasons_not_receiving_installations</name>
+                    <choiceReferences>chcReasons_not_receiving_installations</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Reason_for_homes_approached_not_receivin__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Reasons Not Receiving Installations</fieldText>
+                    <fieldType>MultiSelectCheckboxes</fieldType>
+                    <helpText>&lt;p&gt;Please enter the number of homes which have been approached but are not continuing on the scheme, using the list below to select the reason why the homes are no longer on the scheme You can select more than one by using Ctrl and click.&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Summary_Details_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Phase_RAG_Rating</name>
+                    <choiceReferences>chcPhase_RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>Green</stringValue>
+                    </defaultValue>
+                    <fieldText>Phase RAG Rating (* Required)</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <helpText>&lt;p&gt;Rate your delivery progress. Use Red if there are significant problems affecting your ability to deliver as expected. Use Amber for if there are problems that may affect delivery. Use Green if you&apos;re on target to deliver as expected.&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>rcdFundingAward.Record_Type_Name__c</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>SHF Challenge Fund</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>Summary_Screen_Section3</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Summary_Screen_Section3_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Total_No_of_Homes_Identified_As_Suitable_For_Retrofit</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Total_No_of_KPI_1__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Total No. of Homes Identified As Suitable For Retrofit (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Enter the total number of homes identified as suitable for retrofit&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Total_No_of_Homes_Identified_As_Suitable_For_Retrofit} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Total_No_of_Homes_Ready_For_Installs_To_Start</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Total_No_of_KPI_2__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Total No. of Homes Ready For Installs To Start  (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Enter the total number of homes ready for installs to start&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Value cannot be in the negative.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Total_No_of_Homes_Ready_For_Installs_To_Start}  &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Summary_Screen_Section3_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Total_Grant_A_A_spend_for_Project</name>
+                    <dataType>Currency</dataType>
+                    <defaultValue>
+                        <elementReference>rcdUpdate.Grant_A_A_Spend__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Total Grant A&amp;A Spend in Month (* Required)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Enter the total grant A&amp;amp;A spend for this month (across all active phases in project this month)&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>2</scale>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Value cannot be in the negative.&lt;/p&gt;</errorMessage>
+                        <formulaExpression>IF({!Total_Grant_A_A_spend_for_Project} &lt; 0, FALSE, TRUE)</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>rcdFundingAward.Record_Type_Name__c</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>SHF Challenge Fund</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Narrative</name>
+            <fieldText>Narrative</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Narrative_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Narrative_Text</name>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px; color: rgb(0, 0, 0);&quot;&gt;You should use this area to explain any variations in your monthly report between the actuals and the forecast. For example, you should note reasons for any difference in the Key Performance Indicator figures.&amp;nbsp;This will help when assessing the status of this project.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Plan_for_Next_Month</name>
+                    <defaultValue>
+                        <stringValue>{!rcdUpdate.Plan_for_Next_Month__c}</stringValue>
+                    </defaultValue>
+                    <fieldText>Plan for Next Month (* Required)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;Outline what activities are planned for the next reporting period&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Progress_Update</name>
+                    <defaultValue>
+                        <stringValue>{!rcdUpdate.Progress_Update__c}</stringValue>
+                    </defaultValue>
+                    <fieldText>Progress Update (* Required)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;Describe the current status of the project, qualifying the RAG rating and outlining activities undergone this reporting period&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>Lessons_Learned_Other_Information_optio</name>
+                    <defaultValue>
+                        <stringValue>{!rcdUpdate.Lessons_Learned_Other_Information__c}</stringValue>
+                    </defaultValue>
+                    <fieldText>Lessons Learned/Other Information (optional)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;Enter any lessons you have learned through delivery of the scheme, or any other additional information you wish to bring to our attention&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Summary_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>txt_Date_Clarification_Message</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(231, 119, 7);&quot;&gt;Please enter non-cumulative data only to represent progress made in this month only&lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_Resubmission_Text</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div style=&quot;width:100%;border: 3px solid  rgb(37, 107, 199);padding: 10px;&quot;&gt;
+&lt;p&gt;&lt;strong style=&quot;font-size: 18px; color: rgb(37, 107, 199);&quot;&gt;Please adjust and resubmit your report for the following reasons:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(0, 0, 0);&quot;&gt;{!rcdUpdate.Resubmission_Request_Details__c}&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtHR</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;hr/&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtRAG_Amber</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;/resource/ragstatus/3amber.png&quot; alt=&quot;Amber Disk&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtRAG_Green</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;/resource/ragstatus/2green.png&quot; alt=&quot;Green Disk&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txtRAG_Red</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;/resource/ragstatus/4red.png&quot; alt=&quot;Red Disk&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>currentItem_Filter_Forecasts_to_Attach</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>currentItemFromSourceCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdActual</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardActual__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdActualsList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardActual__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdActualsListincUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardActual__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdBaselineList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdForecast</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdForecastList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdForecastListincUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdFundingAward</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAward</objectType>
+    </variables>
+    <variables>
+        <name>rcdParentBaseline</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdRemainingBaselinesList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingBaseline__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>FundingAwardUpdate__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdUpdatedForecast</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>rcdUpdatedForecastList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingAwardForecast__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_Date_of_Update</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_No_Baseline</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varAASpendFieldValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>rcdActual.Grant_A_A_Spend__c</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>varAwardId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varChosenBaselineIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varFinalForecastCountText</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varForecastCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varFormType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Create</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varLastModifiedDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>var_Date_of_Update</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>varNewForecastEndDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varNewForecastMonth</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varNewForecastStartDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varPhaseBaselineCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>varPosition</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>1.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varRecordTypeCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varReportingPeriodEnd</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varReportingPeriodMonth</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varReportingPeriodStart</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varShowSkip</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varTotalReceived</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

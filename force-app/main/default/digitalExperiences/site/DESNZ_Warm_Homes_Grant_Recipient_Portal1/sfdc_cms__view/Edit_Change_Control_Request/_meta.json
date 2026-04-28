@@ -1,0 +1,5 @@
+{
+  "apiName" : "Edit_Change_Control_Request",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

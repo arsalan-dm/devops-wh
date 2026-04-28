@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DCA_Governance_Controls_RAG_Detail__c</fullName>
+    <description>Governance &amp; Controls/Consortium Arrangements RAG Detail</description>
+    <label>Governance &amp; Controls RAG Detail</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

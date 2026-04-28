@@ -1,0 +1,222 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Transactions",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"8a6586f7-117d-45d4-ae7c-ac84c9f2644f\",\"columns\":[{\"UUID\":\"dcdae51c-99ee-416b-b0eb-19e955124e54\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "d518534f-9450-4c8e-9192-a0acc48cf974",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Transactions Summary",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "5c9a2ecd-6b57-4be6-8844-b878226441a3",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "6fc7d3cc-ef56-4437-adf8-7f3f7085a7dd",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"da910736-f702-48a2-a445-f24823ff5350\",\"columns\":[{\"UUID\":\"c8b33be5-460a-4472-9245-8423eb427e83\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"c209cec9-d996-4473-8a6a-48300c88903b\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "activeTabBorderHighlightWeight" : "2px",
+                    "activeTabTextEmphasis" : "{\"bold\":true}",
+                    "activeTabTextStyle" : "{\"textStyle\":\"paragraph1\",\"headingTag\":\"p\"}",
+                    "borderColor" : "",
+                    "borderRadius" : "0px",
+                    "borderWeight" : "0px",
+                    "enableOverflowMenu" : false,
+                    "imageFit" : "cover",
+                    "imagePosition" : "center center",
+                    "overflowIconColor" : "rgb(116,116,116)",
+                    "overflowIconStyle" : "down-arrow",
+                    "overflowMenuLabel" : "More",
+                    "tabAlignment" : "left",
+                    "tabBorderColor" : "",
+                    "tabBorderRadius" : "0px",
+                    "tabBorderWeight" : "0px",
+                    "tabHoverBorderHighlightWeight" : "1px",
+                    "tabLayout" : "horizontal",
+                    "tabPadding" : "12px",
+                    "tabTextStyle" : "{\"textStyle\":\"paragraph1\",\"headingTag\":\"p\"}",
+                    "tabsetConfig" : "{\"UUID\":\"cc3db2fc-00a1-4d1f-9dcc-d39f240a753e\",\"activeTab\":null,\"useOverflowMenu\":null,\"tabs\":[{\"UUID\":\"1842d015-eadd-41af-8e0c-156d724c3baa\",\"tabName\":\"Proposed\",\"tabKey\":\"tab1\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"408f5d63-2490-4633-ab69-82496245625c\",\"tabName\":\"Query\",\"tabKey\":\"4c914\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"265d731d-e9ac-4b99-a606-608ac3095bff\",\"tabName\":\"Reviewed\",\"tabKey\":\"tab2\",\"locked\":false,\"allowGuestUser\":false},{\"UUID\":\"416375bb-c871-44c7-a543-d499e9f86dd9\",\"tabName\":\"Summarised\",\"tabKey\":\"tab3\",\"locked\":false,\"allowGuestUser\":false}]}",
+                    "width" : "100%"
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : {
+                        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"recordId\",\"type\":\"String\",\"value\":\"{!id}\"},{\"label\":\"var_recordId_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_recordId_Type\",\"type\":\"String\",\"value\":\"{!Type}\"},{\"label\":\"var_Status\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Status\",\"type\":\"String\",\"value\":\"Proposed\"}]",
+                        "flowName" : "{\"flowName\":\"GMS_Funding_Transaction_Display\",\"flowLabel\":\"GMS - Funding Transaction Display\"}"
+                      },
+                      "definition" : "dxp_flow:flow",
+                      "id" : "92feaed9-c25c-4758-a6ed-69ca3fa237ec",
+                      "type" : "component"
+                    } ],
+                    "id" : "1842d015-eadd-41af-8e0c-156d724c3baa",
+                    "name" : "tab1",
+                    "title" : "Proposed",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"recordId\",\"type\":\"String\",\"value\":\"{!id}\"},{\"label\":\"var_recordId_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_recordId_Type\",\"type\":\"String\",\"value\":\"{!Type}\"},{\"label\":\"var_Status\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Status\",\"type\":\"String\",\"value\":\"Query\"}]",
+                        "flowName" : "{\"flowName\":\"GMS_Funding_Transaction_Display\",\"flowLabel\":\"GMS - Funding Transaction Display\"}"
+                      },
+                      "definition" : "dxp_flow:flow",
+                      "id" : "f8a63365-5b83-49be-924a-f2f5fff7a53d",
+                      "type" : "component"
+                    } ],
+                    "id" : "408f5d63-2490-4633-ab69-82496245625c",
+                    "name" : "4c914",
+                    "title" : "Query",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"recordId\",\"type\":\"String\",\"value\":\"{!Id}\"},{\"label\":\"var_recordId_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_recordId_Type\",\"type\":\"String\",\"value\":\"{!Type}\"},{\"label\":\"var_Status\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Status\",\"type\":\"String\",\"value\":\"Reviewed\"}]",
+                        "flowName" : "{\"flowName\":\"GMS_Funding_Transaction_Display\",\"flowLabel\":\"GMS - Funding Transaction Display\"}"
+                      },
+                      "definition" : "dxp_flow:flow",
+                      "id" : "b6d62208-2ab1-4dba-a071-4dabec33c0cc",
+                      "type" : "component"
+                    } ],
+                    "id" : "265d731d-e9ac-4b99-a606-608ac3095bff",
+                    "name" : "tab2",
+                    "title" : "Reviewed",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"recordId\",\"type\":\"String\",\"value\":\"{!id}\"},{\"label\":\"var_recordId_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_recordId_Type\",\"type\":\"String\",\"value\":\"{!Type}\"},{\"label\":\"var_Status\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Status\",\"type\":\"String\",\"value\":\"Summarised\"}]",
+                        "flowName" : "{\"flowName\":\"GMS_Funding_Transaction_Display\",\"flowLabel\":\"GMS - Funding Transaction Display\"}"
+                      },
+                      "definition" : "dxp_flow:flow",
+                      "id" : "e7e2c04e-f137-4d27-8e3a-c0afdf3ddb8e",
+                      "type" : "component"
+                    } ],
+                    "id" : "416375bb-c871-44c7-a543-d499e9f86dd9",
+                    "name" : "tab3",
+                    "title" : "Summarised",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_layout:tabs",
+                  "id" : "cc3db2fc-00a1-4d1f-9dcc-d39f240a753e",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "imageInfos" : "",
+                    "richTextValue" : "<p>Download Microsoft Excel Template to bulk upload transaction records <a href=\"https://desnz-gm--whdev.sandbox.my.salesforce.com/sfc/p/TA000009XUev/a/TA000000heJx/faUDB1eyBUhcCtcSxSw9CwymQe4Gw0HNxjmxtUxWTcg\" rel=\"noopener noreferrer\" target=\"_self\"><strong>here</strong></a></p><p><br></p><p><strong>GUIDANCE</strong></p><p><br></p><p>The Reconciliation and Evidence Checking Process for WH:SHF W3 is a mandatory process for all Grant Recipients. As outlined in the Grant Funding Agreement, the Grant Recipient shall use the grant solely for the delivery of funded activities and the Grant Recipient shall provide the Department with evidence of the costs incurred.</p><p>&nbsp;</p><p>Grant Recipients are expected to submit their transactions on a quarterly basis. Please select the ‘Create Transactions Record’ button which will give you the option to input transactions as a single entry or a bulk entry (max 500 per upload).</p><p>&nbsp;</p><p>If you have selected to do a ‘bulk entry’ – please use the transactions spreadsheet linked abto capture all of your transactions which is downloadable above. GRs will then need to copy and paste the transactions directly into the GMS ahead of the deadline. The GMS will allow 500 transactions to be copied over at one time.</p><p>&nbsp;</p><p>Once you are content with the copied data please press submit. The GMS will show you how many transactions have been successfully copied over into the system.</p><p>&nbsp;</p><p>Please note:</p><ul><li>The spreadsheet must not be changed as it needs to mirror the GMS exactly for the system to accept the transactions information.</li><li>The spreadsheet will not summarise the total cost of all the transactions that have been inputted into to it – the GMS will calculate this once in the system.</li><li>We advise GRs to create their own spreadsheet if they would like to have any additional functionality to support them with manging this process.</li><li>We ask that Grant Recipients follow the DD/MM/YYYY date format and do not input £ symbols – just the numerical value of the amount. If this is not followed, the information will not copy into the GMS accurately.</li><li>Column A – ‘Transaction Description’ has a character limit of around 250 characters. There are no other character limits in the spreadsheet. GRs are advised to use column H for any additional notes/information they would like to add.</li><li>When copying the data from the spreadsheet into the GMS – please copy the headings in row 1 as well.</li></ul><p>&nbsp;</p><p>If your transaction has a ‘proposed’ status against it - you can still edit it as you wish. If the transaction has an ‘approved’ status - please contact your DSM and they will assist you.</p><p>&nbsp;</p><p>During the Reconciliation process, the Department/Delivery Partner may have queries on transactions that they need GRs to clarify. This will show up on this page for you to address.’</p><p><strong>﻿</strong></p>"
+                  },
+                  "definition" : "community_builder:richTextEditor",
+                  "id" : "d950a800-adc5-4109-a12a-c3e6c363ab7f",
+                  "type" : "component"
+                } ],
+                "id" : "c8b33be5-460a-4472-9245-8423eb427e83",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "665fb203-8179-496d-abec-3ac1efb094ac",
+                  "type" : "component"
+                } ],
+                "id" : "c209cec9-d996-4473-8a6a-48300c88903b",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "da910736-f702-48a2-a445-f24823ff5350",
+              "type" : "component"
+            } ],
+            "id" : "dcdae51c-99ee-416b-b0eb-19e955124e54",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "8a6586f7-117d-45d4-ae7c-ac84c9f2644f",
+          "type" : "component"
+        } ],
+        "id" : "ba35883e-087d-4bbd-a916-f6914f12d424",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Transactions",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "d6a63942-3730-4cc8-a547-e2c75849f060",
+          "type" : "component"
+        } ],
+        "id" : "ef8ccd7a-f988-4dd4-a0ea-b6c7c74ca9ba",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "c80fff13-057c-4c2d-867a-1d872fdc6730",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-transactions"
+  },
+  "urlName" : "transactions"
+}

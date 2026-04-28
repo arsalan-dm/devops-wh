@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Change_Control_Requests_SHF</fullName>
+    <columns>Name</columns>
+    <columns>LastModifiedDate</columns>
+    <columns>LastModifiedBy</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ApprovalStatus</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>FundingAward</field>
+        <operation>startsWith</operation>
+        <value>SHF</value>
+    </filters>
+    <label>Approved Change Control Requests - SHF</label>
+    <sharedTo>
+        <group>Digital_Modus</group>
+        <group>SHF_User</group>
+    </sharedTo>
+</ListView>

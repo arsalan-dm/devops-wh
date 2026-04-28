@@ -1,0 +1,228 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Fraud and Error",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"16792d80-8e1c-49f6-a510-4edcc63444ce\",\"columns\":[{\"UUID\":\"84c7f5b2-2dbd-4dd5-92f2-92e1141e8e44\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "60b043c3-5c05-429c-8a78-6e9b18f601c3",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Fraud and Error",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "047a6ab3-9f87-4a4b-90e8-0912321c2cea",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "b8867ae1-99ed-421b-8e4f-921176574574",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"7302d2be-d582-45ba-ad6e-93d0cba0cdc4\",\"columns\":[{\"UUID\":\"54572e14-b035-42b2-af9a-e7f5135f5220\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"079f08b8-64be-4144-9d29-1fbfc8952a1a\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"DESNZ_Award_Next_Reporting_Alert\",\"flowLabel\":\"DESNZ Award Next Reporting Alert\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "fdf59c16-2122-4b27-928d-bcca0e6f5801",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "columnGutterWidth" : "",
+                    "columnMinHeight" : "",
+                    "columnVerticalAlign" : "flex-start",
+                    "layoutDirectionDesktop" : "row",
+                    "layoutDirectionMobile" : "column",
+                    "layoutDirectionTablet" : "column",
+                    "sectionConfig" : "{\"UUID\":\"d1e83eab-d1ad-4145-b57b-6c6b502404ff\",\"columns\":[{\"UUID\":\"37b88ff6-a4a0-41fa-9164-5920c8403056\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"6\",\"seedComponents\":[]},{\"UUID\":\"cbc250ac-e52c-43ae-908d-fbb88d248a72\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"6\",\"seedComponents\":[]}]}"
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : {
+                        "backgroundColor" : "",
+                        "isLinkable" : false,
+                        "linkAssistiveText" : "",
+                        "paddingHorizontal" : "none",
+                        "paddingVertical" : "none",
+                        "text" : "Fraud and Error Reporting",
+                        "textAlign" : "left",
+                        "textDecoration" : "{\"bold\":true}",
+                        "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}"
+                      },
+                      "definition" : "dxp_base:textBlock",
+                      "id" : "a674d686-1f9d-46e8-bfac-10ad8f4cad7e",
+                      "type" : "component"
+                    } ],
+                    "id" : "37b88ff6-a4a0-41fa-9164-5920c8403056",
+                    "name" : "col1",
+                    "title" : "Column 1",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "right",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Create Fraud or Error Case",
+                        "type" : "primary",
+                        "url" : "{\"linkInfo\":{\"pageReference\":{\"type\":\"comm__namedPage\",\"attributes\":{\"name\":\"Create_Fraud__c\"}}}}"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "657d93aa-3379-40f5-908c-04790e594106",
+                      "type" : "component"
+                    } ],
+                    "id" : "cbc250ac-e52c-43ae-908d-fbb88d248a72",
+                    "name" : "col2",
+                    "title" : "Column 2",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_layout:columns",
+                  "id" : "d1e83eab-d1ad-4145-b57b-6c6b502404ff",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "isLinkable" : false,
+                    "linkAssistiveText" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "This provides a list of Fraud and Error cases that have been raised for this project. You can search each list independently to be able to filter the records displayed.",
+                    "textAlign" : "left",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"textStyle\":\"body-regular\",\"headingTag\":\"p\",\"enableOverride\":false}"
+                  },
+                  "definition" : "dxp_base:textBlock",
+                  "id" : "88bc52c6-ab2a-4f9f-8686-4ebb4c041597",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"varFormType\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varFormType\",\"type\":\"String\",\"value\":\"Adhoc\"}]",
+                    "flowName" : "{\"flowName\":\"DESNZ_Fraud_and_Error_Details_Monthly_Reporting\",\"flowLabel\":\"DESNZ - Fraud and Error Details Monthly Reporting\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "f8066ca9-edb7-42b7-84a0-d68ad4f2a4a9",
+                  "type" : "component"
+                } ],
+                "id" : "54572e14-b035-42b2-af9a-e7f5135f5220",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"var_Category_Input\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Category_Input\",\"type\":\"String\",\"value\":\"Fraud\"},{\"label\":\"var_Sub_Category_Input\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Sub_Category_Input\",\"type\":\"String\",\"value\":\"Fraud Management Plan\"},{\"label\":\"var_Upload_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Upload_Type\",\"type\":\"String\",\"value\":\"Monthly Fraud Management Plan\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_File_Upload_Button\",\"flowLabel\":\"GMS - File Upload Button\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "5efdddc4-e123-473c-b339-7fc8a819d7cc",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"var_Category_Input\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Category_Input\",\"type\":\"String\",\"value\":\"Fraud\"},{\"label\":\"var_Sub_Category_Input\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Sub_Category_Input\",\"type\":\"String\",\"value\":\"Fraud Risk Assessment\"},{\"label\":\"var_Upload_Type\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"var_Upload_Type\",\"type\":\"String\",\"value\":\"Monthly Fraud Risk Assessment\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_File_Upload_Button\",\"flowLabel\":\"GMS - File Upload Button\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "7a9c39fd-3dc7-4cd6-aaae-ff3fd6f0e195",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "332e65f2-8c74-4233-b043-25f094f8aca7",
+                  "type" : "component"
+                } ],
+                "id" : "079f08b8-64be-4144-9d29-1fbfc8952a1a",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "7302d2be-d582-45ba-ad6e-93d0cba0cdc4",
+              "type" : "component"
+            } ],
+            "id" : "84c7f5b2-2dbd-4dd5-92f2-92e1141e8e44",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "16792d80-8e1c-49f6-a510-4edcc63444ce",
+          "type" : "component"
+        } ],
+        "id" : "cf6e1a07-88d3-4e3a-99e1-4be18177e647",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Fraud and Error",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "6f21490e-b7c7-44a6-a3d7-01ec999bac37",
+          "type" : "component"
+        } ],
+        "id" : "9099ec45-0ee4-4c7d-9805-c8a6390ee9de",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "6cfd86ca-fa95-4384-81cb-a46816392bd7",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-fraud-and-error"
+  },
+  "urlName" : "fraud-and-error"
+}

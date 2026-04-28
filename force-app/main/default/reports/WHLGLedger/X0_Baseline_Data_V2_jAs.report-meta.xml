@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FundingAward.Funding_Baselines__r$Name</field>
+    </columns>
+    <columns>
+        <field>FundingAward$Awardee</field>
+    </columns>
+    <columns>
+        <field>FundingAward$Grant_Participant_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FundingAward$Total_Grant_Amount__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FundingAward$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>FundingAward.Local_Grant</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FundingAward$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>0. Baseline Data V2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Funding_Awards_with_Baselines__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FundingAward.Funding_Baselines__r$Approved_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

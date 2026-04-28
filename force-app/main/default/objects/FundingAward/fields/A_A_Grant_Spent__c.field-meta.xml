@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_A_Grant_Spent__c</fullName>
+    <label>A&amp;A Grant Spent</label>
+    <summarizedField>FundingAwardActual__c.Grant_A_A_Spend__c</summarizedField>
+    <summaryForeignKey>FundingAwardActual__c.Funding_Award__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

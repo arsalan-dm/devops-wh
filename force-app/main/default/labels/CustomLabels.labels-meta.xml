@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Chat_Unfollow_Notification_Message</fullName>
+        <categories>Chat</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat Unfollow Notification Message</shortDescription>
+        <value>Chat successfully unfollowed</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Follow_Notification_Message</fullName>
+        <categories>Chat</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat Follow Notification Message</shortDescription>
+        <value>Chat successfully followed</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Follow_When_Hovering</fullName>
+        <categories>Chat</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat Follow When Hovering</shortDescription>
+        <value>Unfollow</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Follow_When_Off</fullName>
+        <categories>Chat</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat Follow When Off</shortDescription>
+        <value>Follow</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Follow_When_On</fullName>
+        <categories>Chat</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat Follow When On</shortDescription>
+        <value>Following</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Home_Title_Label</fullName>
+        <categories>Chat</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat Home Title Label</shortDescription>
+        <value>Chats I’m following</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Window_Formalise_Messages_Button</fullName>
+        <categories>Chat</categories>
+        <language>en_GB</language>
+        <protected>false</protected>
+        <shortDescription>Chat Window Formalise Messages Button</shortDescription>
+        <value>Raise a case</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Window_Formalise_Messages_Cancel_Button</fullName>
+        <categories>Chat</categories>
+        <language>en_GB</language>
+        <protected>false</protected>
+        <shortDescription>Chat Window Formalise Messages Cancel Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Window_New_Message_Button</fullName>
+        <categories>Chat</categories>
+        <language>en_GB</language>
+        <protected>false</protected>
+        <shortDescription>Chat Window New Message Button</shortDescription>
+        <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Window_New_Message_Placeholder</fullName>
+        <categories>Chat</categories>
+        <language>en_GB</language>
+        <protected>false</protected>
+        <shortDescription>Chat Window New Message Placeholder</shortDescription>
+        <value>Type a message</value>
+    </labels>
+    <labels>
+        <fullName>Chat_Window_Title</fullName>
+        <categories>Chat</categories>
+        <language>en_GB</language>
+        <protected>false</protected>
+        <shortDescription>Chat Window Title</shortDescription>
+        <value>Chat</value>
+    </labels>
+</CustomLabels>

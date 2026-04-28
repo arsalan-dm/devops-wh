@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>When a booking is created from a FENC activity, ensure funding award is populated</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fla_inspectionLevelMapping</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!Get_other_bookings_from_FENC_Activity.Inspecting_Officer_Type__c}, &quot;Senior Inspector&quot;), &quot;Second line - senior inspector/chartered surveyor&quot;,
+IF(ISPICKVAL({!Get_other_bookings_from_FENC_Activity.Inspecting_Officer_Type__c}, &quot;Junior Inspector&quot;), &quot;First line - junior inspector&quot;, &quot;&quot;))</expression>
+    </formulas>
+    <interviewLabel>GMS - Booking - Populate Funding Award {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GMS - Booking - Populate Funding Award</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_other_bookings_from_FENC_Activity</name>
+        <label>Get other bookings from FENC Activity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_FENC_Activity_with_inspection_details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FENC_Activity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.FENC_Activity__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Booking__c</object>
+        <sortField>Booking_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_booking_with_funding_award</name>
+        <label>Update booking with funding award</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_other_bookings_from_FENC_Activity</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Funding_Award__c</field>
+            <value>
+                <elementReference>$Record.FENC_Activity__r.Funding_Award__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_FENC_Activity_with_inspection_details</name>
+        <label>Update FENC Activity with inspection details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Current_Booking__c</field>
+            <value>
+                <elementReference>Get_other_bookings_from_FENC_Activity.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.FENC_Activity__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_booking_with_funding_award</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FENC_Activity__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Booking__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

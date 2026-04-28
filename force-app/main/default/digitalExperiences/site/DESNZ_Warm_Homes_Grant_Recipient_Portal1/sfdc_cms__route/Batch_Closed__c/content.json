@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Batch Closed",
+  "contentBody" : {
+    "activeViewId" : "Batch_Closed",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-batch-closed",
+    "urlPrefix" : "batch-closed"
+  },
+  "urlName" : "batch-closed"
+}

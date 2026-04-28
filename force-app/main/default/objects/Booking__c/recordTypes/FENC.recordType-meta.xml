@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FENC</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Booking_Layout</compactLayoutAssignment>
+    <description>Fraud, Error and Non-Compliance (FENC)</description>
+    <label>FENC</label>
+    <picklistValues>
+        <picklist>Booking_Checklist__c</picklist>
+        <values>
+            <fullName>Checklist Item 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Checklist Item 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Checklist Item 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Checklist Item 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Checklist Item 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crib Sheets Reviewed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Booking_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paused</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inspecting_Officer_Type__c</picklist>
+        <values>
+            <fullName>Junior Inspector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Inspector</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Site_Inspection_Sub_Types__c</picklist>
+        <values>
+            <fullName>Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

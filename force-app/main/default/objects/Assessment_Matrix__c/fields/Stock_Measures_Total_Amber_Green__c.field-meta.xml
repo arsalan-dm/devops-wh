@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_Measures_Total_Amber_Green__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Starting_EPCs_RAG__c , &quot;Amber/Green&quot;), 1, 0) +
+IF(ISPICKVAL( Ending_EPCs_RAG__c , &quot;Amber/Green&quot;), 1, 0) +
+IF(ISPICKVAL( Non_social_homes_RAG__c , &quot;Amber/Green&quot;), 1, 0) +
+IF(ISPICKVAL( Measure_types_installed_RAG__c , &quot;Amber/Green&quot;), 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stock &amp; Measures - Total Amber/Green</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

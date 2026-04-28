@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PAS_2035_Accredited__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if the supplier has a PAS 2035 accreditation</description>
+    <inlineHelpText>Check if the supplier has a PAS 2035 accreditation</inlineHelpText>
+    <label>PAS 2035 Accredited</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Monthly_Update</fullName>
+    <active>true</active>
+    <businessProcess>DESNZ Support Process</businessProcess>
+    <description>Request to open monthly update record to be able to make amendments</description>
+    <label>Open Monthly Update</label>
+    <picklistValues>
+        <picklist>Category_of_risk_areas__c</picklist>
+        <values>
+            <fullName>Co-funding contribution amount paid from grant instead of Landlord%2Fthird party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collusion between Supplier and homeowner%2Flandlord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collusion between Supplier and internal staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Amount sent to the supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect expenditure %28grant instead of co-funding%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Application - False information on the Application%3A Benefit Receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Application - False information on the Application%3A False ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Application - False information on the Application%3A Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Application - False information on the Application%3A Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Application - False information on the Application%3A Undeclared partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Application - Owner not occupier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Property - false information on the application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Property - falsified%2Fincorrect EPC from pre-installation check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible Property - non domestic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoiced by both installer and retrofit co-ordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandate fraud - unrelated to scheme properties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measure already Exists in the property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measure not compliant with standards%2Fcannot be lodged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measure substitution %28and substitution not compliant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measures not installed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money sent to the incorrect supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - Charging for additional%2Fcancelled work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - Charging for incomplete measures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - Charging for measures not installed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - Charging for non-compliant measures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - Charging incorrect amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - VAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - duplicate charging for measures%2Flabour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier invoice%2Fproposal  - for non existing enabling or ancillary work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier looses accreditation %28midway delivery%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier not accredited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mis selling of scheme</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcome__c</picklist>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nil Value Procedural Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Compliance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Sub_Type__c</picklist>
+        <values>
+            <fullName>Concerns about data accuracy or integrity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concerns about the fairness or relevance of Performance and DCA ratings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confusion or delays in Change Request submission decisions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confusion or delays in FENC decisions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confusion or delays in Phase Request submission decisions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delays in data processing or feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disputes over evaluation requirements or support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement issues with Evaluation contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate FENC support or guidance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect or missing data fields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issues with self-conducted evaluation activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of clarity or support to meet scheme requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problems with reporting or monitoring procedures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical errors or access problems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undue disruption due to audit activities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Evaluation and Learning Concerns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraud%2C Error%2C and Non-Compliance Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GMS %28Grant Management System%29 and Data Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheme Process and Operational Complaints</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Summary_of_Risk__c</picklist>
+        <values>
+            <fullName>Customer%2FBeneficiary%2FApplicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measure%2FInstallation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheme admin%2Fadministration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>wkdw__TicketCategory__c</picklist>
+        <values>
+            <fullName>HR - Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Employee Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

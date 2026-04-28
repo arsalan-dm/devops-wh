@@ -1,0 +1,5 @@
+{
+  "apiName" : "Batch_Not_Approved",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

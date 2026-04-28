@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>(DM) Chart Multiple Datasets</masterLabel>
+    <description>Create JS Charts</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="type" type="String" label="Chart Type" description="Type of chart (e.g., line)" default="line"/>
+            <property name="chartLabels" type="String" label="Chart Labels" description="Comma-separated labels for the x-axis (e.g., 'Jan, Feb, Mar')" />
+            <property name="kpiData1" type="String" label="KPI Data 1" description="Comma-separated KPI data for KPI 1" />
+            <property name="kpiData2" type="String" label="KPI Data 2" description="Comma-separated KPI data for KPI 2" />
+            <property name="kpiData3" type="String" label="KPI Data 3" description="Comma-separated KPI data for KPI 3" />
+            <property name="kpiData4" type="String" label="KPI Data 4" description="Comma-separated KPI data for KPI 4" />
+            <property name="kpiData5" type="String" label="KPI Data 5" description="Comma-separated KPI data for KPI 5" />
+            <property name="kpiLabels" type="String" label="KPI Labels" description="Comma-separated labels for the KPIs" />
+            <property name="kpiColors" type="String" label="KPI Line Colors" description="Comma-separated colors for the KPI lines (e.g., '#FF5733, #33FF57, #3357FF')" />
+            <property name="chartHeight" type="String" label="Chart Height" description="Height of the chart" default="400"/>
+            <property name="fillData" type="String" label="Fill Data" description="Fills bar or space below line chart (true of false)" default="false"/>
+            <property name="pointSize" type="String" label="Point Size" description="Set point size line chart (use 0 to hiide)" default="0"/>
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

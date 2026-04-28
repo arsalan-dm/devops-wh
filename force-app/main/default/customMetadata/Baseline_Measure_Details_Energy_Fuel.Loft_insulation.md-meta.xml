@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Loft insulation</label>
+    <protected>false</protected>
+    <values>
+        <field>Energy_Demand__c</field>
+        <value xsi:type="xsd:double">0.17</value>
+    </values>
+    <values>
+        <field>Fuel_Savings__c</field>
+        <value xsi:type="xsd:double">90.81</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Actual_to_Forecast</name>
+        <label>Assign Actual to Forecast</label>
+        <locationX>242</locationX>
+        <locationY>492</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Forecast_Record.Related_Actual__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Forecast_Record</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Forecast_Record_Found</name>
+        <label>Check Forecast Record Found</label>
+        <locationX>374</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>No Forecast Found</defaultConnectorLabel>
+        <rules>
+            <name>Is_Forecast_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Forecast_Record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Actual_to_Forecast</targetReference>
+            </connector>
+            <label>Is Forecast Found</label>
+        </rules>
+    </decisions>
+    <description>Sets Related Forecast and Actual against the correct monthly update record</description>
+    <environments>Default</environments>
+    <interviewLabel>DESNS - Set Related Forecast and Actual {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DESNZ - Set Related Forecast and Actual</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Forecast_Record</name>
+        <label>Get Forecast Record</label>
+        <locationX>374</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Forecast_Record_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Parent_Baseline__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Parent_Baseline__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Forecast_Start_Date__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Actuals_Start_Date__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FundingAwardForecast__c</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Actual_Record_with_Forecast</name>
+        <label>Update Actual Record with Forecast</label>
+        <locationX>242</locationX>
+        <locationY>708</locationY>
+        <inputAssignments>
+            <field>Related_Forecast__c</field>
+            <value>
+                <elementReference>Get_Forecast_Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Forecast_Record</name>
+        <label>Update Forecast Record</label>
+        <locationX>242</locationX>
+        <locationY>600</locationY>
+        <connector>
+            <targetReference>Update_Actual_Record_with_Forecast</targetReference>
+        </connector>
+        <inputReference>Get_Forecast_Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <object>FundingAwardActual__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Wait_1_Minute</name>
+            <connector>
+                <targetReference>Get_Forecast_Record</targetReference>
+            </connector>
+            <label>Wait 1 Minute</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

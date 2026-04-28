@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DESNZ_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>To be completed by the relevant DESNZ representative once the Phase Request has been reviewed.</inlineHelpText>
+    <label>DESNZ Approval</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

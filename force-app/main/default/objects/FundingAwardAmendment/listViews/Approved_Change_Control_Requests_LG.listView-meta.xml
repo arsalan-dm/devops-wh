@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Change_Control_Requests_LG</fullName>
+    <columns>Name</columns>
+    <columns>LastModifiedDate</columns>
+    <columns>LastModifiedBy</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ApprovalStatus</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>FundingAward</field>
+        <operation>startsWith</operation>
+        <value>WHLG</value>
+    </filters>
+    <label>Approved Change Control Requests - LG</label>
+    <sharedTo>
+        <group>Digital_Modus</group>
+        <group>Local_Grant_User</group>
+    </sharedTo>
+</ListView>

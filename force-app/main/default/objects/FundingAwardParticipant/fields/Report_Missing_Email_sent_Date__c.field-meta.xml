@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_Missing_Email_sent_Date__c</fullName>
+    <description>This field is used to manage to date of when reports haven&apos;t been submitted, it is then used to trigger a flow which will send an email to the users where this date changes. Flow that will read this value is:
+Send Email to GR that haven&apos;t submitted their report</description>
+    <label>Report Missing Email sent Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

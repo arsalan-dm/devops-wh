@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_DAC_Actions</fullName>
+    <columns>NAME</columns>
+    <columns>Funding_Award__c</columns>
+    <columns>Action_Title__c</columns>
+    <columns>Action_Description__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Action_Source__c</columns>
+    <columns>Owning_Team__c</columns>
+    <columns>DAC_Condition_RAG__c</columns>
+    <columns>DAC_Theme__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Action_Type__c</field>
+        <operation>equals</operation>
+        <value>DAC Condition</value>
+    </filters>
+    <label>All DAC Actions</label>
+</ListView>

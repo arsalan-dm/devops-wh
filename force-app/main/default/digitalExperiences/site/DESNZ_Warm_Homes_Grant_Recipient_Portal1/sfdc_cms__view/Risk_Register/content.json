@@ -1,0 +1,215 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Risk Register",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"414af844-6a99-431b-a38a-a4d92bef2551\",\"columns\":[{\"UUID\":\"d7d70403-e090-43d8-86bb-ad7bf1a41be8\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Risks and Issues",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "c71f62f1-8be4-4608-a3b5-979100622938",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "3361da9c-b4e7-4235-8c86-4dfde5c332ff",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"621613eb-4eac-4476-ac86-d656a44cea6c\",\"columns\":[{\"UUID\":\"dd402095-f610-4065-aaad-834f026e2207\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"a64216b8-0f96-40f1-926e-d9d82b978984\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"DESNZ_Award_Next_Reporting_Alert\",\"flowLabel\":\"DESNZ Award Next Reporting Alert\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "64519548-ef5b-4ed2-a334-11f8b11a1dd1",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "columnGutterWidth" : "",
+                    "columnMinHeight" : "",
+                    "columnVerticalAlign" : "flex-start",
+                    "layoutDirectionDesktop" : "row",
+                    "layoutDirectionMobile" : "column",
+                    "layoutDirectionTablet" : "column",
+                    "sectionConfig" : "{\"UUID\":\"5d18df2c-cc6e-4140-98d8-491892df66af\",\"columns\":[{\"UUID\":\"d31c616d-1f94-40c2-8101-673739c2ff54\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"6\",\"seedComponents\":[]},{\"UUID\":\"b175a9ab-bb36-43c6-955d-a41e682c8a84\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"6\",\"seedComponents\":[]}]}"
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : {
+                        "backgroundColor" : "",
+                        "isLinkable" : false,
+                        "linkAssistiveText" : "",
+                        "paddingHorizontal" : "none",
+                        "paddingVertical" : "none",
+                        "text" : "Risk Register",
+                        "textAlign" : "left",
+                        "textDecoration" : "{}",
+                        "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}"
+                      },
+                      "definition" : "dxp_base:textBlock",
+                      "id" : "c9720aac-2b04-45ed-8e8a-88f71ec7e322",
+                      "type" : "component"
+                    } ],
+                    "id" : "d31c616d-1f94-40c2-8101-673739c2ff54",
+                    "name" : "col1",
+                    "title" : "Column 1",
+                    "type" : "region"
+                  }, {
+                    "children" : [ {
+                      "attributes" : {
+                        "alignment" : "right",
+                        "size" : "standard",
+                        "stretch" : "standard",
+                        "text" : "Create New Risk or Issue",
+                        "type" : "primary",
+                        "url" : "{\"linkInfo\":{\"pageReference\":{\"type\":\"comm__namedPage\",\"attributes\":{\"name\":\"Create_Risk__c\"}}}}"
+                      },
+                      "definition" : "dxp_base:button",
+                      "id" : "6e166a83-a5b3-4c16-bcb9-894b7e89166a",
+                      "type" : "component"
+                    } ],
+                    "id" : "b175a9ab-bb36-43c6-955d-a41e682c8a84",
+                    "name" : "col2",
+                    "title" : "Column 2",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_layout:columns",
+                  "id" : "5d18df2c-cc6e-4140-98d8-491892df66af",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "alignment" : "center",
+                    "color" : "rgb(0, 52, 121)",
+                    "lineStyle" : "solid",
+                    "size" : 1,
+                    "width" : 100
+                  },
+                  "definition" : "dxp_base:horizontalLine",
+                  "id" : "1608ba06-9578-4b9a-9084-0eadc22b6df7",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "backgroundColor" : "",
+                    "isLinkable" : false,
+                    "linkAssistiveText" : "",
+                    "paddingHorizontal" : "none",
+                    "paddingVertical" : "none",
+                    "text" : "This provides a list of risks and issues that have been raised for this project. You can search each list independently to be able to filter the records displayed.",
+                    "textAlign" : "left",
+                    "textDecoration" : "{}",
+                    "textDisplayInfo" : "{\"textStyle\":\"body-regular\",\"headingTag\":\"p\",\"enableOverride\":false}"
+                  },
+                  "definition" : "dxp_base:textBlock",
+                  "id" : "a0c8ce2d-55bd-4b39-9b47-94065a0de6ad",
+                  "type" : "component"
+                }, {
+                  "attributes" : {
+                    "flowArguments" : "[{\"label\":\"varFormUsage\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varFormUsage\",\"type\":\"String\",\"value\":\"Adhoc\"}]",
+                    "flowName" : "{\"flowName\":\"GMS_Risk_Register_View_and_Edit\",\"flowLabel\":\"GMS - Risk Register View and Edit\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "76c3f605-65f2-4591-87d7-733c4698c977",
+                  "type" : "component"
+                } ],
+                "id" : "dd402095-f610-4065-aaad-834f026e2207",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "c520492d-95d8-4a60-9d62-6f767fcfffe7",
+                  "type" : "component"
+                } ],
+                "id" : "a64216b8-0f96-40f1-926e-d9d82b978984",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "621613eb-4eac-4476-ac86-d656a44cea6c",
+              "type" : "component"
+            } ],
+            "id" : "d7d70403-e090-43d8-86bb-ad7bf1a41be8",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "414af844-6a99-431b-a38a-a4d92bef2551",
+          "type" : "component"
+        } ],
+        "id" : "f5f53224-1d3a-4a0c-bbec-e7c2ef374811",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Risk Register",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "76c67cbd-45e1-4ad7-b582-397888628986",
+          "type" : "component"
+        } ],
+        "id" : "8abf0182-dda1-476e-942e-2b04c5977e8d",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "843d375d-956d-4e99-a596-0e219060d107",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-risk-register"
+  },
+  "urlName" : "risk-register"
+}

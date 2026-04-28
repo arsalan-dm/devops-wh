@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A1_Form</fullName>
+    <active>true</active>
+    <description>A1 Self evaluation form</description>
+    <label>A1 Form</label>
+    <picklistValues>
+        <picklist>Construction_Site_Manager__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Construction__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Have_Resources_Products_Been_Shared__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Installation_Installer__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Design_Architect__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Design_Retrofit_Designer__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Management_Procurement__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Management_Resident_Liaison__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Management_Retrofit_Assessor__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Management_Retrofit_Coord__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Management_Retrofit_Proj_Mgr__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retrofit_Management_Retrofit_Surveyor__c</picklist>
+        <values>
+            <fullName>Delivered internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directly contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My consortium lead %2F consortium partner manages this role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not used on this project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontracted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shared_Resources_Picklist__c</picklist>
+        <values>
+            <fullName>Don%27t Know</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Archive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revision Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

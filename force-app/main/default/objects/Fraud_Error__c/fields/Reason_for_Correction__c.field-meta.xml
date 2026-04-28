@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Correction__c</fullName>
+    <label>Reason for Correction</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Management Review</fullName>
+                <default>false</default>
+                <label>Management Review</label>
+            </value>
+            <value>
+                <fullName>Third Party Driven Review</fullName>
+                <default>false</default>
+                <label>Third Party Driven Review</label>
+            </value>
+            <value>
+                <fullName>Appeals</fullName>
+                <default>false</default>
+                <label>Appeals</label>
+            </value>
+            <value>
+                <fullName>Admin Error</fullName>
+                <default>false</default>
+                <label>Admin Error</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

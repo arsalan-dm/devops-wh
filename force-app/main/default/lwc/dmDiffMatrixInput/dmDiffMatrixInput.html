@@ -1,0 +1,110 @@
+<template>
+    <lightning-card title={title} class="background-card-class">
+        <!--table header-->
+        <div class="table table-class">
+            <div lwc:if={orientation}>
+                <div class="header-class row header">
+                    <div class="slds-border_top header-item-class cell" key={record.Id}> 
+                        Record Name
+                    </div>   
+                    <template for:each={_fields} for:item="field">
+                        <div class="slds-border_top header-item-class cell slds-var-p-top_small" key={field.key}> 
+                            {field.label}
+                        </div>        
+                    </template>
+                </div>
+        
+                <div class="body-class" lwc:if={doneLoading}>
+                    <template for:each={_records} for:item="record">
+                        <div key={record.key} class="table-row-class row slds-border-bottom">
+                            <div class="slds-border_top row-name-cell-class cell">
+                                <div class="row-name">
+                                    {record.label}
+                                </div>
+                                <div>
+                                    Existing
+                                </div>
+                                <div>
+                                    Difference
+                                </div>
+
+                            </div>
+                            <template for:each={_fields} for:item="field" >
+                                <div key={field.key} class="slds-border_top table-cell-class cell" data-label={record.name}>
+                                    <c-dm-diff-matrix-cell 
+                                        field={field} 
+                                        old-record={record.old}
+                                        new-record={record.new} 
+                                        onvaluechanged={handleCellValueChange} 
+                                        total-column={record.total} 
+                                        difference-column={record.difference}
+                                        disabled={record.disabled}>
+                                    </c-dm-diff-matrix-cell>
+                                </div>
+                            </template>
+                        </div>
+                        
+                    </template>
+                </div>
+                <lightning-card lwc:else>
+                    <lightning-spinner alternative-text="loading object data"></lightning-spinner>
+                </lightning-card>
+            </div>
+
+            <div lwc:else >
+                <div class="header-class row header">
+                    <div class="slds-border_top header-item-class cell" key={record.Id}> 
+                        Field name
+                    </div>   
+                    <template for:each={_recordLabels} for:item="recordName">
+                        <div class="slds-border_top header-item-class cell" key={recordName.key}> 
+                            {recordName.name}
+                        </div>        
+                    </template>
+                </div>
+        
+                <div class="body-class" lwc:if={doneLoading}>
+                    <template for:each={_fields} for:item="field">
+                        <div key={field.key} class="table-row-class row slds-border-bottom">
+                            <div class="slds-border_top row-name-cell-class cell">
+                                <div class="row-name">
+                                    {field.label}
+                                </div>
+                                <div>
+                                    Existing
+                                </div>
+                                <div>
+                                    Difference
+                                </div>
+                            </div>
+                            <template for:each={_records} for:item="record" >
+                                <div key={record.key} class="slds-border_top table-cell-class cell" data-label={field.name}>
+                                    <c-dm-diff-matrix-cell 
+                                        field-name={field.name} 
+                                        old-record={record.old}
+                                        new-record={record.new} 
+                                        onvaluechanged={handleCellValueChange} 
+                                        total-column={record.total} 
+                                        difference-column={record.difference}>
+                                    </c-dm-diff-matrix-cell>
+                                </div>
+                            </template>
+                        </div>
+                        
+                    </template>
+                </div>
+                <lightning-card lwc:else>
+                    <lightning-spinner alternative-text="loading object data"></lightning-spinner>
+                </lightning-card>
+            </div>
+            
+
+            
+        </div>
+        <div slot="footer">
+            <lightning-button class="slds-var-p-right_x-small" title="Previous" label="Previous" value="Previous" onclick={handleBack}></lightning-button>
+            <!--<lightning-button class="slds-var-p-right_x-small" title="Reset" label="Reset" value="Reset" onclick={handleReset}></lightning-button>-->
+            <lightning-button title="Save" label="Save" value="Save" onclick={handleSave} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

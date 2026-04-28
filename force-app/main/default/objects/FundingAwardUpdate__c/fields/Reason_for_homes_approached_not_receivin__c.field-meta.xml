@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_homes_approached_not_receivin__c</fullName>
+    <description>Reason for homes approached not receiving installations</description>
+    <inlineHelpText>Reason for homes approached not receiving installations</inlineHelpText>
+    <label>Reasons not receiving installations</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cost of measures too high</fullName>
+                <default>false</default>
+                <label>Cost of measures too high</label>
+            </value>
+            <value>
+                <fullName>Resident refusal</fullName>
+                <default>false</default>
+                <label>Resident refusal</label>
+            </value>
+            <value>
+                <fullName>Can no longer access the property</fullName>
+                <default>false</default>
+                <label>Can no longer access the property</label>
+            </value>
+            <value>
+                <fullName>Property is already at an EPC C</fullName>
+                <default>false</default>
+                <label>Property is already at an EPC C</label>
+            </value>
+            <value>
+                <fullName>Property already has proposed measures installed</fullName>
+                <default>false</default>
+                <label>Property already has proposed measures installed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

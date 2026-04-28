@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Create Change Control Request",
+  "contentBody" : {
+    "activeViewId" : "Create_Change_Control_Request",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-create-change-control-request",
+    "urlPrefix" : "create-change-control-request"
+  },
+  "urlName" : "create-change-control-request"
+}

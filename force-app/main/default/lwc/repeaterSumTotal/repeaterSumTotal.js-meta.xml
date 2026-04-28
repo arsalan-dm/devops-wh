@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Repeater Sum Total</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="sumId" label="Sum Id" type="String" role="inputOnly" />
+            <property name="prefix" label="Prefix" type="String" description="Display units or value to prefix the total" role="inputOnly" />
+            <property name="suffix" label="Suffix" type="String" description="Display units or value to suffix the total" role="inputOnly" />
+            <property name="total" label="Total" type="Integer" description="The summed total" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

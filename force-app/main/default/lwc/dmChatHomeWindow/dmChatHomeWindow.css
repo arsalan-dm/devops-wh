@@ -1,0 +1,15 @@
+:host{
+    --slds-c-card-color-background :rgb(243, 243, 243);
+    --slds-g-color-neutral-100-opacity-75 :rgb(243, 243, 243);
+    --max-height : 500px;
+}
+
+.chat-window{
+    max-height: var(--max-height);
+    overflow-y: scroll;
+}
+
+.line-break{
+    height: 1px;
+    background-color: grey;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capital_Expenditure_Type__c</fullName>
+    <label>Additional Capital Expenditure Type</label>
+    <referenceTo>FundingCapitalExpenditureType__c</referenceTo>
+    <relationshipLabel>Additional Capital Expenditures</relationshipLabel>
+    <relationshipName>Batch_Capital_Expenditures</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

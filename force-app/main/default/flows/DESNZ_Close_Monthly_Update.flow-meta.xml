@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Status_to_Awaiting_Approval</name>
+        <label>Update Status to Awaiting Approval</label>
+        <locationX>440</locationX>
+        <locationY>384</locationY>
+        <assignmentItems>
+            <assignToReference>var_status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Awaiting Approval</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Status_to_Overdue</name>
+        <label>Update Status to Overdue</label>
+        <locationX>176</locationX>
+        <locationY>384</locationY>
+        <assignmentItems>
+            <assignToReference>var_status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Overdue</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Status</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_update_status</name>
+        <label>Check update status</label>
+        <locationX>440</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Other status</defaultConnectorLabel>
+        <rules>
+            <name>Draft</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Draft</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Status_to_Overdue</targetReference>
+            </connector>
+            <label>Draft</label>
+        </rules>
+        <rules>
+            <name>GR_Complete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GR Complete</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Status_to_Awaiting_Approval</targetReference>
+            </connector>
+            <label>GR Complete</label>
+        </rules>
+    </decisions>
+    <description>Closes the Monthly update record when the scheduled monthly update date is passed</description>
+    <environments>Default</environments>
+    <interviewLabel>DESNZ - Close Monthly Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DESNZ - Close Monthly Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Status</name>
+        <label>Update Status</label>
+        <locationX>440</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <elementReference>var_status</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </filters>
+        <object>FundingAwardUpdate__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Next_Reporting_Date</name>
+            <connector>
+                <targetReference>Check_update_status</targetReference>
+            </connector>
+            <label>Next Reporting Date</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>Next_Reporting_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>var_status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

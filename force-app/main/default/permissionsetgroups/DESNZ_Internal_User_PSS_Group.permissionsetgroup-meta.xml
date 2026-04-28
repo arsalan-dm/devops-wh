@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Required permission set group to enable Internal Users to be able to access all required PSS Assignments</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>DESNZ Internal User PSS Group</label>
+    <permissionSets>Chat_User_Internal</permissionSets>
+    <permissionSets>Compliant_Data_Sharing_Users</permissionSets>
+    <permissionSets>DESNZ_Internal_Users_Reports_Export_Access</permissionSets>
+    <permissionSets>DESNZ_Manage_External_Users</permissionSets>
+    <permissionSets>DESNZ_Warm_Homes_Internal_User_ABS_Custom_Objects</permissionSets>
+    <permissionSets>DESNZ_Warm_Homes_Internal_User_Custom_Objects</permissionSets>
+    <permissionSets>DESNZ_Warm_Homes_Internal_User_Grantmaking</permissionSets>
+    <permissionSets>DESNZ_Warm_Homes_Internal_User_PSS_Base_Access</permissionSets>
+    <permissionSets>DESNZ_Warm_Homes_Super_User</permissionSets>
+    <permissionSets>force__CompliantDataSharingUser</permissionSets>
+    <permissionSets>force__ServiceUserPsl</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

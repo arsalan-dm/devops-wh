@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Funding_Actuals_Amount_Grant__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Total amount of Grant money Grant Recipient had reported as Actuals during the reconciliation period</description>
+    <label>Total Funding Actuals Amount Grant</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

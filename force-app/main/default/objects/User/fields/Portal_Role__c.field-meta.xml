@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Role__c</fullName>
+    <description>Picklist field to identify role of user over and above role hierarchy/profile etc. For use in LWR to configure component visibility</description>
+    <label>Portal Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consortium Member</fullName>
+                <default>false</default>
+                <label>Consortium Member</label>
+            </value>
+            <value>
+                <fullName>Grant Recipient Lead</fullName>
+                <default>false</default>
+                <label>Grant Recipient Lead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

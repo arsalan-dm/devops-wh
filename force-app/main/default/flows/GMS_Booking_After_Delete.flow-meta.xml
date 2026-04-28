@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Any_records_found</name>
+        <label>Any records found?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No records found</defaultConnectorLabel>
+        <rules>
+            <name>Records_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Other_Booking_Records</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_related_FENC_Activity</targetReference>
+            </connector>
+            <label>Records found</label>
+        </rules>
+    </decisions>
+    <description>If a booking is deleted, update the related FENC activity</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fla_inspectionLevelMap</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!Get_Other_Booking_Records.Inspecting_Officer_Type__c}, &quot;Senior Inspector&quot;), &quot;Second line - senior inspector/chartered surveyor&quot;,
+IF(ISPICKVAL({!Get_Other_Booking_Records.Inspecting_Officer_Type__c}, &quot;Junior Inspector&quot;), &quot;First line - junior inspector&quot;, &quot;&quot;))</expression>
+    </formulas>
+    <interviewLabel>GMS - Booking - After Delete {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GMS - Booking - After Delete</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Other_Booking_Records</name>
+        <label>Get Other Booking Records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Any_records_found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FENC_Activity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.FENC_Activity__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsDeleted</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Booking__c</object>
+        <sortField>Booking_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_related_FENC_Activity</name>
+        <label>Update related FENC Activity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Current_Booking__c</field>
+            <value>
+                <elementReference>Get_Other_Booking_Records.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.FENC_Activity__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Other_Booking_Records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FENC_Activity__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Booking__c</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,120 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Site Map",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"58a3e5c3-cc60-41d8-b35f-de64e6365974\",\"columns\":[{\"UUID\":\"dc8f75d3-b5cd-4dba-9d50-7a415ec47767\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "f21dbe4f-e178-4ae1-b302-8d6c5dc44af7",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Site Map",
+                "textAlign" : "left",
+                "textDecoration" : "{\"bold\":false}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "c538bcdc-aa09-4e10-a5b3-798a4cab1d51",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "ed4a6477-4d0c-4acf-977c-23a1b0fbf31e",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "5%",
+                    "right" : "5%",
+                    "top" : ""
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<ul>\n <li><a href=\"/\" target=\"_self\">Homepage</a></li>\n <li><a href=\"/project-summary\" target=\"_self\">Project Summary</a></li>\n <li><a href=\"/baselines\" target=\"_self\">Baselines</a></li>\n <li><a href=\"/batch-summary\" target=\"_self\">Batch Summary</a></li>\n <li><a href=\"/batch-summary/batch-approved\" target=\"_self\">Batch Approved</a></li>\n <li><a href=\"/batch-summary/batch-by-payment\" target=\"_self\">Batch By Payment</a></li>\n <li><a href=\"/batch-summary/batch-closed\" target=\"_self\">Batch Closed</a></li>\n <li><a href=\"/batch-summary/batch-create\" target=\"_self\">Batch Create</a></li>\n <li><a href=\"/batch-summary/batch-held\" target=\"_self\">Batch Held</a></li>\n <li><a href=\"/batch-summary/batch-in-progress\" target=\"_self\">Batch In Progress</a></li>\n <li><a href=\"/batch-summary/batch-not-approved\" target=\"_self\">Batch Not Approved</a></li>\n <li><a href=\"/batch-summary/batch-returned\" target=\"_self\">Batch Returned</a></li>\n <li><a href=\"/batch-summary/batch-submitted\" target=\"_self\">Batch Submitted</a></li>\n <li><a href=\"/monthly-updates\" target=\"_self\">Monthly Updates</a></li>\n <li><a href=\"/monthly-actuals\" target=\"_self\">Monthly Actuals</a></li>\n <li><a href=\"/monthly-forecasts\" target=\"_self\">Monthly Forecasts</a></li>\n <li><a href=\"/properties-measures\" target=\"_self\">Property and Measure Details</a></li>\n <li><a href=\"/address-lookup\" target=\"_self\">Address Lookup</a></li>\n <li><a href=\"/retrieve-trustmark-data\" target=\"_self\">Retrieve Trustmark Data</a></li>\n <li><a href=\"/update-measure-costs\" target=\"_self\">Update Measure Costs</a></li>\n <li><a href=\"/payments\" target=\"_self\">Payments</a></li>\n <li><a href=\"/fraud-and-risks\" target=\"_self\">Fraud and Risks</a></li>\n <li><a href=\"/transactions\" target=\"_self\">Transactions</a></li>\n <li><a href=\"/create-transaction\" target=\"_self\">Create Transaction</a></li>\n <li><a href=\"/edit-transaction\" target=\"_self\">Edit Transactoin</a></li>\n <li><a href=\"/fraud-and-error\" target=\"_self\">Fraud and Error</a></li>\n <li><a href=\"/create-fraud\" target=\"_self\">Create Fraud</a></li>\n <li><a href=\"/risk-register\" target=\"_self\">Risk Regester</a></li>\n <li><a href=\"/create-risk\" target=\"_self\">Create Risk</a></li>\n <li><a href=\"/reconciliations\" target=\"_self\">Reconciliations</a></li>\n <li><a href=\"/rejected-grant-drawdown-requests\" target=\"_self\">Rejected Grant Drawdown Requests</a></li>\n <li><a href=\"/submit-phase-request\" target=\"_self\">Submit Phase Request</a></li>\n <li><a href=\"/submit-grant-drawdown-request\" target=\"_self\">Submit Grant Drawdown Request</a></li>\n <li><a href=\"/submitted-grant-drawdown-requests\" target=\"_self\">Submitted Grant Drawdown Requests</a></li>\n <li><a href=\"/support\" target=\"_self\">Support</a></li>\n</ul>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "78d2683d-dd28-413d-b795-4d0f5f1f2c84",
+              "type" : "component"
+            } ],
+            "id" : "dc8f75d3-b5cd-4dba-9d50-7a415ec47767",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "58a3e5c3-cc60-41d8-b35f-de64e6365974",
+          "type" : "component"
+        } ],
+        "id" : "0c79fcd2-214e-47f5-ac54-95b633440eb4",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Site Map",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "4e177d5c-bb04-4314-883e-d626708b99f1",
+          "type" : "component"
+        } ],
+        "id" : "82fdcb4c-8f64-453e-8837-65e2fb03285f",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "256a0713-be5a-4791-a32e-992335cf300d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-site-map"
+  },
+  "urlName" : "site-map"
+}

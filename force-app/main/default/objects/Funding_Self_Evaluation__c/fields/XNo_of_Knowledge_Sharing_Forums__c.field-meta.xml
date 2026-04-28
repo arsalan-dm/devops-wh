@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XNo_of_Knowledge_Sharing_Forums__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>How many (if any) retrofit-related knowledge sharing forums has the Wave 3 project team organised or taken part in during Wave 3?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many (if any) retrofit-related knowledge sharing forums has the Wave 3 project team organised or taken part in during Wave 3?</inlineHelpText>
+    <label>XNo.of Knowledge Sharing Forums</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

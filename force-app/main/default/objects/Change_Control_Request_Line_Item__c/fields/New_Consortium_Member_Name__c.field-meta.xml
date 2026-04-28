@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Consortium_Member_Name__c</fullName>
+    <description>The name of the consortium member that will be added to the Funding Award when Action_Type is add, and the new name of the consortium member when the Action Type is Name Change
+
+The name of the new consortium member that will be replacing the GRL on GRL change types</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The name of the consortium member that will be added to the Funding Award when Action_Type is add, and the new name of the consortium member when the Action Type is Name Change
+
+The name of the new consortium member that will be replacing the GRL on GRL change types</inlineHelpText>
+    <label>New Consortium Member Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

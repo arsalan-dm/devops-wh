@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SHF_Strategic_Partner</fullName>
+    <active>true</active>
+    <label>SHF Strategic Partner</label>
+    <picklistValues>
+        <picklist>Measure_Type__c</picklist>
+        <values>
+            <fullName>Air Source Heat Pump</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cavity Wall Insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draughtproofing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Wall Insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ground Source Heat Pump</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loft insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary Glazing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar PV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar Thermal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage heaters*%28TBC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underfloor insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ventilation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wet Central Heating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Historic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

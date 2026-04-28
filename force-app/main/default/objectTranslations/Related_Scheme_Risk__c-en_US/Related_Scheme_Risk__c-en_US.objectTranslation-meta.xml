@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Related Scheme Risk</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Related_Scheme Risks</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Risk --></label>
+        <name>Risk</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

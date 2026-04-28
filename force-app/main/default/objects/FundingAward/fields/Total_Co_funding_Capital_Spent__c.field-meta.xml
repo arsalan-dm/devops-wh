@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Co_funding_Capital_Spent__c</fullName>
+    <label>Total Co-funding Capital Spent</label>
+    <summarizedField>FundingAwardActual__c.Co_funding_Capital_Spend__c</summarizedField>
+    <summaryForeignKey>FundingAwardActual__c.Funding_Award__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

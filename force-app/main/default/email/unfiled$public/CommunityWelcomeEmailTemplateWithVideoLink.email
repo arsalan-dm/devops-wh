@@ -1,0 +1,10 @@
+Hi {!Receiving_User.FirstName},
+
+            Welcome to {!Community_Name}! To get started, go to {!Community_Url}
+
+            Username: {!Receiving_User.Username}
+
+            Logging into & Navigating the Grant Recipient Portal training video: https://app.guidde.com/share/playbooks/84xV2DX6LYvueFhLmfYWCm
+
+            Thanks,
+            {!Organization.Name}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>DM Options Picker</masterLabel>
+    <description>Custom options picker component for screen flows.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="label" label="1. Label" type="String" />
+            <property name="choiceLabels" label="2. Choice Labels" type="String" />
+            <property name="choiceValues" label="3. Choice Values" type="String" />
+            <property name="delimiter" label="4. Delimiter" type="String" />
+            <property name="isPicklist" label="5. Picklist Mode" type="Boolean" />
+            <property name="defaultValue" label="6. Default Value" type="String" role="inputOnly" />
+            <property name="isRequired" label="7. Required" type="Boolean" />
+            <property name="value" label="8. Selected Value" type="String" />
+            <property name="crossContextPicking" label="9. Cross Context Picking" type="Boolean" />
+            <property name="pickerId" label="10. Picking Id" type="String" />
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

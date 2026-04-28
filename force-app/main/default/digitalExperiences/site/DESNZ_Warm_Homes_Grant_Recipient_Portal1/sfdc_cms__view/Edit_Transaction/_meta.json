@@ -1,0 +1,5 @@
+{
+  "apiName" : "Edit_Transaction",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

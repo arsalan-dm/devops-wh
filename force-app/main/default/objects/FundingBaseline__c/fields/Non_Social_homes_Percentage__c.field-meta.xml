@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Social_homes_Percentage__c</fullName>
+    <formula>Starting_No_of_Non_Social_Homes__c / Total_Homes_to_be_Upgraded__c</formula>
+    <label>Non-Social Homes %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

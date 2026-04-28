@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cumulative_Grant_Claim_received__c</fullName>
+    <inlineHelpText>This field is auto calculated as the cumulative sum of the amount of grant funding you have received, or expect to receive, from DESNZ.</inlineHelpText>
+    <label>Cumulative Grant Claim received</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Summarises the A&amp;A, Capital and A&amp;A Uplift fields together and updates the Amount field with the result whenever a Disbursement record is created or updated.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Adds the A&amp;A, Capital and A&amp;A Uplift field values together.</description>
+        <name>SumFormula</name>
+        <dataType>Currency</dataType>
+        <expression>IF(OR({!$Record.Amount_A_A__c} = NULL, ISBLANK({!$Record.Amount_A_A__c})), 0, 
+{!$Record.Amount_A_A__c}) + IF(OR({!$Record.Amount_Capital__c} = NULL, ISBLANK({!$Record.Amount_Capital__c})), 0, 
+{!$Record.Amount_Capital__c}) + IF(OR({!$Record.A_A_Uplift__c} = NULL, ISBLANK({!$Record.A_A_Uplift__c})), 0, 
+{!$Record.A_A_Uplift__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>GMS - Funding Disbursement Amount Recalculation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GMS - Funding Disbursement Amount Recalculation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Recalculates the A&amp;A, Capital and A&amp;A Uplift fields together and updates the Amount field with the result.</description>
+        <name>Update_Funding_Disbursement</name>
+        <label>Update Funding Disbursement</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Amount</field>
+            <value>
+                <elementReference>SumFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Funding_Disbursement</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Amount_A_A__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Amount_Capital__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>A_A_Uplift__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Amount</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <object>FundingDisbursement</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,44 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    flex: 1;
+    text-align: left;
+}
+
+.header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.row-name{
+    height: 96px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .cell {
+        
+    }
+
+    .header {
+        display: none; /* Hide header row on small screens */
+    }
+
+    .cell::before {
+        content: attr(data-label);
+        display: block;
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rolling_Batch_Summary__c</fullName>
+    <label>Rolling Batch Summary</label>
+    <summarizedField>Batch_Financial_Year_Split__c.Funding_Used_in_Financial_Year__c</summarizedField>
+    <summaryForeignKey>Batch_Financial_Year_Split__c.Funding_Disbursement__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

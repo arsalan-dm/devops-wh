@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Baseline_New_Version__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The baseline record that is the new version of the baseline this change was for</description>
+    <inlineHelpText>The baseline record that is the new version of the baseline this change was for</inlineHelpText>
+    <label>Baseline - New Version</label>
+    <referenceTo>FundingBaseline__c</referenceTo>
+    <relationshipLabel>Change Control Request Line Items (Baseline - New Version)</relationshipLabel>
+    <relationshipName>Updating_Line_Items</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

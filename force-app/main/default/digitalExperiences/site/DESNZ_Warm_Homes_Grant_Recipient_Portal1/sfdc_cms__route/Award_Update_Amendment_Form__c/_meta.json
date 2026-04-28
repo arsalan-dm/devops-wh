@@ -1,0 +1,5 @@
+{
+  "apiName" : "Award_Update_Amendment_Form__c",
+  "type" : "sfdc_cms__route",
+  "path" : "routes"
+}

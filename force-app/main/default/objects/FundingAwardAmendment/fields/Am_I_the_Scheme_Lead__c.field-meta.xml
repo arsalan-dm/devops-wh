@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Am_I_the_Scheme_Lead__c</fullName>
+    <description>TRUE if Scheme Lead is the same as the running user</description>
+    <formula>IF( $User.Id = Scheme_Lead__r.Id, TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Am I the Scheme Lead?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

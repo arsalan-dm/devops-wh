@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR50LCH_Grant_Per_House__c</fullName>
+    <formula>PR50LCH_Grant_Total__c/PR50LCH_House_Count__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Average spend of low carbon heat pot per private rented (50% funded by landlord) home for batch only</inlineHelpText>
+    <label>Grant Per House PR50LCH</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

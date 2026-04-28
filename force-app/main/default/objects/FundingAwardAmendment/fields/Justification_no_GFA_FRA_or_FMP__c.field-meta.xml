@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Justification_no_GFA_FRA_or_FMP__c</fullName>
+    <inlineHelpText>Please include a justification of why you haven&apos;t received your GFA or updated your FRA/FMP.</inlineHelpText>
+    <label>Justification no GFA, FRA or FMP</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This event is fired when an amount is inputted on repeaterSumInput</description>
+    <isExposed>false</isExposed>
+    <lightningMessageFields>
+        <description>This is the position on the repeater</description>
+        <fieldName>repeaterId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Specifies the specific sum that the value should be attributed</description>
+        <fieldName>sumId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>the outputted value of the repeater input</description>
+        <fieldName>value</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Whether the repeater instance was removed</description>
+        <fieldName>removed</fieldName>
+    </lightningMessageFields>
+    <masterLabel>MeasureSpendTotal</masterLabel>
+</LightningMessageChannel>

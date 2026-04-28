@@ -1,0 +1,5 @@
+{
+  "apiName" : "Change_Control_Requests_Draft",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

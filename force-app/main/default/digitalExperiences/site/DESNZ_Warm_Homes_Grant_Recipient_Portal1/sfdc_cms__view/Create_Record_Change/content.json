@@ -1,0 +1,145 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Create Record Change",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"c9d8fafa-6718-4805-a4a3-740bc7a3caaa\",\"columns\":[{\"UUID\":\"483411c2-3b92-4253-a97f-fdd6f18ff71d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<!-- Main Content Area -->\n<div id=\"main-content\" tabindex=\"-1\">\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "e192c033-1c93-46a3-bc2c-becb86185581",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "Request Record Change",
+                "textAlign" : "left",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\",\"enableOverride\":false}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "66fb55a4-6757-4943-951b-96e7ae28fef7",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 52, 121)",
+                "lineStyle" : "solid",
+                "size" : 1,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "879ebb1c-ed89-4676-b3d2-d4673a2cc8a3",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"53f2b837-f137-40a9-af28-fabd5c036dba\",\"columns\":[{\"UUID\":\"7eb2bb6c-8c56-4f99-8dcf-70a674e8e505\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"ddcb36ba-f2c4-41a8-adf4-f2c7a40d300e\",\"columnName\":\"Column 2\",\"columnKey\":\"col2\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "dxpStyle" : {
+                      "margin" : {
+                        "bottom" : "",
+                        "left" : "",
+                        "right" : "",
+                        "top" : ""
+                      }
+                    },
+                    "flowArguments" : "[{\"label\":\"varMeasureReference\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varMeasureReference\",\"type\":\"String\",\"value\":\"{!varMeasureReference}\"},{\"label\":\"varPropertyReference\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"varPropertyReference\",\"type\":\"String\",\"value\":\"{!varPropertyReference}\"}]",
+                    "flowName" : "{\"flowName\":\"DESNZ_Create_Record_Change_Case\",\"flowLabel\":\"DESNZ - Create Record Change Case\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "34d087d9-b8a3-4575-a0b8-2e3d0d9e6ab4",
+                  "type" : "component"
+                } ],
+                "id" : "7eb2bb6c-8c56-4f99-8dcf-70a674e8e505",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "flowName" : "{\"flowName\":\"GMS_Funding_Award_Chat_Window\",\"flowLabel\":\"GMS - Funding Award Chat Window\"}"
+                  },
+                  "definition" : "dxp_flow:flow",
+                  "id" : "ad1be4ec-57ca-43d8-9c2e-3e1e40f6f4a0",
+                  "type" : "component"
+                } ],
+                "id" : "ddcb36ba-f2c4-41a8-adf4-f2c7a40d300e",
+                "name" : "col2",
+                "title" : "Column 2",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "53f2b837-f137-40a9-af28-fabd5c036dba",
+              "type" : "component"
+            } ],
+            "id" : "483411c2-3b92-4253-a97f-fdd6f18ff71d",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c9d8fafa-6718-4805-a4a3-740bc7a3caaa",
+          "type" : "component"
+        } ],
+        "id" : "03cc476d-e117-43a6-bde2-390224443833",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Create Record Change",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "b7804574-cbcf-423b-8fa5-72586c247750",
+          "type" : "component"
+        } ],
+        "id" : "18d2ed6a-6af0-4216-a0ed-1564c1af8987",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "9dd90f04-3480-4885-9d6a-2ceda2227355",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-create-record-change"
+  },
+  "urlName" : "create-record-change"
+}

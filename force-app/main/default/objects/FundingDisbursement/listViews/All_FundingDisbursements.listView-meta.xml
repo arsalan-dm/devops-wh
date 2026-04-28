@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_FundingDisbursements</fullName>
+    <columns>Name</columns>
+    <columns>DisbursementName</columns>
+    <columns>ScheduledDate</columns>
+    <columns>DisbursementDate</columns>
+    <columns>Payment_Period_Start__c</columns>
+    <columns>Payment_Period_End__c</columns>
+    <columns>Status</columns>
+    <columns>Payment_Reference__c</columns>
+    <columns>Drawdown_Batch_amount__c</columns>
+    <columns>FundingAward</columns>
+    <columns>Approved_Batch_Total_Amount__c</columns>
+    <columns>Amount</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Funding Disbursements</label>
+</ListView>

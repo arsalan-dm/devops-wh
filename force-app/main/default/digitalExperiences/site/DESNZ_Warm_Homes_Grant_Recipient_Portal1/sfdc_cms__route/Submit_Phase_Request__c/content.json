@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Submit Phase Request",
+  "contentBody" : {
+    "activeViewId" : "Submit_Phase_Request",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-submit-phase-request",
+    "urlPrefix" : "submit-phase-request"
+  },
+  "urlName" : "submit-phase-request"
+}

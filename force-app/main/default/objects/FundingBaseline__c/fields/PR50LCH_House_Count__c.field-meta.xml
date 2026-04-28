@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR50LCH_House_Count__c</fullName>
+    <inlineHelpText>Private Rented 50% Funded Low Carbon Heat for all approved batches</inlineHelpText>
+    <label>PR50LCH House Count</label>
+    <summarizedField>FundingBatch__c.PR50LCH_House_Count__c</summarizedField>
+    <summaryFilterItems>
+        <field>FundingBatch__c.ABS_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved, Closed</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>FundingBatch__c.Version_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </summaryFilterItems>
+    <summaryForeignKey>FundingBatch__c.Active_Baseline__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

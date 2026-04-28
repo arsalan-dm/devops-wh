@@ -1,0 +1,7 @@
+:host{
+    --slds-c-button-color-background :white;
+    --slds-c-button-color-background-active :white;
+    --slds-c-button-stateful-color-background-selected : white;
+    --slds-c-button-stateful-color-border-selected-hover : rgb(117, 117, 117);
+    --slds-c-button-stateful-color-border-selected : #757575;
+}

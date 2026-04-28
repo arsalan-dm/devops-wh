@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Transactions",
+  "contentBody" : {
+    "activeViewId" : "Transactions",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-transactions",
+    "urlPrefix" : "transactions"
+  },
+  "urlName" : "transactions"
+}

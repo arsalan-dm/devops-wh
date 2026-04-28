@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Cost_of_Measures__c</fullName>
+    <description>Aggregated total of Measure costs</description>
+    <label>Total Cost of Measures</label>
+    <summarizedField>Property_Measure__c.Total_Cost_of_Single_Measure_Installatio__c</summarizedField>
+    <summaryForeignKey>Property_Measure__c.Related_Funding_Award__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Of_Homes_Per_Phase__c</fullName>
+    <description>CF Milestones - No. of homes per phase</description>
+    <label>No. Of Homes Per Phase</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>6</visibleLines>
+</CustomField>

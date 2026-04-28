@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Award</fullName>
+    <active>true</active>
+    <description>Denotes the amount of budget allocated to an Award</description>
+    <label>Award</label>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finalized</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Drawdown_Request__c</fullName>
+    <description>For Challenge Funds only.</description>
+    <label>Funding Drawdown Request</label>
+    <referenceTo>Funding_Drawdown_Request__c</referenceTo>
+    <relationshipName>Phase_Drawdown_Requests</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

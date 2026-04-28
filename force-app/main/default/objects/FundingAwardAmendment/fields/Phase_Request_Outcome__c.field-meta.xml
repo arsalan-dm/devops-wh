@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phase_Request_Outcome__c</fullName>
+    <inlineHelpText>To be completed by T&amp;T (or DESNZ if required) representative once the Phase Request has been reviewed.</inlineHelpText>
+    <label>Phase Request Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved - Green</fullName>
+                <default>false</default>
+                <label>Approved - Green</label>
+            </value>
+            <value>
+                <fullName>Approved - Amber</fullName>
+                <default>false</default>
+                <label>Approved - Amber</label>
+            </value>
+            <value>
+                <fullName>Approved - Red</fullName>
+                <default>false</default>
+                <label>Approved - Red</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grant_Recipient_Type__c</fullName>
+    <label>Grant Recipient Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Local Authority</fullName>
+                <default>false</default>
+                <label>Local Authority</label>
+            </value>
+            <value>
+                <fullName>Housing Association</fullName>
+                <default>false</default>
+                <label>Housing Association</label>
+            </value>
+            <value>
+                <fullName>Charity</fullName>
+                <default>false</default>
+                <label>Charity</label>
+            </value>
+            <value>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+                <label>Consortium</label>
+            </value>
+            <value>
+                <fullName>Combined Authority</fullName>
+                <default>false</default>
+                <label>Combined Authority</label>
+            </value>
+            <value>
+                <fullName>Registered Provider</fullName>
+                <default>false</default>
+                <label>Registered Provider</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

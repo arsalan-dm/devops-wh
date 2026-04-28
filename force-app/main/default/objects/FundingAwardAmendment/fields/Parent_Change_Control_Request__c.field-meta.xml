@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Change_Control_Request__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Parent Change Control request that contains a rollup of all the values submitted from a change request on the portal.</description>
+    <label>Parent Change Control Request</label>
+    <referenceTo>FundingAwardAmendment</referenceTo>
+    <relationshipLabel>Change Control Requests</relationshipLabel>
+    <relationshipName>Change_Control_Requests</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

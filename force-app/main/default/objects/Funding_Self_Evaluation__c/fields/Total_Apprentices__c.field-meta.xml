@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Apprentices__c</fullName>
+    <description>Total number of apprentices employed</description>
+    <externalId>false</externalId>
+    <formula>Apprentices_Constr_Installation_Ops__c  +  Apprentices_Site_Management__c  +  Apprentices_Eng_Design_Assmts__c  +  Apprentices_Other_eg_Proj_Mgmt_Admin__c  +  Apprentices_Don_t_know__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total number of apprentices employed</inlineHelpText>
+    <label>Total Apprentices</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

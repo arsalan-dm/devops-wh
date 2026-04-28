@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Summary</fullName>
+    <columns>Name</columns>
+    <columns>Funding_Award__c</columns>
+    <columns>Total_Grant_Funding_Capital__c</columns>
+    <columns>Total_Grant_Funding_A_A__c</columns>
+    <columns>Total_Homes_To_Be_Treated__c</columns>
+    <columns>Region__c</columns>
+    <columns>Postcode__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Project Summary</label>
+</ListView>

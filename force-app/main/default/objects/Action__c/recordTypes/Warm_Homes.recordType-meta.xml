@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warm_Homes</fullName>
+    <active>true</active>
+    <label>Warm Homes</label>
+    <picklistValues>
+        <picklist>Action_Source__c</picklist>
+        <values>
+            <fullName>DCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DQA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Tiering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Action_Type__c</picklist>
+        <values>
+            <fullName>DAC Condition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DAC_Condition_RAG__c</picklist>
+        <values>
+            <fullName>Amber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DAC_Theme__c</picklist>
+        <values>
+            <fullName>Commercial Assurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Assurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraud and Error Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Income Eligibility Verification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Escalate__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Owning_Team__c</picklist>
+        <values>
+            <fullName>DESNZ Scheme Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grant Recipient Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overdue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trend__c</picklist>
+        <values>
+            <fullName>Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Up</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

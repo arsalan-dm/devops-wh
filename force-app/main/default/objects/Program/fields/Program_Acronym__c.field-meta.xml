@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Acronym__c</fullName>
+    <description>Short Name for the Scheme/Program</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Short Name for the Scheme/Program</inlineHelpText>
+    <label>Program Acronym</label>
+    <length>10</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

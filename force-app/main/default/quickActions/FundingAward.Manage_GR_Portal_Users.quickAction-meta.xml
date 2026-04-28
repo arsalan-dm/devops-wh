@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provide PPDOs and Scheme Leads with the necessary permissions to manage users in the Grant Recipient Portal</description>
+    <flowDefinition>DESNZ_Manage_GR_User</flowDefinition>
+    <label>Manage GR Portal Users</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

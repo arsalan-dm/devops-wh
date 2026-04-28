@@ -1,0 +1,38 @@
+<template>
+    <!-- <template lwc:if={showChatSummary}> -->
+        <div class={chatSummaryStyle} onclick={handleClick}>
+            <!-- slds-theme_default -->
+            <header>
+                <div class="slds-grid slds-size_11-of-12">
+                    <div class="slds-p-right_small slds-col">
+                        <p><b>{chat.contextParentName}</b> ({chat.awardeeName})</p>
+                        <template if:true={chatIsUnfollowed}>
+                            <p class="slds-text-color_destructive">(You’ve unfollowed this chat — it will disappear on reload)</p>
+                        </template>
+                        <i>{chat.summary}</i>
+                        <template if:true={hasMessages}>
+                            <p>Last Message: {formattedDateTime}</p>
+                        </template>                    
+                        <!-- Stuff below to test dynamic behaviours -->
+                        <!-- <p>Chat Unfollowed = {chat.isUnfollowed}</p> -->
+                        <!-- <p>Chat Summary for {chat.chatId}</p> -->
+                        <!-- <p>Parent Context {chat.contextParent}</p> -->
+                        <!-- <p>Child Context {chat.contextChild}</p> -->
+                        <!-- <p>{selectedChatParentContext}</p> -->
+                        <!-- <p>{chatSummaryStyle}</p> -->
+                        <!-- <p> All Messages (debug) - {chat.messagesJSON}</p> -->
+                    </div>
+                    <div class="slds-col slds-size_1-of-12">
+                        <template if:true={hasItemsToRead}>
+                            <div class="slds-align_absolute-center">
+                                <div class="slds-align_absolute-center items-to-read">
+                                    <b>{chat.unreadMessageCount}</b>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </header>
+        </div>
+    <!-- </template> -->
+</template>

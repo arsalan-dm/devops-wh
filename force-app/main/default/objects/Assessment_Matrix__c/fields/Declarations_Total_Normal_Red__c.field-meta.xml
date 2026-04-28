@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Declarations_Total_Normal_Red__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(ISPICKVAL( Homes_suitable_for_KPI1_RAG__c, &quot;Red&quot;), ISPICKVAL(Homes_suitable_for_KPI1_High_Risk__c, &quot;No&quot;)),  1, 0) +
+IF(AND(ISPICKVAL( Homes_suitable_for_KPI2_RAG__c, &quot;Red&quot;), ISPICKVAL(Homes_suitable_for_KPI2_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( PR_matches_previous_baseline_RAG__c, &quot;Red&quot;), ISPICKVAL(Matches_previous_baseline_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Carry_over_any_deviation_RAG__c, &quot;Red&quot;), ISPICKVAL(Carry_over_any_deviation_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Accompanying_PCR_RAG__c, &quot;Red&quot;), ISPICKVAL(Accompanying_PCR_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Compliant_wave_3_RAG__c, &quot;Red&quot;), ISPICKVAL(Compliant_wave_3_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Key_project_roles_RAG__c, &quot;Red&quot;), ISPICKVAL(Key_project_roles_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Comply_with_A_A_policy_RAG__c, &quot;Red&quot;), ISPICKVAL(Comply_with_A_A_policy_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Received_signed_copy_RAG__c, &quot;Red&quot;), ISPICKVAL(Received_signed_copy_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Updated_PP_RR_RAG__c, &quot;Red&quot;), ISPICKVAL(Updated_PP_RR_High_Risk__c, &quot;No&quot;)), 1, 0) +
+IF(AND(ISPICKVAL( Phase_DCA_RAG__c, &quot;Red&quot;), ISPICKVAL(Phase_DCA_High_Risk__c, &quot;No&quot;)), 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Declarations - Total Normal Red</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

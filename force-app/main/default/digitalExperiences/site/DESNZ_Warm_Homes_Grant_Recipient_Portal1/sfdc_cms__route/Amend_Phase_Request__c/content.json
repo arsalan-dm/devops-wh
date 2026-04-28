@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Amend Phase Request",
+  "contentBody" : {
+    "activeViewId" : "Amend_Phase_Request",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-amend-phase-request",
+    "urlPrefix" : "amend-phase-request"
+  },
+  "urlName" : "amend-phase-request"
+}

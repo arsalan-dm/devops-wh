@@ -1,0 +1,11 @@
+<template>
+    <br>
+    <nav>
+        <lightning-progress-indicator current-step={currentStage} type={displayType} variant="shade">
+            <template for:each={_stages} for:item="stage">
+                <lightning-progress-step key={stage.key} label={stage.stageName} value={stage.stageName} onclick={handleNext}></lightning-progress-step>
+            </template>
+        </lightning-progress-indicator>
+    </nav>
+    <br>
+</template>

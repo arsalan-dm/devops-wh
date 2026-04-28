@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XSME_Contractors_Used__c</fullName>
+    <defaultValue>&quot;Enter Text&quot;</defaultValue>
+    <description>How many (if any) SME contractors have you used on your Wave 3 project? Please use your best approximation, and provide any further relevant details. Please do not include their subcontractors.</description>
+    <inlineHelpText>How many (if any) SME contractors have you used on your Wave 3 project? Please use your best approximation, and provide any further relevant details. Please do not include their subcontractors.</inlineHelpText>
+    <label>XSME Contractors Used</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

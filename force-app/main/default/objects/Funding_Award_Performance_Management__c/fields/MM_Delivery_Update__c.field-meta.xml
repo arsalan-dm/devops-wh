@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MM_Delivery_Update__c</fullName>
+    <inlineHelpText>Review progress against key milestones and planned delivery for the period since last meeting. Query any variances identified, exploring causes and justification.</inlineHelpText>
+    <label>Delivery Update</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

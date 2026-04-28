@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_RAG__c</fullName>
+    <description>RAG Status of the related Account for the Consortium Member</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Related_Account__r.ABS_Traffic_Light__c, &quot;Red&quot;), &quot;🔴&quot;, 
+IF(ISPICKVAL(Related_Account__r.ABS_Traffic_Light__c, &quot;Amber&quot;),&quot;🟡&quot;, 
+IF(ISPICKVAL(Related_Account__r.ABS_Traffic_Light__c, &quot;Green&quot;), &quot;🟢&quot;, null
+)))</formula>
+    <inlineHelpText>RAG Status of the related Account for the Consortium Member</inlineHelpText>
+    <label>Account RAG</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

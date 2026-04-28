@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Award_Update_Details</fullName>
+    <fields>Name</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Actuals_Month__c</fields>
+    <fields>Actuals_Start_Date__c</fields>
+    <fields>Parent_Funding_Award_Update__c</fields>
+    <fields>Parent_Deadline_Date__c</fields>
+    <fields>Parent_Update_Status__c</fields>
+    <label>Funding Award Update Details</label>
+</CompactLayout>

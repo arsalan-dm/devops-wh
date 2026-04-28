@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_Internal_Case__c</fullName>
+    <label>Source of Internal Case</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Desktop Check</fullName>
+                <default>false</default>
+                <label>Desktop Check</label>
+            </value>
+            <value>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+                <label>Site Visit</label>
+            </value>
+            <value>
+                <fullName>GR Assurance Check</fullName>
+                <default>false</default>
+                <label>GR Assurance Check</label>
+            </value>
+            <value>
+                <fullName>A&amp;A Checking</fullName>
+                <default>false</default>
+                <label>A&amp;A Checking</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

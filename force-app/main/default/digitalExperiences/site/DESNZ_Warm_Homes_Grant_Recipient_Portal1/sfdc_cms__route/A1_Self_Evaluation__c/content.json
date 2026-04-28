@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "A1 Self Evaluation",
+  "contentBody" : {
+    "activeViewId" : "A1_Self_Evaluation",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-a1-self-evaluation",
+    "urlPrefix" : "a1-self-evaluation"
+  },
+  "urlName" : "a1-self-evaluation"
+}

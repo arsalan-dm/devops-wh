@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Submitted Grant Drawdown Requests",
+  "contentBody" : {
+    "activeViewId" : "Submitted_Grant_Drawdown_Requests",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-submitted-grant-drawdown-requests",
+    "urlPrefix" : "submitted-grant-drawdown-requests"
+  },
+  "urlName" : "submitted-grant-drawdown-requests"
+}

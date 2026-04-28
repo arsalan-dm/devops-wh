@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Project_Homes_Treated_Request__c</fullName>
+    <formula>IF(Parent_Change_Control_Tracker__c = &quot;&quot;, 0,
+IF(Pending_Change_Control_Request__c = &quot;&quot;,
+( Original_Award_Project_Baseline__r.Total_Homes_to_be_Upgraded__c  -  Total_Project_Homes_Treated__c ) / Original_Award_Project_Baseline__r.Total_Homes_to_be_Upgraded__c * -1,
+(Current_Award_Baseline__r.Total_Homes_to_be_Upgraded__c - Total_Project_Homes_Treated__c) / Current_Award_Baseline__r.Total_Homes_to_be_Upgraded__c * -1))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Project Homes Treated - Request</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>
