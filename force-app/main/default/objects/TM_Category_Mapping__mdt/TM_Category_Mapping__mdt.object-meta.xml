@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Table that aligns Trustmark Meaure Types with DESNZ Statistical Categories</description>
-    <label>TM Category Mapping</label>
-    <pluralLabel>TM Category Mappings</pluralLabel>
-    <visibility>Public</visibility>
-</CustomObject>

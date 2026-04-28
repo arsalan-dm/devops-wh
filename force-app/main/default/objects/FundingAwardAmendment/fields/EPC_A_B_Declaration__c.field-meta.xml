@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>EPC_A_B_Declaration__c</fullName>
-    <defaultValue>false</defaultValue>
-    <label>EPC A or B Declaration</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

@@ -1,5 +1,0 @@
-{
-  "apiName" : "Transaction_Evidence__c",
-  "type" : "sfdc_cms__route",
-  "path" : "routes"
-}

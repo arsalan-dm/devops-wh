@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<LightningExperienceTheme xmlns="http://soap.sforce.com/2006/04/metadata">
-    <defaultBrandingSet>LEXTHEMINGICSPSSPreprod</defaultBrandingSet>
-    <description>Preprod Theme with ORANGE colour</description>
-    <masterLabel>ICS PSS Preprod</masterLabel>
-    <shouldOverrideLoadingImage>false</shouldOverrideLoadingImage>
-</LightningExperienceTheme>

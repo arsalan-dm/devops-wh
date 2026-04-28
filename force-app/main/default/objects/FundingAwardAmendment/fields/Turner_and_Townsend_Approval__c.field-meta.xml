@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Turner_and_Townsend_Approval__c</fullName>
-    <defaultValue>false</defaultValue>
-    <inlineHelpText>To be completed by the delivery partner once the Phase Request has been reviewed.</inlineHelpText>
-    <label>Delivery Partner Approval</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

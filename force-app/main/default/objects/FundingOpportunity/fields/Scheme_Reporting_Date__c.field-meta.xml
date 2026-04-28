@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Scheme_Reporting_Date__c</fullName>
-    <description>Populated by flow logic that determines when monthly reports are due</description>
-    <label>Scheme Reporting Date</label>
-    <required>false</required>
-    <trackHistory>true</trackHistory>
-    <type>Date</type>
-</CustomField>

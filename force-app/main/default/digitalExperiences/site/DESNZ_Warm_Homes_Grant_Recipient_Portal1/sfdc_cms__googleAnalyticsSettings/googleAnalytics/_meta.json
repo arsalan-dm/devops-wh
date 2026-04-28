@@ -1,5 +1,0 @@
-{
-  "apiName" : "googleAnalytics",
-  "type" : "sfdc_cms__googleAnalyticsSettings",
-  "path" : "_settings"
-}

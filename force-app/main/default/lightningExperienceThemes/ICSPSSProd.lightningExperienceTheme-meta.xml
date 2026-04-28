@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<LightningExperienceTheme xmlns="http://soap.sforce.com/2006/04/metadata">
-    <defaultBrandingSet>LEXTHEMINGBEISPSS</defaultBrandingSet>
-    <description>Production Theme with BLUE colour</description>
-    <masterLabel>ICS PSS Prod</masterLabel>
-    <shouldOverrideLoadingImage>false</shouldOverrideLoadingImage>
-</LightningExperienceTheme>

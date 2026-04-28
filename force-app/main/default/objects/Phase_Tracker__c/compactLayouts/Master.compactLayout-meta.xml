@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Master</fullName>
-    <fields>Name</fields>
-    <fields>RecordTypeId</fields>
-    <fields>Funding_Award__c</fields>
-    <fields>Last_Refreshed__c</fields>
-    <label>Master</label>
-</CompactLayout>

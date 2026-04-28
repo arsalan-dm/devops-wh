@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Trigger_Reporting_Date_Update__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>Trigger to enable scheduled path on reporting date change flow</description>
-    <label>Trigger Reporting Date Update</label>
-    <trackHistory>true</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

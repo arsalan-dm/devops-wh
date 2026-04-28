@@ -1,5 +1,0 @@
-{
-  "apiName" : "Change_Control_Requests_Awaiting_Changes__c",
-  "type" : "sfdc_cms__route",
-  "path" : "routes"
-}
