@@ -50,7 +50,7 @@ runs:
             }' > changed-sources/apexScanResults.sarif
             echo "No issues found in the code scan."
           else
-            echo "Issues found in the code scan."
+            echo "Issues found in the code scan. Updating path in SARIF file."
             sed -i 's|changed-sources/force-app|force-app|g' changed-sources/apexScanResults.sarif
           fi
         
