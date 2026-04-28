@@ -63,6 +63,11 @@ runs:
       run: |
           ls changed-sources/force-app
 
+    - name: 'Verify Changes'
+      shell: bash
+      run: |
+          ls changed-sources/force-app
+          
     - name: 'Check-only deploy delta changes - run all tests'
       shell: bash
       run: |
