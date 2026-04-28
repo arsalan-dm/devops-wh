@@ -1,4 +1,4 @@
-name: MAIN-01 Multi-Environment Automated Validation Pipeline
+name: MAIN-01 Automated check-only SalesForce deployment on CODEMERGE org
 on: 
   pull_request_target:
     types:
@@ -46,7 +46,7 @@ jobs:
               owner,
               repo,
               issue_number: prNumber,
-              labels: ['validation-in-progress']
+              labels: ['do-not-merge']
             });
   comment-pending:
     runs-on: ubuntu-latest
@@ -64,16 +64,13 @@ jobs:
               repo,
               issue_number: prNumber,
               body: `
-              ⏳ Starting multi-environment validation pipeline...
-              🔹 Scratch → CM → QA → UAT → Regression → PROD
+              ⏳ Running check-only deployment to CODEMERGE org...
               `
             });
-
-  # Scratch Org Validation
-  validate-scratch:
+  check-only-deployment-on-org:
     needs: add-blocking-label
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
+    if: ${{ github.actor != 'dependabot[bot]'  && !github.event.repository.fork }}
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -84,150 +81,19 @@ jobs:
         run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
       - name: Set up the environment
         uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to Scratch org
+      - name: Auth to CODEMERGE org
         uses: ./.github/actions/salesforce_authorisation
         with:
-          organisation_url: ${{ secrets.SFDX_SCRATCH_URL }}
-      - name: Perform check-only deployment to Scratch
-        uses: ./.github/actions/salesforce_verification_deploy
-        with:
-          head_branch_name: ${{ github.event.pull_request.head.sha }}
-          diff_branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.SCRATCH_ORG_USERNAME }}
-
-  # CM Org Validation (depends on Scratch)
-  validate-cm:
-    needs: validate-scratch
-    runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Fetch base branch
-        run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
-      - name: Set up the environment
-        uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to CM org
-        uses: ./.github/actions/salesforce_authorisation
-        with:
-          organisation_url: ${{ secrets.SFDX_CM_URL }}
-      - name: Perform check-only deployment to CM
+          organisation_url: ${{ secrets.SFDX_SFDX_CM_URL }}
+      - name: Perform a check-only deployment to CODEMERGE Org
         uses: ./.github/actions/salesforce_verification_deploy
         with:
           head_branch_name: ${{ github.event.pull_request.head.sha }}
           diff_branch_name: ${{ github.event.pull_request.base.sha }}
           username: ${{ secrets.CM_ORG_USERNAME }}
-
-  # QA Org Validation (depends on CM)
-  validate-qa:
-    needs: validate-cm
-    runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Fetch base branch
-        run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
-      - name: Set up the environment
-        uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to QA org
-        uses: ./.github/actions/salesforce_authorisation
-        with:
-          organisation_url: ${{ secrets.SFDX_QA_URL }}
-      - name: Perform check-only deployment to QA
-        uses: ./.github/actions/salesforce_verification_deploy
-        with:
-          head_branch_name: ${{ github.event.pull_request.head.sha }}
-          diff_branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.QA_ORG_USERNAME }}
-
-  # UAT Org Validation (depends on QA)
-  validate-uat:
-    needs: validate-qa
-    runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Fetch base branch
-        run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
-      - name: Set up the environment
-        uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to UAT org
-        uses: ./.github/actions/salesforce_authorisation
-        with:
-          organisation_url: ${{ secrets.SFDX_UAT_URL }}
-      - name: Perform check-only deployment to UAT
-        uses: ./.github/actions/salesforce_verification_deploy
-        with:
-          head_branch_name: ${{ github.event.pull_request.head.sha }}
-          diff_branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.UAT_ORG_USERNAME }}
-
-  # Regression Org Validation (depends on UAT)
-  validate-regression:
-    needs: validate-uat
-    runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Fetch base branch
-        run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
-      - name: Set up the environment
-        uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to Regression org
-        uses: ./.github/actions/salesforce_authorisation
-        with:
-          organisation_url: ${{ secrets.SFDX_REGRESSION_URL }}
-      - name: Perform check-only deployment to Regression
-        uses: ./.github/actions/salesforce_verification_deploy
-        with:
-          head_branch_name: ${{ github.event.pull_request.head.sha }}
-          diff_branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.REGRESSION_ORG_USERNAME }}
-
-  # PROD Org Validation (depends on Regression - check-only)
-  validate-prod:
-    needs: validate-regression
-    runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' && !github.event.repository.fork }}
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Fetch base branch
-        run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
-      - name: Set up the environment
-        uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to PROD org
-        uses: ./.github/actions/salesforce_authorisation
-        with:
-          organisation_url: ${{ secrets.SFDX_PROD_URL }}
-      - name: Perform check-only deployment to PROD
-        uses: ./.github/actions/salesforce_verification_deploy
-        with:
-          head_branch_name: ${{ github.event.pull_request.head.sha }}
-          diff_branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.PROD_ORG_USERNAME }}
-
   comment-success:
     runs-on: ubuntu-latest
-    needs: validate-prod
+    needs: check-only-deployment-on-org
     if: success()
     steps:
       - name: Add comment to PR
@@ -243,15 +109,12 @@ jobs:
               repo,
               issue_number: prNumber,
               body: `
-              ✅ All validations passed!
-              Pipeline stages completed successfully:
-              🟢 Scratch → 🟢 CM → 🟢 QA → 🟢 UAT → 🟢 Regression → 🟢 PROD
+              ✅ Check-only deployment to CODEMERGE succeeded!
               `
-            });
-
+            });    
   add-success-label:
     runs-on: ubuntu-latest
-    needs: validate-prod
+    needs: check-only-deployment-on-org
     if: success()
     steps:
       - name: Add label
@@ -266,19 +129,18 @@ jobs:
               owner,
               repo,
               issue_number: prNumber,
-              labels: ['validation-passed', 'ready-to-merge']
+              labels: ['ready-to-merge']
             });
 
             await github.rest.issues.removeLabel({
               owner,
               repo,
               issue_number: prNumber,
-              name: 'validation-in-progress'
+              name: 'do-not-merge'
             });
-
   comment-failure:
     runs-on: ubuntu-latest
-    needs: validate-prod
+    needs: check-only-deployment-on-org
     if: failure()
     steps:
       - name: Add comment to PR
@@ -294,34 +156,6 @@ jobs:
               repo,
               issue_number: prNumber,
               body: `
-              ❌ Validation pipeline failed!
-              Please review the failed stage and fix the issues.
+              ❌ Check-only deployment to CODEMERGE failed.
               `
-            });
-
-  add-failure-label:
-    runs-on: ubuntu-latest
-    needs: validate-prod
-    if: failure()
-    steps:
-      - name: Add label
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prNumber = context.payload.pull_request.number;
-            const { owner, repo } = context.repo;
-
-            await github.rest.issues.addLabels({
-              owner,
-              repo,
-              issue_number: prNumber,
-              labels: ['validation-failed']
-            });
-
-            await github.rest.issues.removeLabel({
-              owner,
-              repo,
-              issue_number: prNumber,
-              name: 'validation-in-progress'
             });    
