@@ -84,7 +84,7 @@ jobs:
       - name: Auth to CODEMERGE org
         uses: ./.github/actions/salesforce_authorisation
         with:
-          organisation_url: ${{ secrets.SFDX_SFDX__URL}}
+          organisation_url: ${{ secrets.SFDX_SFDX_CM_URL}}
       - name: Perform a check-only deployment to CODEMERGE Org
         uses: ./.github/actions/salesforce_verification_deploy
         with:
