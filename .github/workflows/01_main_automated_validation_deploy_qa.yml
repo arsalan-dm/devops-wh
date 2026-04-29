@@ -7,7 +7,7 @@ on:
       - synchronize
     
     branches:
-      - develop
+      - QA
     
     paths:
       - 'force-app/**'
@@ -18,7 +18,7 @@ on:
       - synchronize
     
     branches:
-      - develop
+      - QA
     
     paths:
       - 'force-app/**'
