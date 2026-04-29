@@ -27,28 +27,6 @@ jobs:
             core.setOutput("pr_number", pr.data.number);
             core.setOutput("pr_sha", pr.data.head.sha);
 
-  # Route to Scratch deployment
-  route-to-scratch:
-    needs: get_pr_branch
-    if: ${{ github.event.comment.body == '/deploy-to-scratch' && !github.event.repository.fork }}
-    uses: ./.github/workflows/02_main_manual_deploy_to_scratch.yml
-    secrets:
-      SFDX_SCRATCH_URL: ${{ secrets.SFDX_SCRATCH_URL }}
-      SCRATCH_ORG_USERNAME: ${{ secrets.SCRATCH_ORG_USERNAME }}
-      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
-      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
-
-  # Route to CM deployment
-  route-to-cm:
-    needs: get_pr_branch
-    if: ${{ github.event.comment.body == '/deploy-to-cm' && !github.event.repository.fork }}
-    uses: ./.github/workflows/03_main_manual_deploy_to_cm.yml
-    secrets:
-      SFDX_CM_URL: ${{ secrets.SFDX_CM_URL }}
-      CM_ORG_USERNAME: ${{ secrets.CM_ORG_USERNAME }}
-      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
-      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
-
   # Route to QA deployment
   route-to-qa:
     needs: get_pr_branch
@@ -68,32 +46,5 @@ jobs:
     secrets:
       SFDX_UAT_URL: ${{ secrets.SFDX_UAT_URL }}
       UAT_ORG_USERNAME: ${{ secrets.UAT_ORG_USERNAME }}
-      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
-      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
-
-  # Route to Regression deployment
-  route-to-regression:
-    needs: get_pr_branch
-    if: ${{ github.event.comment.body == '/deploy-to-regression' && !github.event.repository.fork }}
-    uses: ./.github/workflows/06_main_manual_deploy_to_regression.yml
-    secrets:
-      SFDX_REGRESSION_URL: ${{ secrets.SFDX_REGRESSION_URL }}
-      REGRESSION_ORG_USERNAME: ${{ secrets.REGRESSION_ORG_USERNAME }}
-      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
-      PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
-
-  # Route to PROD deployment
-  route-to-prod:
-    needs: get_pr_branch
-    if: ${{ github.event.comment.body == '/deploy-to-prod' && !github.event.repository.fork }}
-    uses: ./.github/workflows/07_main_manual_deploy_to_prod.yml
-    with:
-      pr_branch: ${{ needs.get_pr_branch.outputs.pr_branch }}
-      pr_repo: ${{ needs.get_pr_branch.outputs.pr_repo }}
-      pr_number: ${{ needs.get_pr_branch.outputs.pr_number }}
-      pr_sha: ${{ needs.get_pr_branch.outputs.pr_sha }}
-    secrets:
-      SFDX_PROD_URL: ${{ secrets.SFDX_PROD_URL }}
-      PROD_ORG_USERNAME: ${{ secrets.PROD_ORG_USERNAME }}
       INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
       PROFILE_NAMES: ${{ secrets.PROFILE_NAMES }}
