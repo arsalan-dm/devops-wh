@@ -1,4 +1,4 @@
-name: MAIN-01 Automated check-only SalesForce deployment on CODEMERGE org
+name: MAIN-01 Automated check-only SalesForce deployment on QA org
 on: 
   pull_request_target:
     types:
@@ -64,7 +64,7 @@ jobs:
               repo,
               issue_number: prNumber,
               body: `
-              ⏳ Running check-only deployment to CODEMERGE org...
+              ⏳ Running check-only deployment to QA org...
               `
             });
   check-only-deployment-on-org:
@@ -81,16 +81,16 @@ jobs:
         run: git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
       - name: Set up the environment
         uses: ./.github/actions/salesforce_runner_env
-      - name: Auth to CODEMERGE org
+      - name: Auth to QA org
         uses: ./.github/actions/salesforce_authorisation
         with:
-          organisation_url: ${{ secrets.SFDX_SFDX_CM_URL}}
-      - name: Perform a check-only deployment to CODEMERGE Org
+          organisation_url: ${{ secrets.SFDX_SFDX_QA_URL}}
+      - name: Perform a check-only deployment to QA Org
         uses: ./.github/actions/salesforce_verification_deploy
         with:
           head_branch_name: ${{ github.event.pull_request.head.sha }}
           diff_branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.CM_ORG_USERNAME}}
+          username: ${{ secrets.QA_ORG_USERNAME}}
   comment-success:
     runs-on: ubuntu-latest
     needs: check-only-deployment-on-org
@@ -109,7 +109,7 @@ jobs:
               repo,
               issue_number: prNumber,
               body: `
-              ✅ Check-only deployment to CODEMERGE succeeded!
+              ✅ Check-only deployment to QA succeeded!
               `
             });    
   add-success-label:
@@ -156,6 +156,6 @@ jobs:
               repo,
               issue_number: prNumber,
               body: `
-              ❌ Check-only deployment to CODEMERGE failed.
+              ❌ Check-only deployment to QA failed.
               `
             });
