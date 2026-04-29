@@ -35,4 +35,4 @@ runs:
           chmod +x scripts/bash/give-profile-access-to-all-fields.sh
           chmod +x scripts/bash/common.sh
           chmod +x scripts/bash/convert-source-to-mdapi.sh
-          scripts/bash/give-profile-access-to-all-fields.sh -r ${{inputs.instance_url}} -u ${{inputs.username}} -p ${{inputs.profile_names}}
+          scripts/bash/give-profile-access-to-all-fields.sh -r "${{inputs.instance_url}}" -u "${{inputs.username}}" -p "${{inputs.profile_names}}"
