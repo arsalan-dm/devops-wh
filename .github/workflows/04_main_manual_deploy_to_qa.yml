@@ -20,7 +20,7 @@ jobs:
             const workflows = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
-              workflow_id: "03_main_manual_deploy_to_cm.yml",
+              workflow_id: "03_main_automated_deployment_to_cm.yml",
               branch: branchName
             });
 

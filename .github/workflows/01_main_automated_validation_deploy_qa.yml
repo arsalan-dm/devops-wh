@@ -11,18 +11,6 @@ on:
     
     paths:
       - 'force-app/**'
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-    
-    branches:
-      - QA
-    
-    paths:
-      - 'force-app/**'
-
 permissions:
   contents: write # for checkout
   pull-requests: write # for commenting
